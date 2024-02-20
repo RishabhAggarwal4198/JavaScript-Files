@@ -106,6 +106,7 @@ slider.addEventListener('input', () => {
 
 
 
+
 rotate_btns.forEach((ele) => {
 	ele.addEventListener('click', () => {
 		if(ele.id === "rotate_left"){

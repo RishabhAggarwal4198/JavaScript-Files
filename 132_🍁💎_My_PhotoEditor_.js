@@ -6,6 +6,7 @@ let filterBtns = document.querySelectorAll('.filters button')
 let sliderInput = document.querySelector('.slider input')
 let filterType = document.querySelector('.filter_type')
 let filterMagnitude = document.querySelector('.value')
+let transformBtns = document.querySelector('.transFormBox  button')
 
 
 let bright = 100,
@@ -106,5 +107,8 @@ function editImage ()  {
 sliderInput.addEventListener('input', editImage );
 
 
-
-
+transformBtns.forEach((el) =>{
+	el.addEventListener('click', () =>{
+		
+	})
+})

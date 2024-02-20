@@ -114,7 +114,7 @@ h1{
 
 
 .filetrsBox, 
-.transFormBox 
+.transFormBox
 {
 	margin: 1rem 0rem;
 	display: grid;
@@ -127,15 +127,15 @@ h1{
 
 
 
-.filters{
+.filters,
+.transfromers{
 	display: flex;
 	justify-content: space-between;
 	padding: .6rem;
-
 }
 
 .filters button,
-.transFormBox button {
+.transfromers button {
 	height: 2rem;
 	width: 2rem;
 	display: flex;
@@ -149,7 +149,8 @@ h1{
 }
 
 
-.filters button img {
+.filters button img,
+.transfromers button img {
 	height:90%;
 	width:90%;
 	background-color: rgb(89, 123, 144);
@@ -166,7 +167,7 @@ h1{
 .disabled p,
 .disabled .slider,
 .disabled .filetrsBox
-, .disabled .transFormBox
+, .disabled .transfromers
 {
 	pointer-events: none;
 	opacity: .2;

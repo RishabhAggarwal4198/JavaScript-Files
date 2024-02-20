@@ -1,0 +1,81 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>React</title>
+</head>
+
+
+<body style="background-color: #212121; color: #fff;">
+    <button> Button Clicked </button>
+    
+</body>
+
+ 
+
+<script>
+
+    // class React {
+    //     constructor () {
+    //         this.library = "React"
+    //         this.server = "https://localhost:300"
+
+
+    //         //💎✅💎 A hypothetical Business REQUIREMENT :- Whenever this page is gonna load, it could create the OBJECT of REACT by itself
+            
+    //         document.querySelector('button').addEventListener('click', this.handleClick)
+    //     }
+        
+    //     handleClick () {
+    //         console.log("button clicked");
+    //         console.log(this); 
+    //     }
+    // } 
+
+    // const app = new React () 
+    
+
+                        // 🔽🔽 (by using "bind(this)")
+
+
+    class React {
+        constructor () {
+            this.library = "React"
+            this.server = "https://localhost:300"
+
+            // Requirement 
+            document
+                .querySelector('button')
+                .addEventListener('click', this.handleClick.bind(this))   // 💎✅💎  By using "bind(this)" we along with  sending the refrence of "handleClick" (by using "this.handleClick"), we also sent the refrences of all variables available over there like "this.library", "this.server"  etc.
+
+        }
+        
+        handleClick () {
+            console.log("button clicked");
+            console.log(this);
+        }
+    } 
+
+    const app = new React () /*
+                             📍📍Now when we gonna click the "button" in console we 
+                                  gonna get  :- 
+                                               " button clicked
+
+                                                React {library: 'React', server: 'https://localhost:300'} "
+
+                                    in the console
+                             */
+                             
+
+
+
+
+
+
+
+</script>
+
+
+
+</html>

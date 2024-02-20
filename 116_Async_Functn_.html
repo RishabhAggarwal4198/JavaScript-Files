@@ -1,0 +1,149 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+	<title>Document</title>
+
+	<style>
+		body{
+			background-color: #212121;
+		}
+
+
+	</style>
+</head>
+
+
+
+
+<body>
+	
+</body>
+
+
+
+
+<script>
+
+/* ✅ When we add 'Async' keyword in front of Function, it automatically/ bydefault returns a PROMISE....
+	& whatever function these PROMISE retunrs, upon that we could apply our functions like :- 'then' & 'catch'
+*/ 
+
+
+
+// 💎✅💎Creating ASYNC function 👇👇
+
+async function greet() {
+  return 'hello';
+}
+
+//📍📍Now when we will RUN 'greet()' in the console & we will get :-
+								// Promise {<fulfilled>: 'hello'}
+								// [[Prototype]]: Promise
+								// [[PromiseState]]: "fulfilled"
+								// [[PromiseResult]]: "hello"
+
+//✅ its returning [[PromiseState]]: "fulfilled" , even though we havn't even written any promise statement into it, but still returning the same
+//✅ So basically the STRING 'hello' which we have wrote after 'return' , it's making a result & it's getting stored in the PROMISE
+
+
+						    // 🔽🔽
+
+
+async function greet1() {
+  
+}
+
+//📍📍 RUN 'greet1()' now in the console & we will get :-
+								// Promise {<fulfilled>: 'undefined'}
+								// [[Prototype]]: Promise
+								// [[PromiseState]]: "fulfilled"
+								// [[PromiseResult]]: "undefined"
+
+//✅ So Even if we don't return anything from that ASYNC function, even than we will get the // [[PromiseState]]: "fulfilled" bcoz we have used ASYNC keyword in front of this function
+
+
+							// 🔽🔽			
+
+
+async function greet2() {
+	abc.abc();              //❌❌Will throw an ERROR bcoz of this
+	return 'hello';
+}
+
+//📍📍 RUN 'greet2()' now in the console & we will get :-
+								// Promise {<rejected>: ReferenceError: abc is not defined
+								// [[Prototype]]: Promise
+								// [[PromiseState]]: "rejected"
+								// [[PromiseResult]]: ReferenceError: abc is not defined at greet2 (http://127.0.0.1:5501/HItesh%20Sir/116_Async_Functn_.html:108:2) at <anonymous>:1:1
+
+
+							// 🔽🔽			
+
+							
+//🍁🍁💎🍁🍁 work of 'throw' keyword is to THROW AN ERROR 
+
+async function greet3() {
+	throw 'some random Error'         //❌❌Will throw an ERROR bcoz of this
+	return 'hello';
+}
+
+//📍📍 RUN 'greet3()' now in the console & we will get :-
+								// Promise {<rejected>: 'some random Error'}
+								// [[Prototype]]: Promise
+								// [[PromiseState]]: "rejected"
+								// [[PromiseResult]]: 'some random Error'
+
+
+							// 🔽🔽			
+
+							
+//🍁🍁💎🍁🍁 Making ARROW function async 👇👇
+
+let demo = async (valu) => {
+	return valu+5
+}
+
+//📍📍 RUN 'demo(5)' in the console & we will get :-
+							// Promise {<fulfilled>: 10}
+							// [[Prototype]]: Promise
+							// [[PromiseState]]: "fulfilled"
+							// [[PromiseResult]]: 10
+
+
+
+
+
+
+								
+
+// 💎✅💎 RUN the CODE below to see the result 💎✅💎 👇👇
+
+async function greet5() {
+	throw '404 page not found'         
+}
+
+greet5()
+	.then((rzlt) => {
+		console.log('promise was resolved');
+		console.log('RESULT was : ', rzlt);
+	})
+	.catch((err) => {
+		console.log('promise was rejected with err ', err);
+	})
+
+
+
+
+
+
+
+
+
+
+ 
+
+</script>
+
+
+</html>

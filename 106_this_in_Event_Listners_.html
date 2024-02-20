@@ -1,0 +1,66 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+
+	<title>Document</title>
+
+	<style>
+
+		
+		
+	</style>
+
+</head>
+
+
+<body>
+
+	<h1> HELLO !! EVERYONE </h1>
+	<h3> This text is for trial </h3>
+	<p> Today is Friday </p>
+
+	<button>Click Me !!</button>
+	
+</body>
+
+
+<script>
+
+	// let btn = document.querySelector(`button`)
+
+	// btn.addEventListener('click',  function () {            //✅✅ If we gonna use 'ARROW-FUNCTION' over here it's not gonna bcoz of the presence of 'this' in the console.log
+	// 	console.log(this);
+	// 	console.dir(btn.innerText)
+	// 	this.style.backgroundColor = 'red'
+	// })
+
+					// 🔽🔽 OR (much more efficient way of writing the above code for more events)
+
+
+	let h1 = document.querySelector('h1')
+	let h3 = document.querySelector('h3')
+	let para = document.querySelector('p')
+	let btn = document.querySelector('button')
+
+
+	let color = ['red', 'green', 'purple', 'yellow', 'pink', 'skyblue', 'salmon' ]
+
+	function changeColor () {
+		console.log(this.innerText);
+		let random = color[Math.floor(Math.random()*7)]
+		this.style.backgroundColor = random
+		this.style.cursor = 'pointer';
+	}
+
+
+	h1.addEventListener('click', changeColor)
+	h3.addEventListener('click', changeColor)
+	para.addEventListener('click', changeColor)
+	btn.addEventListener('click', changeColor)
+
+
+
+</script>
+
+
+</html>

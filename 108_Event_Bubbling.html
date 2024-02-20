@@ -1,0 +1,100 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+
+	<title>Document</title>
+
+	<style>
+
+	
+		#div_1{
+			background-color: pink;
+			height: 200px;
+			width: 400px;
+
+		}
+
+		ul{
+			background-color: blue;
+		}
+
+		li{
+			background-color: greenyellow;
+		}
+
+
+	</style>
+
+</head>
+
+
+
+
+<body>
+
+	<div id="div_1">
+		<ul>
+			<li> One </li>
+			<li> Two </li>
+			<li> Three </li>
+		</ul>
+	</div>
+
+
+	<div>
+
+	</div>
+	
+
+</body>
+
+
+
+
+<script>
+
+	// 💎✅💎 EVENT-BUBBLING 👇👇
+
+	let div = document.querySelector('div')
+	let ul = document.querySelector('ul')
+	let list = document.querySelectorAll('li')
+	let para = document.createElement('p')
+
+	// console.log(list.length);
+
+	div.addEventListener('click', function (evnt) {
+		console.log(`'div' was clicked`);
+		para.innerHTML= `'div' was clicked`
+		document.querySelector('body').append(para)
+	});
+
+
+	ul.addEventListener('click', function (evnt) {
+		evnt.stopPropagation();           // ✅ To perevent the bubbling of the EVENT (from inside to outside)
+		console.log(`'ul' was clicked`);
+		para.innerHTML= `'ul' was clicked`
+		document.querySelector('body').append(para)
+	});
+
+
+	for (lis of list ){
+		lis.addEventListener('click', function (evnt) {
+		evnt.stopPropagation();  
+		console.log(`'list' was clicked`);
+		para.innerHTML= `'list' was clicked`
+		document.querySelector('body').append(para)
+	});
+	}
+
+	
+
+	
+
+	
+
+</script>
+
+
+
+</html>

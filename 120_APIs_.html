@@ -1,0 +1,42 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+	<title>Document</title>
+
+	<style>
+
+		body{
+			background-color: #212121;
+		}
+
+	</style>
+</head>
+
+<body>
+	
+</body>
+
+
+
+<script>
+
+//✅✅ requesting DATA from a url
+
+let url = 'https://random-data-api.com/api/address/random_address?size=3'
+
+fetch(url)
+.then((res) => {
+	console.log(res);
+})
+.catch((err) => {
+	console.log(err);
+})
+
+
+
+
+</script>
+
+
+</html>

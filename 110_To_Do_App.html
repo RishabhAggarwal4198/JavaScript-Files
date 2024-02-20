@@ -1,0 +1,140 @@
+<!DOCTYPE html>
+<html lang="en">
+
+	<head>
+
+		<title>Document</title>
+
+		<style>
+
+			body{
+				background-color: #212121;
+				color: #ffffff;
+			}
+
+			ul{
+				list-style:circle;
+				
+				
+			}
+
+			
+
+		</style>
+
+	</head>
+
+
+	<body>
+
+		<h1> To do App </h1>
+		<input placeholder="enter your task here">
+		<button id="button1"> Add task </button>
+		<button id="button2"> Reset </button>
+		<ul>
+
+		</ul>
+		
+
+	
+	</body>
+
+	<script>
+
+
+		// 🍁🍁✅🍁🍁  TO-DO  APP 👇👇 (created by me)
+
+		let input =	document.querySelector('input')
+		
+		let btn1 = document.querySelector('#button1')
+		let btn2 = document.querySelector('#button2')
+		let ul = document.querySelector('ul')
+	
+	
+
+		// btn1.addEventListener('click', function () {
+
+		// 	let list = document.createElement('li')
+		// 	list.innerHTML = `${input.value}    <button id='dlt_Btn'>❌</button>`
+		// 	ul.append(list)
+		// 	list.style.margin = '22px  -18px';
+		// 	input.value = ``
+
+		// 	let dltBtn = document.querySelectorAll('#dlt_Btn')
+		// 	// dltBtn.style.fontSize = '2px'
+
+		// 	//    dltBtn.addEventListener('click', function() {
+		// 	//    this.parentElement.remove()
+		// 	//    })
+			
+		// 				// 🔽🔽
+
+		// 	for (DBtn of dltBtn) {
+		// 	   DBtn.addEventListener('click', function() {
+		// 	   this.parentElement.remove()
+		// 	})}
+			
+		// })
+
+
+		// btn2.addEventListener('click', function () {
+		// 		location.reload()
+		// 	   // ul.remove();
+		// })
+
+
+
+		// let litzz = document.querySelectorAll ('li')
+
+		// for (li of listzz) {
+
+		// 	li.addEventListener('click', function () {
+		// 	   this.parentElement.remove()
+		// 	})
+		// }
+
+
+						// 🔽🔽🔽🔽 (much EFFECTIVE way)
+				
+						
+		// 🍁🍁✅🍁🍁  TO-DO  APP 👇👇 (💎by using EVENt-DELEGATION💎)
+
+		btn1.addEventListener('click', function () {
+
+			let list = document.createElement('li')
+			list.innerHTML = `${input.value}    <button id='dlt_Btn'>❌</button>`
+			ul.append(list)
+			list.style.margin = '6px  -18px';
+			input.value = ``
+
+		})
+ 
+
+		ul.addEventListener('click', function (evt) {
+			// console.dir(evt.target);
+			// console.dir(evt.target.nodeName);
+			console.dir(evt.target.tagName);
+			if(evt.target.tagName == `BUTTON`){
+				let lt = evt.target.parentElement;
+				lt.remove();
+			}
+
+		})
+
+
+		btn2.addEventListener('click', function () {
+				location.reload()
+			   // ul.remove();
+		})
+
+
+		
+				
+	
+
+		
+	</script>
+
+
+
+</html>

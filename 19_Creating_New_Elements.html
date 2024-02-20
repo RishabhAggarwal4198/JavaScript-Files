@@ -1,0 +1,53 @@
+<!DOCTYPE html>
+
+<html>
+<head>
+    <title> DOM </title>
+
+</head>
+
+<body style="background-color: #212121; color: #fff;" >
+    <div class="parent">
+        <!-- this is comment -->
+      <div class="day">Monday</div>
+      <div class="day">Tuesday </div>
+      <div class="day">Wednesday </div>
+      <div class="day">Thursday</div>
+
+    </div>
+
+</body>
+
+    <script>
+
+        const parent = document.querySelector('.parent')
+        // console.log(parent);
+        // console.log(parent.children);
+        // console.log(parent.children[1]);
+        // console.log(parent.children[1].innerHTML);       // 📍console.log prints "Tuesday"
+
+
+        // for(let i = 0; i < parent.children.length; i++){
+        //     console.log(parent.children[i].innerHTML);
+        // }
+
+        // parent.children[1].style.color = "red"            // 📍"Tuesday" will become red in color
+
+        // console.log(parent.firstElementChild);              // 💎📍 printed :- "<div class="day">Monday</div>" 
+        // console.log(parent.lastElementChild);              // 💎📍 printed :- "<div class="day">Thursday</div>" 
+
+        
+
+        const dayOne = document.querySelector('.day')
+        // console.log(dayOne);
+        // console.log(dayOne.parentElement);                  // 📍 printed whole of the "parent" element 
+        // console.log(dayOne.nextElementSibling);             // 📍 printed :- "<div class="day">Tuesday </div>"
+
+
+        console.log("NODES: ", parent.childNodes);             //💎📍💎  We will get a tree structure of a complete Node List
+         
+
+
+    </script>
+
+</html>

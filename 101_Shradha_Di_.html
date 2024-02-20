@@ -1,0 +1,351 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+	<title>Spider-Man</title>
+
+	<link rel="preconnect" href="https://fonts.googleapis.com">
+	<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+	<link href="https://fonts.googleapis.com/css2?family=Bebas+Neue&family=Teko&display=swap" rel="stylesheet">
+
+	<style>
+		body{
+			/* background-color: #212121; */
+			/* color: #ffff; */
+			font-family:Teko ;
+		}
+
+		
+		body {
+			font-family: Arial;
+		}
+
+		#mainImg {
+			width: 35%;
+		}
+
+		.box {
+			border: 0.25px solid black;
+			background-color: lightgray;
+			width: 200px;
+			padding: 1rem;
+		}
+
+    .yellowBG {
+      background-color: rgb(188, 188, 40);
+    }
+
+		.boxLink {
+			text-decoration: none;
+		}
+
+		.oldImg {
+			height: 200px;
+			width: 200px;
+			margin-right: 1rem;
+		}
+
+		#description {
+			background-color: antiquewhite;
+		}
+
+
+	</style>
+
+</head>
+
+<body>
+
+	<h1>Spider Man</h1>
+    <img src="/Starter Code (Part-9)/Images/spiderman_img.png" id="mainImg" class="abc  xyz" />
+    <h2>About</h2> 
+    <p>
+      <b>Spider-Man</b> is a superhero appearing in American comic books
+      published by
+      <a href="https://www.google.com/search?q=Marvel+Comics"   >Marvel Comics</a>.
+      Created by writer-editor <b>Stan Lee</b> and artist <b>Steve Ditko</b>, he
+      first appeared in the anthology comic book
+      <a href="https://www.google.com/search?q=Amazing+Fantasy"
+        >Amazing Fantasy</a>
+      #15 (August 1962) in the <a href="#">Silver Age of Comic Books</a>. He has
+      been featured in comic books, television shows, films, video games,
+      novels, and plays
+    </p>
+
+    <div class="box">
+      <h4>Publication Info</h4>
+      <ul>
+        <li id="li_A"><a href="#" class="boxLink">Publisher</a></li>
+        <li id="li_B"><a href="#" class="boxLink">First Appearance</a></li>
+        <li id="li_C">
+          Created by
+          <ul>
+            <li><a href="#" class="boxLink">Stan Lee</a></li>
+            <li><a href="#" class="boxLink">Steve Ditko</a></li>
+          </ul>
+        </li>
+      </ul>
+    </div>
+
+    <h2>Creation & Development</h2>
+    <p id="description">
+      In 1962, with the success of the Fantastic Four, Marvel Comics editor and
+      head writer Stan Lee was casting for a new superhero idea. He said the
+      idea for Spider-Man arose from a surge in teenage demand for comic books
+      and the desire to create a character with whom teens could identify. As
+      with Fantastic Four, Lee saw Spider-Man as an opportunity to "get out of
+      his system" what he felt was missing in comic books. In his autobiography,
+      Lee cites the non-superhuman pulp magazine crime fighter the Spider as a
+      great influence, and in a multitude of print and video interviews, Lee
+      stated he was further inspired by seeing a spider climb up a wall—adding
+      in his autobiography that he has told that story so often he has become
+      unsure of whether or not this is true.
+    </p>
+    <div class="images">
+      <img src="/Starter Code (Part-9)/Images/creation_1.png" class="oldImg" />
+      <img src="/Starter Code (Part-9)/Images/creation_2.jpeg" class="oldImg" />
+      <img src="/Starter Code (Part-9)/Images/creation_3.jpeg" class="oldImg" />
+    </div>
+
+
+
+
+
+	
+</body>
+
+
+
+<script>
+
+	
+let smallImages = document.getElementsByClassName("oldImg");
+
+for(let i = 0; i< smallImages.length; i++){
+	// console.dir(smallImages[i]);       //✅ Will get Each image Element in the console
+	// console.dir(smallImages[i].src)    //✅ Will get the source Url of Each image
+	// console.dir(smallImages[i].src = `/Starter Code (Part-9)/Images/spiderman_img.png`)    //✅ Will replace the "src" of all the images with the src of spiderman Image 
+
+}
+
+
+let heading = document.querySelector('h1')
+
+heading.innerHTML=`<u>${heading.innerText}</u>`
+
+
+
+
+
+// let imgg = document.querySelector('img');
+
+// CHANGING 'Ids' 👇👇 
+// imgg.getAttribute('id'); 
+// imgg.setAttribute('id', 'SpiderMan')
+
+
+// CHANGING 'src' 👇👇 
+// imgg.setAttribute('src', '/Starter Code (Part-9)/Images/creation_3.jpeg' )
+
+
+// ADDING Attribute of 'class' 👇👇
+// imgg.setAttribute('class', 'imagezz')
+// img.getAttribute('class')                //📍📍 Answer is :- imagezz
+
+
+
+
+
+
+
+
+// 💎✅💎 MANIPULATING - STYLEs👇👇
+
+
+let heading0 = document.querySelector('h1')
+
+heading0.style.color='Red'
+heading0.style.backgroundColor = "#D0D6B5"
+
+
+
+
+//changing the COLORS od anchor tags👇
+
+let links = document.querySelectorAll('.box  a')    //✅ Will select all the '<a> </a>' tags present inside DIV with  class = "box"
+
+for(let i=0; i < links.length; i++){
+  links[i].style.color = "green"
+  links[i].innerHTML= `<b> ${links[i].innerText}<b>`
+}
+                // 🔽🔽OR (by using FOR-OF Loop)
+
+for(zz of links){
+  zz.style.color = "purple"
+  zz.innerHTML = `<i> ${zz.innerText}</i>`
+}
+
+
+/* 
+✅✅NOTE✅✅
+CSS-STYLING through DOM changes only the INLINE-CSS not the CSS which we have written in the separate CSS file
+& as in most cases we link & use another CSS file to style our webpage... so we prefer not to Manipulate or change CSS by using DOM more frequently
+*/
+
+
+
+let imeg = document.querySelector('img')
+
+imeg.classList;                        // ✅✅ Will give the names of all the classes of the 'img'
+
+imeg.classList.add('newClass')         // ✅✅ Will ADD new class to the list of name 'newClass'
+                                       // ✅✅ Now we could ADD this class to your separate CSS file & add all the styling (whichever we want)
+
+imeg.classList.remove('newClass')      // ✅✅ Will remove the class = 'newClass' (from the classList)
+
+imeg.classList.contains('newClass');   // ✅✅ To check whether in 'classList' there exists any class with name 'newClass'
+                                       // 📍📍Will display 'false' in console [bcoz it got removed]
+
+imeg.classList.toggle('newClass')      // ✅✅ Will ADD the class if was not present previusly or will REMOVE the class is the class was present                      
+                                       // ✅ [Watch @Part-9 , class-List Property ]
+                                       // 📍📍Will display 'true' in console [as it got ADDED now]
+
+imeg.classList.toggle('newClass')       // 📍📍Will display 'false' in console [as it got REMOVED now]
+
+
+
+
+//changing the COLORS of DIV with class="box" 👇
+
+let box = document.querySelector('.box')
+box.classList.add('yellowBG')         // ✅ [As we have already added class with name 'yellowBG' in CSS  <style> tag ]
+
+
+
+
+
+
+
+
+
+// 💎✅💎 NAVIGATION on page 👇👇 [accssing an elemnt with the help of the names of other ELements]
+
+let h4 = document.querySelector('h4');
+h4.parentElement          //📍📍 Answer will be :- <div class ='box'>  </div> 
+
+
+let boxx = document.querySelector('.box')
+box.children                 //📍📍 Answer will be :- HTMLCollection(2) [h4, ul]
+box.childElementCount         //📍📍 Answer will be :-  2
+
+
+
+let ul = document.querySelector('ul');
+ul.parentElement        //📍📍 Answer will be :- <div  class="box  yellowBG">  <div>
+ul.childElementCount    //📍📍 Answer will be :-  3
+ul.children            //📍📍 Answer will be :-  HTMLCollection(3) [li, li, li]
+
+ul.children[0]      //📍📍 Answer will be :- <li id="li_A"> </li>
+ul.children[2]       //📍📍 Answer will be :- <li id="li_C"> </li>
+
+ul.children[2].previousElementSibling   //📍📍 Answer will be :- <li id="li_B"> </li>
+ul.children[0].previousElementSibling   //📍📍 Answer will be :- null
+ul.children[1].nextElementSibling      //📍📍 Answer will be :- <li id="li_C"> </li>
+
+
+
+//MANIPULATING an ELEMENT using its above properties 👇
+
+let para = document.querySelector('p')
+
+para.previousElementSibling.style.color = "Green"               //📍📍 Will change to color of "About" to green
+para.previousElementSibling.style.backgroundColor = "skyblue"  //📍📍 Will change to BackgroundColor of "About" to skyblue
+para.children[0].style.backgroundColor="pink"                  //📍📍 Will change to color of "Spider-Man" to pink
+
+
+
+
+
+
+
+
+ 
+// 💎✅💎 CREATING or ADDING new Elements 👇👇 [CREATEELEMENT & APPEND-CHILD ]
+
+let newP = document.createElement('p')       //🍁✅🍁 Created a New Element
+
+newP.innerHTML = "Hi, I am a new p"         //✅ new TEXT value got inserted into it
+// console.dir(newP)
+
+let body = document.querySelector('body')
+
+body.appendChild(newP)                    //🍁✅🍁 "APPEND" means to insert something at the last
+                                          //📍📍  "newP" element just got added at the end of the body
+
+                 // 🔽🔽
+
+
+let newT = document.createElement('div')
+newT.innerHTML= `<b> Everyone </b>`  //---------------
+
+let container = document.querySelector('.box')
+container.appendChild(newT)                    //📍📍  "newT" element just got added at the end of the 'container'  
+
+               // 🔽🔽
+
+let btn = document.createElement('button')
+btn.innerHTML = `Exit`
+// console.dir(btn)          //📍📍 to check the properties of the 'btn'
+
+let patra = document.querySelector('.box')
+patra.appendChild(btn)                        //📍📍  "btn" element just got added at the end of the 'patra' (after 'newT'  element)  
+
+btn.append(' - From Here')         //✅ Will insert the given text in the Button
+
+             // 🔽🔽
+
+let btn1 = document.createElement('button');
+btn1.innerHTML = `Hello`
+
+newT.append(btn1)                 //🍁✅🍁 will inert button 'btn1' after text 'Everyone' 
+newT.append(`You`)                //🍁✅🍁 will inert text 'You' at the end of 'newT' HTMLtext
+                                  // Watch Part-9 @ Adding Elements on Page
+newT.prepend('Hello')             //🍁✅🍁 will inert text 'Hello' at the starting 'newT' HTMLtext    
+
+              // 🔽🔽
+
+let newBtn = document.createElement('button')
+
+newBtn.innerHTML= `NEWW BUTTON`
+
+let prgph = document.querySelector('p')
+
+
+//🍁👇🍁Different conditions that where we want to add the "newBtn" in the "prgph" 👇
+
+// prgph.insertAdjacentElement('beforebegin', newBtn)     //🍁✅🍁 will inert  'newBtn' before the beginning of 'prgrph'
+// prgph.insertAdjacentElement('afterbegin', newBtn)      //🍁✅🍁 will inert  'newBtn' after the beginning of 'prgrph'
+// prgph.insertAdjacentElement('beforeend', newBtn)       //🍁✅🍁 will inert  'newBtn' before the end  of 'prgrph' 
+// prgph.insertAdjacentElement('afterend', newBtn)        //🍁✅🍁 will inert  'newBtn' after the beginning of 'prgrph'  
+
+             // 🔽🔽
+
+let paraa = document.createElement('p')
+
+paraa.innerHTML = `<b>This is information abou it</b>`
+
+let info = document.querySelector('#description')
+
+info.appendChild(paraa)
+
+info.removeChild(paraa)                                  //🍁✅🍁 will remove the appended child 'paraa' from 'info'
+// info.remove()                                         //🍁✅🍁 will remove the whole 'paraa' from the Web-Page
+                                                         // ❌ ❌Use it Carefully❌❌    
+// document.querySelector('.box').remove()               //🍁✅🍁 will remove the whole 'box' from the Web-Page
+
+
+
+</script>
+
+
+</html>

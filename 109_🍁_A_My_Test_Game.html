@@ -1,0 +1,183 @@
+<!DOCTYPE html>
+<html lang="en">
+
+	<head>
+
+		<title>Document</title>
+
+		<style>
+
+			body{
+				background-color: #7b7979;
+				display: flex;
+				justify-content: center;
+				align-items: center;
+				flex-direction: column;
+				height: 100vh;
+				row-gap: 10px;
+			}
+
+			.para {
+				background-color: rgb(126, 129, 232);
+				border: 10px solid rgb(81, 79, 79);
+				border-radius: 40px;
+				padding: 8px;
+			}
+			
+			#div_1{
+				height: 400px;
+				width: 400px;
+				background-color: rgb(97, 101, 233);
+				border: 10px solid rgb(81, 79, 79);
+				border-radius: 40px;
+				padding: 8px;
+				display: flex;
+				column-gap: 8px;
+			}
+
+
+			.div_2{
+				height: 50px;
+				width: 50px;
+				background-color: rgb(169, 171, 242);
+				border: 4px solid rgb(81, 79, 79);
+				border-radius: 18px;
+				display: flex;
+				justify-content: center;
+				align-items: center;
+
+			}
+
+			#resetBtn{
+				background-color: rgb(97, 101, 233);
+				border: 10px solid rgb(81, 79, 79);
+				border-radius: 40px;
+				padding: 8px 38px;
+				color: rgb(198, 199, 242);
+				font-size: 20px;
+				font-weight: 800;
+			}
+
+
+
+		</style>
+
+	</head>
+
+
+
+
+	<body>
+
+		<p></p>
+
+		<div id="div_1">
+
+			<div class="div_2"> </div>
+			<div class="div_2"> </div>
+			<div class="div_2"> </div>
+			<div class="div_2"> </div>
+
+		</div>
+
+		<!-- <div>
+			<button>Play</button>
+			<button></button>
+		</div> -->
+
+		<button id="resetBtn">Reset</button>
+
+
+
+
+	
+
+	</body>
+
+
+
+
+	<script>
+
+		let div_1 = document.querySelector('#div_1')
+
+		let postnHrzntl = [ `center`, `flex-start`, `flex-end`, `space-between` , `space-around`, `space-evenly` ]
+		
+		let postnVerti = [ `center`, `flex-start`, `flex-end`, `baseline` , `stretch` ]
+
+		let resetBtn = document.querySelector('#resetBtn')
+		
+		// let flower = [`💐`, `🌻`, `🌷`, `🌹`, `🪻`]
+		let items = ['🍔' , '🍟' , '🥗' , '🍙', '🌯', '🥪']
+		// let items = ['🔴' , '🔵' , '🟢' , '🟡' , '🟤', '🟣']
+
+		let div_2 = document.querySelectorAll('.div_2')
+
+		console.log(div_2.length);
+
+
+		for(divTwo of div_2) {
+			divTwo.addEventListener('click', function () {
+
+			let hori = postnHrzntl[Math.floor(Math.random()*6)]
+			let verti = postnVerti[Math.floor(Math.random()*5)]
+			// let flow = items[Math.floor(Math.random()*5)]
+			// console.log(flow);
+			div_1.style.justifyContent = hori 
+			div_1.style.alignItems = verti
+			// divTwo.innerHTML= `${flow}`
+			})
+		} 
+		
+						// ✅✅ (also using KEYs 👇)
+
+			document.addEventListener('keypress', function () {
+
+			let hori = postnHrzntl[Math.floor(Math.random()*6)]
+			let verti = postnVerti[Math.floor(Math.random()*5)]
+			let flow0 = items[Math.floor(Math.random()*5)]
+			let flow1 = items[Math.floor(Math.random()*5)]
+			let flow2 = items[Math.floor(Math.random()*5)]
+			let flow3 = items[Math.floor(Math.random()*5)]
+		
+			div_1.style.justifyContent = hori 
+			div_1.style.alignItems = verti
+			
+			// for(ele of div_2 ){
+			// 	ele.innerHTML = `${flow}`
+			// 	ele.style.fontSize = '40px'
+			// }
+
+			for(ele of div_2 ){
+				ele.style.fontSize = '40px'
+			}
+
+			div_2[0].innerHTML = `${flow0}`
+		   
+			div_2[1].innerHTML = `${flow1}`
+
+			div_2[2].innerHTML = `${flow2}`
+
+			div_2[3].innerHTML = `${flow3}`
+			
+			})
+
+			resetBtn.addEventListener('click', function() {
+				for(ele of div_2 ){
+				ele.innerHTML = null
+				div_1.style.justifyContent = 'center'
+				div_1.style.alignItems = 'center'
+			}
+
+			})
+
+			
+		
+
+		
+
+	</script>
+
+
+
+</html>

@@ -1,0 +1,153 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Closures </title>
+</head>
+
+
+<body style="background-color: #212121; ">
+    <button id="orange"> Orange </button>
+    <button id="green"> Green </button>
+</body>
+
+
+
+
+<script>
+
+
+        // 💎✅💎LEXICAL - SCOPING 👇👇
+
+
+        // function init() {
+        //     let name = "Mozilla";
+        //     function displayName() {
+        //             console.log(name); 
+        //         }
+        //         displayName();
+        // }
+        // init();                      //[📍📍 Answer is :-  "Mozilla"  ] 
+
+
+                    // 🔽🔽
+
+        // let georgie = "Sheldon's brother"
+        // function bead () {
+        //     let meeMaw = "Sheldon's Grandmother";
+        //     function bead2 () {
+        //         console.log(`Hello MewMaaw (${meeMaw}) & Georgie  (${georgie})`);
+        //     }
+        //     bead2();
+        // }
+
+        // bead();
+
+
+                // 🔽🔽
+
+
+        // function outer () {
+        //     let username = "Rishabh"
+        //     function inner () {
+        //         let secret = "my123";
+        //         console.log("inner", username);
+        //     }
+        //     function innerTwo () {
+                
+        //         console.log("innerTwo", username);
+        //     }
+        //     inner()
+        //     innerTwo()
+            
+        // }
+        // outer ()
+        // console.log("TOO OUTER", username); 
+
+
+
+
+
+
+
+
+
+        
+        
+        // 💎✅💎 CLOSURES  👇👇 [@10:00:07] (basically it means that when we return a complete function, then in that case only that function don't get returned ifact it's complete scope gets returned or it's LEXICAL scope gets returned)
+
+
+        function makeFunc() {
+            const name = "Mozarelllla";
+            function displayName() {
+                console.log(name);  
+            }
+            return displayName;    // ✅✅ here we just passed the REFRENCE of the "displayName" function, so it won'tget executed   👇👇
+        }                          //💎💎IMPORTANT [@9:57:43 - 9:59:40]
+
+        // const myFunc = makeFunc();  
+        // myFunc();                   //[📍📍 Answer is :-  "Mozarelllla"  ] 
+
+</script>  
+
+
+
+<script>
+
+    
+
+    // document.querySelector('#orange').addEventListener('click', () =>{
+    //     document.body.style.backgroundColor = 'orange';
+        
+    // } )
+
+    // document.querySelector('#green').addEventListener('click', () => {
+    //     document.body.style.backgroundColor = 'green';
+    // })
+
+                        // 🔽🔽 ( OR )
+
+    // document.getElementById("orange").onclick = function () {
+    //     document.body.style.backgroundColor = 'orange'
+    // }
+
+    // document.getElementById("green").onclick = function () {
+    //     document.body.style.backgroundColor = 'lightgreen'
+    // }
+
+
+                        // 🔽🔽 ( What if there comes 500 buttons like the baove ?)
+
+
+    // ✅🍁💎🍁✅👇👇 Perfect Use case Scenario of CLOSURES & LEXICAL-SCOPING 👇
+                            // [@10:06:07, @10:06:48, @10:07:14, 🍁@10:07:42🍁]
+
+    function clickHandler (color) {
+        //  document.body.style.background-color = `${color}`
+         return function () {
+            document.body.style.backgroundColor = `${color}`
+         }
+    }
+
+    // document.getElementById('orange').onclick = clickHandler    // ✅✅  It's not working  bcoz here we just gave it refrence of the FUNCTION "clickHandler" [i.e. only the definition of the FUNCTION, but we have not commanded it to get EXECUTED ]
+    // document.getElementById('green').onclick = clickHandler     // ✅✅  It's not working  bcoz here we just gave it refrence of the FUNCTION "clickHandler" [i.e. only the definition of the FUNCTION, but we have not commanded it to get EXECUTED ]
+
+                             // 🔽🔽 
+
+    document.getElementById('orange').onclick = clickHandler (`orange`)
+    document.getElementById('green').onclick = clickHandler (`lightgreen`)
+   
+
+
+
+
+
+    
+
+
+
+</script>
+
+
+</html>

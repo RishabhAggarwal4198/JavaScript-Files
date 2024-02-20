@@ -1,0 +1,77 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+
+
+<body style="background-color: #212121;">
+    
+</body>
+
+
+
+
+<script>
+
+
+ // 💎✅💎 JAVASCRIPT is basically "prototypal" in behaviour (i.e. JS don't give up that easily , if it's not able to find something then it goes further up... further deep to find it out )
+ // 💎✅💎 in JAVASCRIPT  basically everything is "OBJECT" either it be an ARRAY, STRING, FUNCTION  etc. 
+
+
+ //💎💎 Creating an OBJECT 👇👇
+    let a = {
+        name: "Rishabh",
+        langunage: "Hindi"
+    }
+    console.log(a);   // [📍📍 We have its prototypes in "console.log" of browser ]
+
+
+
+ //💎💎  Accessing PROTOTYPE properties👇👇
+
+    console.log(a.toString().length);   //  [📍📍 ANswer is "15"]
+    console.log(a.hasOwnProperty());    //  [📍📍 ANswer is "false"]
+
+
+
+ //💎💎  Inserting new PROTOTYPE properties in an object 👇👇
+
+ let newProto = {
+    run: () => {
+        alert("run")
+        },
+
+    print : console.log("Hello Everyone")
+ }
+
+ a.__proto__ = newProto     // [📍📍 Inserting "newProto" property inside Object "a" ]
+ a.run()                    // [📍📍 Answer:- We got alert of "run" & "Hello Everyone"  Printed in console]
+
+
+
+
+ //💎💎  PROTOTYPE inside a PROTOTYPE 👇👇
+
+ newProto.__proto__ = {         // [📍📍 Inserting new ProtoType property inside previously declared object "newProto" ]
+    Naam: "Suresh",
+    Bhaasha: "Malyalam"
+ }
+
+ console.log(a.Bhaasha);      // [📍📍Will get "Malyalam" printed in the console]
+ 
+ /* ✅✅ in the above "console.log" statement first it will search for 
+ "Bhaasha" in object "a" when not found >>> it went to prototype properties 
+ of "a" (which inclues "newProto" property also) when not found >>> it went
+ to the prototype property of "newProto" to find that
+
+ watch @ :-  https://www.youtube.com/watch?v=eDxrLEQbLv0
+ */
+
+
+</script>
+
+</html>

@@ -1,0 +1,219 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+
+	<title>Document</title>
+
+	<style>
+
+		body{
+			height: 1000px;
+		}
+
+		#input2 {
+			height: 18vh;
+		}
+
+
+
+	</style>
+
+</head>
+
+
+
+
+<body>
+
+		<button>Button 1</button>
+		<button id="btn_2" >Button 2 </button>
+		<br>
+		<br>
+		<input id="input1"  placeholder="type here...">
+		<br>
+		<br>
+		<input id="input2"  placeholder="TYPE HERE">
+		<br>
+		<br>
+		<br>
+		<br>
+		<br>
+
+
+
+		<form action="https://www.google.com/">
+			<input id="user" placeholder="username" type="text">
+			<input id="pass" placeholder="password" type="password">
+			<button>Register</button> 
+		</form>
+		<br>
+		<br>
+		<br>
+		<br>
+		<h2>My text Editor</h2>
+		<p></p>
+		<input id="Text_Editor">
+
+
+
+	
+</body>
+
+
+
+
+<script>
+
+
+	// 💎✅💎 MOUSE-EVENTS 👇👇
+
+	let btn = document.querySelector('button')
+	let btn2 = document.querySelector('#btn_2')
+
+	btn.addEventListener('click', (evnt) => {
+		 console.log(event);
+		 console.log(`button clicked`);
+	})
+				//🔽🔽
+
+
+	btn2.addEventListener('dblclick', (evnt) => {
+		 console.log(event);
+		 console.log(`button 2 clicked`);
+	})
+
+
+
+
+
+
+	// 💎✅💎 KEYBOARD-EVENTS 👇👇
+
+	let input = document.querySelector('#input1')
+
+
+	input.addEventListener('keydown', (e) => {
+		// console.log(e);                   //📍📍Will see 'KeyboardEvent' printed in the console
+	    console.log(e.code);				 //✅ CODE property shows us the NAME of the key WHICH was pressed
+		console.log(e.key); 				  //✅ KEY  property shows us WHAT'S VISIBLE ON THE SCREEN after pressing of that key
+		
+		// console.log('Something Entered');
+		
+		let para = document.createElement('p')
+		para.innerHTML=`<b>'Hello Everyone'</b>`
+		document.querySelector('body').append(para)
+	})
+
+
+					// 🔽🔽
+
+
+	let input2 = document.querySelector('#input2')
+
+	input2.addEventListener('keydown', (evnt) => {
+		// console.log(`Code :- ${evnt.code} `);
+		// console.log(`Key  :- ${evnt.key} `);
+
+		/*
+		Now Suppose :-
+		ArrowUp      =  W
+		ArrowDown    =  S
+		ArrowLeft    =  A
+		ArrowRight   =  D
+		*/
+
+		// So,
+
+		if(evnt.code === `KeyW`) {
+			console.log(`'ArrowUp' key was pressed`);
+		} else if (evnt.code === `KeyS`) {
+			console.log(`'ArrowDown' key was pressed`);
+		} else if (evnt.code === `KeyA`) {
+			console.log(`'ArrowLeft' key was pressed`);
+		} else if (evnt.code === `KeyD`) {
+			console.log(`'ArrowRight' key was pressed`);
+		}
+
+	})
+
+
+
+
+
+	// 💎✅💎 Submitting FORMS & FORM-EVENTS 👇👇
+
+	let form = document.querySelector('form')
+
+	form.addEventListener('submit', (evnt) => {   // ✅ 'SUBMIT' event for submitting the form
+		evnt.preventDefault();           // ✅ Enabling it will prevent the DEFAULT redirecting of the page to the URL mentioned in the ACTION
+		// alert('Form Submitted')
+
+		// let inp = document.querySelector('#user');
+		// console.dir(inp)                  // ✅ Will give the PROPERTIES of "inp"
+		// console.log(inp.value)            // 🍁🍁Will give the TEXT we entered inside the 'inp'
+
+		let user = document.querySelector(`#user`)
+		let pass = document.querySelector(`#pass`)
+
+		console.log(user.value);            //📍📍 Will print the value which you entered
+		console.log(pass.value);            //📍📍 Will print the value which you entered
+	
+		alert(`Hii ! ${user.value}, passowrd entered by you is : ${pass.value}`)
+	});
+
+							
+							// 🔽🔽 OR (another shortcut way of doing above thing)
+
+
+		form.addEventListener('submit', (evnt) => {  
+		evnt.preventDefault(); 
+		console.log(form);      
+
+		let user = form.elements[0]  //  OR this.elemnts[0]  (✅when not using 'Arrow-function')
+		let pass = form.elements[1]  //  OR this.elemnts[1]  (✅when not using 'Arrow-function')
+
+		console.log(user.value);            //📍📍 Will print the value which you entered
+		console.log(pass.value);            //📍📍 Will print the value which you entered
+	
+		alert(`Hii ! ${user.value}, passowrd entered by you is : ${pass.value}`)
+			
+	});
+
+
+	
+
+
+
+
+
+
+	// 💎✅💎 INPUT & CHANGE Events 👇👇  (JavaScript-10 >> More Events >>  watch @ 3:02 )
+
+	let textEditor = document.querySelector('#Text_Editor')
+
+	let paraz = document.createElement('p')
+
+	textEditor.addEventListener('input', function () {
+		console.log(textEditor.value);          //📍📍 'console.log' to see the results
+		
+		paraz.innerHTML = `<b>${textEditor.value}</b>`
+		
+		let h2 = document.querySelector('h2')
+
+		h2.insertAdjacentElement("afterend", paraz)
+	})
+	
+
+	
+
+
+
+
+
+	
+
+</script>
+
+
+</html>

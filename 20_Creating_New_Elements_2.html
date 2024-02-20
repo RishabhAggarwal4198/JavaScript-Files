@@ -1,0 +1,49 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>DOM_Additional</title>
+</head>
+
+
+
+<body style="background-color: #212121; color: white;" >
+
+    
+
+    
+</body>
+
+
+
+<script>
+    
+    const div = document.createElement('div');      //[📍📍 a new element "div"  got created ] 
+    console.log(div);
+
+    div.className = "main"
+    div.id = Math.round((Math.random()* 10 + 1))
+
+    // Adding much more "Attributes" to the DIV (like "title", "style") 👇
+    div.setAttribute("title", "generated title")     //[📍📍 i.e   totle = "generated title" ] 
+    div.style.backgroundColor = "green"
+    div.style.padding = "20px"
+    // div.innerText = "This  DIV is created for learning DOM"
+                            //🔽🔽 OR (in place of using "innerText" )
+    const addText = document.createTextNode("Chai aur code")
+    div.appendChild(addText)                  // [💎📍💎  For attaching  the above "Chai aur code" to the HTML page]
+    document.body.appendChild(div)            // [💎📍💎  For displaying  the above "Chai aur code" to the HTML page ] 
+    
+
+      
+
+
+
+
+
+
+
+</script>
+
+</html>

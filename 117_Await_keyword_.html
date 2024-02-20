@@ -1,0 +1,134 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+	<title>AWAIT_KEYWORD</title>
+
+	<style>
+
+		body{
+			background-color: #212121;
+			color: #ffffff;
+
+		}
+
+	</style>
+	
+</head>
+
+
+<body>
+
+	<h1>Hello Everyone !! </h1>
+   
+</body>
+
+
+<script>
+
+
+
+function getNum () {
+	return new Promise((rezolv, rjct) => {
+		setTimeout ( () => {
+			let num = Math.floor((Math.random()*10)+1)
+			console.log(num);
+			rezolv();
+		}, 1000)
+	});
+}
+ 
+
+async function demo () {
+	await  getNum();                    //🍁🍁🍁🍁 'await' keyword before a function ensures that till the promise of that function don't get resolved, the next function will not get executed
+									    //🍁🍁🍁🍁'await' could only be used in an ASYNC function
+	await getNum(); 	
+	await getNum(); 	
+	await getNum(); 	
+	await getNum(); 	
+}															
+
+//✅✅ Just print 'demo()' in console & we will see that each 'getNum()' will get printed at a gap of 1 second from each other
+
+
+
+
+
+
+
+
+
+// 💎✅💎Now trying to SHORTEN & PRINT👇👇 
+// the most last part of the code of 
+// the file "115_Promises_.html" using ASYNC keyword
+
+
+let h1 = document.querySelector('h1')
+
+function changeColor(color, delay) {
+	return new Promise ((resolve, reject) => {
+			setTimeout(() => {
+				h1.style.color = color
+				resolve ('color changed')  
+				console.log(`'${color}' color Got Executed`);  
+			}, delay)
+		})
+}
+
+	// ❌❌❌❌❌❌❌❌❌❌❌❌❌❌❌❌❌❌
+
+	// changeColor('red', 2000) 
+	// 	.then(() => {
+	// 		console.log('red colour was completed');
+	// 		return changeColor('green', 5000) 
+	// 	})
+	// 	.then(() => {
+	// 		console.log('green colour was completed');
+	// 		return changeColor('blue', 4000)
+	// 	})
+	// 	.then(() => {
+	// 		console.log('blue colour was completed');
+	// 		return changeColor('yellow', 4000)
+	// 	})
+	// 	.then(() => {
+	// 		console.log('yellow colour was completed');
+	// 		return changeColor('skyblue', 4000)
+	// 	})
+	// 	.catch(() => {
+	// 		console.log(`All colours hasn't changed`);
+	// 	})
+
+	// ❌❌❌❌❌❌❌❌❌❌❌❌❌❌❌❌❌❌
+
+						// 🔽🔽
+
+	// async function colorDemo () {
+	// 	changeColor('red',     1000)
+	// 	changeColor('green',   1000)
+	// 	changeColor('blue',    1000)
+	// 	changeColor('pink',    1000)
+	// 	changeColor('yellow', 1000)
+	// }
+
+	//✅ So, by calling 'colorDemo()' in the above all of it will get executed at the same time
+ 
+						// 🔽🔽
+
+	async function colorDemo () {
+		await changeColor('red',     1000)
+		await changeColor('green',   1000)
+		await changeColor('blue',    1000)
+		await changeColor('pink',    1000)
+		 changeColor('yellow',  1000)
+	}
+
+	// colorDemo()
+
+
+
+
+</script>
+
+</html>
+
+

@@ -1,0 +1,122 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+	<title>Document</title>
+
+</head>
+
+
+<body>
+
+	<button>
+		Button 1
+	</button>
+
+
+	<button >
+		Button 2
+	</button>
+
+
+	<button id="btn_3">
+		Button 3
+	</button>
+
+
+	
+</body>
+
+<script>
+
+
+	// 🍁🍁🍁🍁🍁🍁🍁🍁🍁🍁🍁 IGNORE-IT 🍁🍁🍁🍁🍁🍁🍁🍁🍁🍁🍁🍁🍁
+	
+	// document.querySelector('button').addEventListener('click', () => {
+	// 	for(let i = 0; i <=10; i++){
+	// 		let para = document.createElement('p') 
+	// 	    document.querySelector('body').append(para)
+	// 		para.innerHTML=`<b>🍁WELCOME EVERYONE🍁</b>`
+	// 	}
+ 	// })
+
+	// 🍁🍁🍁🍁🍁🍁🍁🍁🍁🍁🍁 IGNORE-IT 🍁🍁🍁🍁🍁🍁🍁🍁🍁🍁🍁🍁🍁
+
+
+
+
+
+
+
+	// let btns = document.querySelectorAll('button')
+	// console.dir(btn)
+
+
+
+	// 💎✅💎 ON-CLICK event 👇👇
+	
+	// for(btn of btns){
+	// 	btn.onclick = sayHello;     //✅ REMEMBER:- Here we are just passing the definition of the function 'sayHello'
+	// }                               // , if we have passed  'sayHello()' then the function would have gotten 
+									// executed over there without even touching  the button
+	function sayHello() {
+		alert("Hello");
+	}
+
+
+
+
+
+
+	// 💎✅💎 ON-MOUSE event 👇👇
+
+	// for (btn of btns){
+	// 	btn.onmouseenter = function () {
+	// 		// console.log("You enetered a Button");
+	// 	}
+	// }
+
+
+
+
+
+
+
+	// 💎✅💎 EVENT-LISTNERS 👇👇 (✅NOTE:- by 'addEventListner'  we can perform multiple operations on single click, while with 'onclick' we acn perform only single event at a time )
+
+	let btn3 = document.querySelector('#btn_3')
+
+	// btn3.addEventListener('click', greet)
+	// btn3.addEventListener('click', wel)
+	btn3.addEventListener('keyup', wel)
+	btn3.addEventListener('keypress', displayMessage)
+	btn3.addEventListener('dblclick', displayLuck )
+
+	function greet (){
+		console.log(`Hello Everyone !!`);
+	}
+
+
+	function wel () {
+		console.log(`Welcome !!`);
+	}
+
+	function displayMessage () {
+		let para = document.createElement('p')
+		para.innerHTML = `WELCOME EVERYONE`
+
+		document.querySelector('body').append(para)
+	}
+	
+
+
+	function displayLuck (){
+		let par = document.createElement('p')
+		par.innerHTML=`Hello!! How are you ?`
+		document.querySelector('body').append(par)
+	}
+
+
+</script>
+
+
+</html>

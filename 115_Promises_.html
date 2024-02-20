@@ -1,0 +1,362 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+	<title> PROMISES </title>
+
+	<style>
+
+		body{
+			background-color: #212121;
+			color: #e9e5e5;
+		}
+
+	</style>
+
+
+</head>
+
+<body>
+
+	<h1>Hello Everyone !! </h1>
+
+</body>
+
+
+<script>
+
+	// function savetoDb(data, success, failure) {
+	// 	let internetSpeed = Math.floor((Math.random()*10)+1);
+
+	// 	if(internetSpeed > 4) {
+	// 		console.log('Your data was saved: ', data);
+	// 	}else {
+	// 		console.log('Weak connection, data nt saved');
+	// 	}
+	// }
+
+				       // 🔽🔽
+
+
+	// function savetoDb(data, success, failure) {
+	// 	let internetSpeed = Math.floor((Math.random()*10)+1);
+
+	// 	if(internetSpeed > 4) {
+	// 		success();	
+	// 	}else {
+	// 		failure();
+	// 	}
+	// }
+
+
+
+
+	// ❌❌❌❌ CALL-BACK HELL ❌❌❌❌ 👇👇
+
+	// savetoDb('apna college',
+	// () => {
+	// 	console.log(`your data was saved `);
+	// 	savetoDb(
+	// 		'hello world',
+	// 		() => {
+	// 			console.log(`success2: data2 saved`);
+	// 			savetoDb('Rishabh', () => {
+	// 				console.log('success3: data 3 saved');
+	// 			})
+	// 		}, 
+	// 		() => {
+	// 			console.log(`failure2: weak connection`);
+	// 		}
+	// 	)
+	// }, 
+	// () => {
+	// 	console.log(`Weak connection. Data not saved`);
+	// } )
+
+
+
+
+
+
+
+
+
+
+
+// 💎✅💎 PROMISE 👇👇
+
+function savetoDb(data) {
+	return new Promise ((success, failure) => {      //🍁✅🍁 In general (success, faiure) are represented by (resolve, reject)
+
+	let internetSpeed = Math.floor((Math.random()*10)+1);
+	if(internetSpeed > 4){
+		success('success : data was saved');
+	} else {
+		failure ('failure: weak connection')
+	}
+
+	});
+} 
+
+
+//✅ Write this :- "savetoDb("Hello Everyone")" thing in the console od the browser to see the result
+ 
+//✅ Three states of PROMISES :-
+// + Pending
+// + Rejected
+// + Fullfilled
+
+
+
+
+
+
+
+
+
+// 💎✅💎Then & Catch in PROMISES 👇👇
+
+// let request = savetoDb('apna college');     // ✅Where 'request' is a promise object
+
+// request.then(() => {
+// 	console.log('promise was resolved');
+// 	console.log(request);
+// })
+// .catch(() => {
+// 	console.log('promise was rejected');
+// 	console.log(request);
+// })
+
+
+			   // 🔽🔽 (OR) [much more efficeint way of doing this]
+
+
+// savetoDb('apna college')
+// .then(() => {
+// 	console.log('promise was resolved');
+// })
+// .catch(() => {
+// 	console.log('promise was rejected');
+// })
+
+
+
+
+
+
+
+
+// 💎✅💎 Chaining in PROMISES 👇👇
+
+	// savetoDb('apna college')
+	// .then(() => {
+	// 	console.log('data1 saved');
+	// 	savetoDb(`Hello World !`)
+	// 		.then(() =>{
+	// 			console.log('data2 saved');
+	// 		});
+	// })
+	// .catch(() => {
+	// 	console.log('promise was rejected');
+	// })
+
+	//✅✅ If even a single of the PROMISE in the aboe not got 'resolved', so it will show  'promise was rejected'
+
+
+			  // 🔽🔽Much more effective way of writing the above CODE
+
+			  
+	savetoDb('apna college')
+	.then(() => {
+		// console.log('data1 saved');
+		return savetoDb('Hello World')   //✅ 'return' a function -----➀
+	})
+	.then(()  => {
+		// console.log('data2 saved');     //✅If ➀ got resolved it will be printed & if not it will show 'promise was rejected'
+		return savetoDb('Rishabh')
+	})
+	.then(() => {
+		// console.log(`data3 saved`);      //✅ 'return' a function -------➁
+	})									 //✅If ➁ got resolved it will be printed & if not it will show 'promise was rejected'	
+	.catch(() => {
+		// console.log('promise was rejected');
+	})
+
+	//📍📍 Run the above code to see how it works
+
+	
+
+
+
+
+	// 💎✅💎 parameters 'then' & 'catch' in PROMISES 👇👇
+
+	savetoDb('apna college')
+	.then((rzlt) => {
+		// console.log('data1 saved');
+		// console.log('result of promise: ', rzlt);
+		// return savetoDb('Hello World')   //✅ 'return' a function -----➀
+	})
+	.then((rzlt)  => {
+		// console.log('data2 saved');     //✅If ➀ got resolved it will be printed & if not it will show 'promise was rejected'
+		// console.log('result of promise: ', rzlt);
+		// return savetoDb('Rishabh')
+	})
+	.then((rzlt) => {
+		// console.log(`data3 saved`);      //✅ 'return' a function -------➁
+		                                 //✅If ➁ got resolved it will be printed & if not it will show 'promise was rejected'	
+		// console.log('result of promise: ', rzlt);
+	})									 
+	.catch((err) => {
+		// console.log('promise was rejected');
+		// console.log('result of promise: ', err);
+	})
+
+
+
+
+
+
+
+
+
+
+
+	// 💎✅💎 REFACTORING OLD CODE 👇👇 (File:- 114_Call_Back_Hell)
+
+
+	// let h1 = document.querySelector('h1')
+
+	// function changeColor(color, delay, nextColorFXN) {
+
+	// setTimeout(() => {
+	// 	h1.style.color = color
+	// 	if(nextColorFXN) nextColorFXN();     // ✅ if(nextColorFXN) denotes IF value of 'nextColorFXN' is true
+
+	// }, delay)
+	// }
+
+	// //✅ CALL-BACK nesting like this is called 'CALLBACK HELL'👇
+	// //❌❌❌❌Not a good way of writing 'NESTED-CALLBACK' ❌❌❌❌
+
+	// changeColor('red', 1000, () => {
+	// 	changeColor('green', 1000, () => {
+	// 		changeColor('blue', 1000, () => {
+	// 			changeColor('yellow', 1000, () => {
+	// 				changeColor('skyblue', 1000);
+	// 			})
+	// 		})
+	// 	})
+	// })
+
+
+						// 🔽🔽(in a much more effiecint way)
+
+
+
+	let h1 = document.querySelector('h1')
+
+	function changeColor(color, delay) {
+		return new Promise ((resolve, reject) => {
+				setTimeout(() => {
+					h1.style.color = color
+					resolve ('color changed')    
+				}, delay)
+			})
+	}
+
+	
+	// let rqstPromise = changeColor('red', 1000)     //📍📍 RUN this to see the results
+
+	//  rqstPromise      //📍 Run this in 'console' & ANSWER will be :-
+						 // Promise {<fulfilled>: 'color changed'}
+					     // [[Prototype]]: Promise
+						 // [[PromiseState]]: "fulfilled"
+						 // [[PromiseResult]]: "color changed"
+
+
+
+	//🍁💎🍁If we add 'DELAY' of little bit more time 👇 !! then ?							
+
+	// let rqstPromise1 = changeColor('green', 4000)   
+
+	//✅ Before 4 seconds 👇
+	
+	//  rqstPromise1      //📍 Run this in 'console' & ANSWER will be :-
+						 // Promise {<pending>}
+					     // [[Prototype]]: Promise
+						 // [[PromiseState]]: "pending"
+						 // [[PromiseResult]]: "undefined"
+
+
+	//✅ After 4 seconds 👇						
+	
+	//  rqstPromise1      //📍 Run this in 'console' & ANSWER will be :-
+						 // Promise {<fulfilled>: 'color changed'}
+					     // [[Prototype]]: Promise
+						 // [[PromiseState]]: "fulfilled"
+						 // [[PromiseResult]]: "color changed"
+
+
+						 // 🔽🔽
+
+
+	//💎💎✅✅Writing above in terms of 'then' & 'catch'
+
+	// changeColor('red', 2000) 
+	// .then(() => {
+	// 	console.log('red colour was completed');
+	// 	return changeColor('green', 5000) 
+	// })
+	// .then(() => {
+	// 	console.log('green colour was completed');
+	// 	return changeColor('blue', 4000)
+	// })
+	// .then(() => {
+	// 	console.log('blue colour was completed');
+	// 	return changeColor('yellow', 4000)
+	// })
+	// .then(() => {
+	// 	console.log('yellow colour was completed');
+	// 	return changeColor('skyblue', 4000)
+	// })
+	// .catch(() => {
+	// 	console.log(`All colours hasn't changed`);
+	// })
+	
+	//📍📍 RUN the above code to see the result
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+	// changeColor('red', 1000, () => {
+	// 	changeColor('green', 1000, () => {
+	// 		changeColor('blue', 1000, () => {
+	// 			changeColor('yellow', 1000, () => {
+	// 				changeColor('skyblue', 1000);
+	// 			})
+	// 		})
+	// 	})
+	// })					
+
+
+
+
+</script>
+
+
+
+
+
+
+</html>

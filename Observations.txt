@@ -1,0 +1,306 @@
+
+
+Commit message :- docs: Changes in the documentation
+
+for JAVASCRIPT :-
+
+1) Ist CLI APP video by TANAY PRATAP Sir
+
+2) JavaScript Tutorial for Beginners: Learn JavaScript in 1 Hour (By MOSH HAMEDANI)
+
+3) JavaScript Full Course (2023) - Beginner to Pro - Part 1
+(by SUPER SIMPLE DEV )
+
+
+
+
+
++ read SELF EL books (books which talks about productivity etc.)
+
+
++ use CODE-FORCES for DSA rather than LEETCODE (bcoz on LeetCode basically u cram the DSA )
+
+
+
+
+
+
+
+
+
+
+
+
+>>>> Javascript in 1 shot in Hindi | part 1 (By Hitesh Sir)
+♦️♦️start watching from  { @8:34:08  }♦️♦️
+
++ [ watch @50:47 ] CODE readibility is the priority
+
+
++ [ watch @52:05, @53:07 ] Original documentation of JAVASCRIPT is at :-   	   
+ ➤   "https://tc39.es/ecma262/#sec-intro"
+	             & 
+ ➤   "https://developer.mozilla.org/en- 
+       US/docs/Learn/JavaScript"
+
++ [watch @1:43:44]  📍 📍 📍 📍 📍 📍 📍If u want to master JavaScript just 
+master "JavaScript Objects" &   "Browser Web events/ Browser Events/ DOM Events"  📍 📍 📍 📍 📍 📍
+
++ [watch @1:53:50] Very importanr for  
+  interviews
+
++ [ watch @01:56:40 ] Stack and heap 
+   memory
+
++ [watch @2:04:11] Very importanr for interviews about STORAGE in STACK & HEAP 
+
++ [watch @2:09:57]  String Interpolation
+
++ [ watch @2:12:59, @2:19:53] Strings k bare mein Padhayi  
+
++ [ watch @2:28:12 ] Split Strings 🍁🍁🍁🍁
+
++[ watch @2:37:26 ] Precision Strings 🍁🍁🍁🍁
+
++ [ watch @2:51:40 ]Math.floor use in MINIMUM & MAXIMUM value 🍁🍁🍁🍁
+
++ [watch @3:54:43, @3:57:50] SYMBOL data type
+
++ [watch @4:02:54 ] (Important) When we access values we mainly do it with......
+
++ [watch @4:08:55 ] for preventing from using    IF - ELSE
+
++ [watch @4:31:05 ] very very IMPORTANT regarding APIs 🍁🍁🍁🍁
+
++ [watch @4:38:13, @4:39:00, @4:45:42 ] FUNCTIONS
+
++ [watch @4:44:00, @4:52:48 ] Difference b/w  "console.log" & "return"
+
++ [watch @5:11:22 ] Difference b/w  "Block-Scope", "Global-Scope" & "Functional-Scope"
+
++ [watch @5:13:06 ] IMPORTANT interview    
+  Question
+
++ [watch @5:21:27 ]  CHILD- FUNCTION vs  
+    PARENT-FUNCTION
+
++ [ watch @5:27:59 ] HOISTING
+
++ [ watch @5:37:50 ]  IMPORTANT interview    
+  Question
+
++ [ watch @5:45:03, 5:46:22 ] V. V. IMPORTANT
+
++ [ watch @5:51:01 ]  IIFE   v. important
+
++ [ watch @6:04:13 - 6:14:01 ]  EXECUTION CONTEXT (The way our code is Excecuted)🍁🍁🍁🍁🍁🍁🍁🍁
+
++ [ watch @6:20:40 ] Interview Question based on CALL-STACK 
+
++ [ watch @6:29:33 ] 🍁 Difference Between == & ===
+
++ [ watch @6:43:01 ] Use of &&  
+
++ [ watch @6:50:01 ] 🍁 SWITCH-STATEMENTS Important Interview Questions   
+
++ [ watch @7:01:51 ] 🍁 Interview Questions &
+  Competitive Programming
+
++ [ watch @7:04:30, @7:13:11 ] NULLISH  
+   COALESCING  OPERATOR
+
++ [ watch @7:10:12 ] 🍁🍁🍁 SUMMARY 🍁🍁🍁
+
++ [ watch @7:20:16, @7:20:56 ] 🍁🍁 How FOR-LOOP  works ??  🍁🍁
+
++ [ watch @7:38:16 ] 🍁🍁 Differnce b/w BREAK &  CONTINUE  🍁🍁
+
++ [ watch @7:47:36 ] 🍁🍁 DO-WHILE loop special case 🍁🍁
+
++ [ watch @7:52:50 ]  🍁🍁 FOR-OF Loop 🍁🍁
+
++ [ watch @7:59:01 ] 🍁🍁 MAPS
+
++ [ watch @8:05:32 ] 🍁FOR-IN LooP🍁 key-  
+  value Pair 
+
++ [ watch @8:24:41 ] 🍁 FOR-EACH LooP (revision) 🍁
+
++ [ watch @8:49:23 ] 🍁 REDUCE method 🍁
+
++ [ watch @8:55:28 ] 🍁 REDUCE method - Explanation 🍁
+
+
+
+
+
+
+
+
+>>>> Javascript in 1 shot in Hindi part 2(By Hitesh Sir) 
+♦️♦️start watching from  { @8:24:03 }♦️♦️
+
+🔽🔽 PROJECT-4  Not Understood:- @3:13:19🔽🔽 
+🔽🔽 XMLHttpRequest in APIs Not Understood:-  @5:12:21 - @5:23:18 🔽🔽 
+🔽🔽 "console.log"  Not Understood:-  @5:23:18 - @5:29:23 🔽🔽 
+🔽🔽 "console.log"  Not Understood:-  @06:21:01  - @   🔽🔽 
+🔽🔽 PROTOTYPE 🔽🔽
+🔽🔽 unable to understand @7:34:46  🔽🔽
+🔽🔽 unable to understand @5:15:00 - 5:23:28 🔽🔽
+🔽🔽 PROMISES & ASYNC unable to understand @6:08:08 - 6:20:19  🔽🔽
+
+
+ 💎💎🍁💎💎JAVASCRIPT @5:31:24 💎💎🍁💎💎
+
+
++ [ watch @45:31 ] 🍁 querySelectorAll vs querySelector DIFFERENCE  🍁
+
++ [ watch @48:11 ] 🍁 REDUCE method -   
+  Explanation 🍁
+
++ [ watch @1:14:37 ] 🍁TREE structure in DOM
+
++ [watch @1:16:31 ]  🍁🍁node-list  V. IMPORTANT 🍁🍁
+
++ [watch @1:26:24 ] 🍁Exercise to be done 🍁
+
++ [watch @1:43:00, @1:43:49 ] 🍁🍁 REVISION 🍁🍁
+
++ [watch @2:21:12 ] 🍁🍁 IMPORTANT (difference in storing value INSIDE & OUTSIDE submit event function)🍁🍁
+
++ [watch @2:35:22 ] 🍁🍁 SET-INTERVAL function 🍁🍁
+
++ [watch @3:31:31  ] 🍁🍁 WHY to prefer "addEventListner" over "onclick" & inline "onclick" Events 🍁🍁
+
++ [watch @3:36:56, @3:37:25 ] 🍁🍁 VERY-IMPORTANT interview questions 🍁🍁
+ 
++ [watch @3:44:29, @3:44:53 ] 🍁🍁BUBBLING-Important 🍁🍁
+
++ [watch @33:55:21  ] 🍁🍁REMOVECHILD-Important 🍁🍁
+
++ [watch @4:05:46  ] 🍁🍁BLOCKING & NON-BLOCKING code 🍁🍁
+
++ [watch @4:10:56  ] 🍁🍁 WEB APIs (important) 🍁🍁
+
++ [watch @4:15:37, @4:17:01]  🍁🍁~ IMPORTANT (WEB APIs , Set-TimeOut ) ~🍁🍁
+
++ [watch @4:23:47  ] 🍁🍁important INTERVIEW question 🍁🍁
+
++ [watch @4:50:25  ] 🍁🍁V.V.important 🍁🍁
+
++ [watch @5:09:33 ] 🍁🍁AJAX-PROGRAMMING for   
+  Good Asychronous programming 🍁🍁
+
++ [watch @5:52:43 ] 🍁🍁PROMISE - important 🍁🍁
+
++  [watch @5:58:34 ] 🍁🍁CHAINING in PROMISES 🍁🍁
+
++ [watch @6:18:54  ] 🍁🍁How it's working ? 🍁🍁
+
++ [watch @6:28:26 ] 🍁🍁Promise IMPORTANT-INTERVIEW question (for SDE-2 Lvl) 🍁🍁
+
++ [watch @6:31:29, 6:33:20, 6:34:17 ] 🍁🍁how FETCH works ?? & JS engine 🍁🍁
+
++ [watch @6:43:03 ] 🍁🍁JAVASCRIPT (a prototype based language)🍁🍁
+
++ [watch @6:57:18 ] 🍁🍁IMPORTANT ( console.log - this in GOLBAL & FUNCTIONSCOPE )🍁🍁
+
++ [ watch @7:15:56 ] 🍁🍁BEHAVIOUR of JS 🍁🍁
+
++ [ watch @7:27:33 ] 🍁🍁 injecting PROTOTYPES 🍁🍁
+
++ [ watch @7:29:03 ] 🍁🍁".this" & "new" keyword importance 🍁🍁
+
++ [ watch @7:35:14 ] 🍁🍁MUST-WATCH (what happens behind the scenes when "new" keyword is inserted) 🍁🍁
+
++ [ watch @7:45:56, @7:49:02] 🍁🍁manupulating "GLOBAL-OBJECT"🍁🍁
+
++ [ watch @7:58:25 ] 🍁🍁 very IMPORTANT (INHERITANCE) 🍁🍁
+
++ [ watch @8:02:33, @8:03:42 ] 🍁🍁 Execution Context 🍁🍁
+
++ [ watch @8:04:24 ] 🍁🍁TRICKY-IMPORTANT interview question 🍁🍁
+
++ [ watch @8:11:23, @8:12:16  ] 🍁🍁 ".CALL" & importance of  "THIS" 🍁🍁
+
++ [ watch @8:15:02 ] 🍁🍁 CLASSES 🍁🍁
+
++ [ watch @8:49:32  ] 🍁🍁 Best example/usecase  of BIND 🍁🍁
+
++ [ watch  @8:51:52 ] 🍁💎🍁 V. V. Importnat questions for interview 🍁💎🍁
+
++ [ watch  @8:58:15] 🍁🍁 Chaning the value of "Math.PI" 🍁🍁
+
++ [ watch  @9:10:04-9:10:40] 🍁🔰🔰🍁V. V. Important for DEEP-LEARNING🍁🔰🔰🍁
+
++ [ watch  @9:22:38, @9:37:08 ] 🍁🍁 Getter-Setter Important 🍁🍁
+
++ [ watch  @9:54:02, @9:58:24, @10:00:09 ] 🍁🍁 Lexical - Scope, Closure 🍁🍁
+
+
+
+>>>> Week 1.2 | JS Foundations         (By Harkirat Singh)
+♦️♦️start watching from{@01:32:57}♦️♦️
+
+
+
+
+
+
+
+
+💎💎 👇👇📍📍✅✅ ❌❌ 🔽🔽 🍁🍁👆👆 🧱🧱🍀🍀
+
+// 💎✅💎  👇👇
+// 🔽🔽  👇👇
+//📍📍 Answer is :-  " "  
+// 🔽🔽
+
+
+APNA -COLLEGE :-
+
++ JavaScript-10 >> Mouse Pointer Events >> watch @ 06:30
+
++ JavaScript-10 >> Event Listners >> watch @ 1:33
+
++ 🍁EVENTs & EVENT-LISTNERS ( JavaScript-10 >> Event Listners >> watch @ 5:09 )
+
++ ❓❓CHANGE-EVENTs ( JavaScript-10 >> More Events >>  watch @ 3:02 )
+
++ 🍁 EVENT-DELEGATION( JavaScript (Mini-Project) >> Event Delegation )
+
+
+
+
+
+
+
+DSSb pasword :- 
+
+asdF$8$Vbnm
+
+
+
+
+The array argument is useful if you want to access another element in the array, especially when you don't have an existing variable that refers to the array. The following example first uses filter() to extract the positive values and then uses forEach() to log its neighbors.
+
+
+
+
+tandem
+
+
+
+
++ The DRAVIDIAN language divide problem
++ The SANATAN-MONEY helps SANATANI app    ( have to step down among common PEOPLE to understand them & their problems from the grass root level ) 
++ App Against UNTOUCHABILITY & ALL
++ App for locals to keep check on INFILTRATION 
++ Online portal for reporting MOMINS who abuse SANATAN
++ clubbing of OLD AGE homes & ORPHANAGE
+
+
+
+
+>> Bhagwan gaya kahan tha jo wapas aaaya hai ?
+

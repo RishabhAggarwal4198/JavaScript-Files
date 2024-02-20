@@ -1,0 +1,54 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+	
+	<title>Document</title>
+	
+	<style>
+
+		body{
+			display: grid;
+			place-items: center;
+		}
+
+		.box{
+			height: 80vh;
+			width: 80vh;
+			border: 3px solid red;
+		}
+	</style>
+
+</head>
+
+
+<body>
+
+	<div class="box">
+
+	</div>
+
+	
+</body>
+
+
+<script>
+
+	let box = document.querySelector('.box')
+
+	let color = [ `purple`, `green`, `yellow`, `blue`, `pink`]
+
+	box.addEventListener('click', () => {
+
+		let g = Math.random()*5          // ✅✅ We have used '5' here bcoz if we gonna '4' with 'Math.floor' then the condition of `color[4]` is never gonna happen & hence no "Pink" color will be seen
+		console.log(g);
+
+		let val = color[Math.floor(g)]
+		box.style.backgroundColor = val
+	})
+
+
+</script>
+
+
+
+</html>

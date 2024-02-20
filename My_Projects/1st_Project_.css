@@ -1,0 +1,25 @@
+body{
+    background-color: #393939;
+    display: flex;
+    justify-content: center;
+}
+
+#div_1{
+    background-color: rgb(107, 111, 111);
+    position: fixed;
+    top: 0;
+    left: 0;
+    right: 0;
+    height: 40px;
+    display: flex;
+    align-items: center;
+}
+
+#doc{
+    background-color: white;
+    margin: 140px 30px;
+    height: 700px;
+    width: 500px;
+}
+
+

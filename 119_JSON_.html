@@ -1,0 +1,125 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+
+	<title>Document</title>
+
+	<style>
+
+		body{
+			background-color: #212121;
+			color: #c5c1c1;
+			
+		}
+
+	</style>
+</head>
+
+
+
+<body>
+	
+
+
+
+</body>
+
+
+
+
+<script>
+
+	//✅✅ Whenever API responds it give its JSON data in the from of a STRING 👇👇
+
+	let jsonRes = `{
+					"products": [
+							{
+							"id": 1,
+							"name": "Product 1",
+							"price": 19.99,
+							"description": "This is product 1."
+							},
+							{
+							"id": 2,
+							"name": "Product 2",
+							"price": 29.99,
+							"description": "This is product 2."
+							},
+							{
+							"id": 3,
+							"name": "Product 3",
+							"price": 39.99,
+							"description": "This is product 3."
+							}
+					    ],
+
+					"validityInYrs": {
+						 "Product 1" : 2,
+						 "Product 2" : 5,
+						 "Product 3" : 4
+					    }
+	
+					}`
+
+
+// console.log(jsonRes);
+
+
+//✅✅ Now to access the above  STRING form JSON data we 
+// have to convert it into an JS-OBJECT we gonna use a 
+// method  'JSON.parse(data)'
+
+//🍁🍁coverting JSON data ➡➡ JS-OBJECT🍁🍁 
+
+
+let convrtObj = JSON.parse(jsonRes)
+// console.log(convrtObj);              //📍📍 RUN it into the console to see it
+// console.log(convrtObj.validityInYrs);   // 📍📍 Answer is :-         
+                                        // {Product 1: 2, Product 2: 5, Product 3: 4}         
+
+// console.log(convrtObj.products);     // 📍📍 Answer is :-         
+                                        // (3) [{…}, {…}, {…}]
+										// 0: {id: 1, name: 'Product 1', price: 19.99, description: 'This is product 1.'}
+										// 1: {id: 2, name: 'Product 2', price: 29.99, description: 'This is product 2.'}
+										// 2: {id: 3, name: 'Product 3', price: 39.99, description: 'This is product 3.'}
+										// length: 3
+										// [[Prototype]]:  Array(0)
+
+
+
+
+
+
+
+//🍁🍁converting JS-OBJECT ➡➡ JSON data🍁🍁 
+						
+let jsObj = {
+	studentName : 'Keshav',
+	age : '10',
+	marks : 22
+}
+
+let jsonData = JSON.stringify(jsObj)
+
+// console.log(jsonData);          		// 📍📍 Answer is :- 
+								  		// '{"studentName":"Keshav","age":"10","marks":22}'
+
+
+// console.log(jsonData.studentName);    // 📍📍 Answer is :- 
+									     // ERROR
+
+
+
+
+
+
+
+
+
+
+
+
+</script>
+
+
+</html>

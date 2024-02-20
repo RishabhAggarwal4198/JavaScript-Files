@@ -1,0 +1,77 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>DOM _ Final </title>
+</head>
+
+<body style="background-color: #212121; color: #fff;">
+
+    <ul class="language">
+        <li>Javascript</li>
+    </ul>
+    
+</body>
+
+
+ <script> 
+
+        function addLanguage (langName) {
+            const listz = document.createElement('li');
+            listz.innerHTML = `${langName}`
+            document.querySelector('.language'). appendChild(listz)
+        }
+
+        // addLanguage("python")      // 📍 "python"  will get added in the list
+        // addLanguage("typeScript")  // 📍 "typeScript"  will get added in the list
+        // addLanguage("Rust")        // 📍 "Rust"  will get added in the list
+
+                     //🔽🔽 OR (much more ✅OPTIMIZED & ✅PROFESSIONAL way of writing above METHOD) 👇 [📍 in this approach we don't have to "TRAVERSE" the whole tree (like the above one) & this way of manipulating the innerHTML is appreciated in bigger companies rather than the above one ]
+ 
+        function addOptiLanguage(langName){
+                const lista = document.createElement('li')
+                lista.appendChild(document.createTextNode(langName))
+                document.querySelector('.language').appendChild(lista)
+        }
+
+        addOptiLanguage("Golang")  // 📍 "golang"  will get added in the list
+        addOptiLanguage("Rust")  // 📍 "Rust"  will get added in the list
+
+
+
+        //👇💎👇 EXAMPLE 1 - For Editing any VALUE (from the above one's)
+
+        // const secondLang = document.querySelector("li:nth-child(2)")
+        // // console.log(secondLang);          // [📍Answer will be "<li>python</li>"]
+        // // secondLang.innerHTML = "Mojo"     // [ 📍Abstain using it bcoz it's an "UN-OPTIMIZED" approach ]
+        // const newLi = document.createElement('li')
+        // newLi.textContent = "Mojo"
+        // secondLang.replaceWith(newLi)
+
+
+
+
+        //👇💎👇 EXAMPLE 2 - For Editing any VALUE (from the above one's)
+
+        // const firstLang = document.querySelector("li:first-child")
+        // firstLang.outerHTML = '<li>TypeScript</li>'      //[📍📍 Answer is :- first value got changed to  "TypeScript"  ] 
+
+
+
+
+        //👇💎👇 For Removing any VALUE (from the above one's)
+        // const lastlang = document.querySelector('li:last-child')
+        // lastlang.remove()            // [ 📍"Rust" got removed from the list ]
+                            
+                            // 🔽🔽 (OR)
+
+        // const nayiLang = document.querySelector('li:nth-child(1)')
+        // nayiLang.remove()          // [ 📍"Javascript" got removed from the list ]       
+
+       
+
+
+ </script>
+
+</html>

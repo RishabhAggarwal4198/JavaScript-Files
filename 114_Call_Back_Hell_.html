@@ -1,0 +1,110 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+	<title>Document</title>
+	
+	<style>
+		body{
+			background-color: #504f4f;
+		}
+
+	</style>
+
+</head>
+
+
+<body>
+
+	<h1>Hello Everyone !! </h1>
+	<!-- <button>CLICK</button> -->
+
+</body>
+
+
+
+<script>
+
+let h1 = document.querySelector('h1')
+let body = document.querySelector('body')
+let button = document.querySelector('button')
+
+//+++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++
+// function changeColor (clr) {
+// 	h1.style.color = `${clr}`
+// 	// setInterval(() => {
+		
+// 	// }, 1000);
+	
+// 	// setTimeout(() => {
+// 	//  body.style.backgroundColor = 'skyblue'
+// 	// }, 1000); 
+
+// }
+
+// let colors = ['red', 'green', 'blue', 'yellow', 'pink']
+
+// button.addEventListener('click', function () {
+
+// 	let clrChang = colors[Math.floor(Math.random()*5)]
+// 	console.log(clrChang);
+// 	changeColor(clrChang) 
+// })  
+
+
+
+//+++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++
+
+
+// function changeColor(color, delay) {
+// 	setTimeout(() => {
+// 		h1.style.color = color;
+// 		nextColorChange();
+// 	}, delay)
+// }
+
+// changeColor(`red`, 1000)
+// changeColor(`orange`, 2000)
+// changeColor(`green`, 3000)   //✅ COLORS will start executing
+
+
+		// 🔽🔽
+
+
+function changeColor(color, delay, nextColorFXN) {
+
+	setTimeout(() => {
+		h1.style.color = color
+		if(nextColorFXN) nextColorFXN();     // ✅ if(nextColorFXN) denotes IF value of 'nextColorFXN' is true
+
+	}, delay)
+}
+
+//✅ CALL-BACK nesting like this is called 'CALLBACK HELL'👇
+//❌❌❌❌Not a good way of writing 'NESTED-CALLBACK' ❌❌❌❌
+
+changeColor('red', 1000, () => {
+	changeColor('green', 1000, () => {
+		changeColor('blue', 1000, () => {
+			changeColor('yellow', 1000, () => {
+				changeColor('skyblue', 1000);
+			})
+		})
+	})
+})
+
+
+
+
+
+
+
+
+
+
+
+
+
+</script>
+
+
+</html>   

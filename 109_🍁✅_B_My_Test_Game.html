@@ -1,0 +1,178 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+	<title>Random Game</title>
+
+	<style>
+		
+		html{
+			font-size: 10px;
+		}
+
+
+		body{
+			background-color: #212121;
+			display: flex;
+			flex-direction: column;
+			row-gap: 3rem ;
+			justify-content: center;
+			align-items: center;
+			height: 100vh;
+		}
+
+		@media  (max-width : 500px){
+			
+			body{
+				background-color: green;
+			}
+		}
+
+		
+	
+
+		#outDiv{
+			height: 50rem ;
+			width: 50rem ;
+			border: .6rem solid red;
+			background-color:#787777 ;
+			border-radius: 2rem;
+			padding: 1.4rem;
+			/* display: grid;
+			grid-template-columns: repeat(5, 1fr); */
+			display: flex;
+			justify-content:space-evenly;
+			column-gap: .4rem;
+
+		}
+
+		#inDiv{
+			height: 5rem;
+			width: 5rem;
+			border: .6rem solid red;
+			border-radius: 1rem;
+			background-color: rgb(238, 136, 136);
+		}
+
+		button{
+			border: .6rem solid red;
+			background-color:#787777 ;
+			border-radius: 2rem;
+			padding: 1.4rem 4rem;
+			color:#212121;
+			font-size: 2.2rem;
+			font-weight: bolder;
+		}
+
+
+		
+		.red {
+			background-color: red;
+			padding: 1.8rem 4.5rem;
+			
+		}
+
+
+		p{
+			margin : 0rem;
+			border: .6rem none red;
+			background-color:#787777 ;
+			border-radius: 2rem;
+			padding: 1rem 2rem;
+			color:#212121;
+			font-size: 2.2rem;
+			font-weight: bolder;
+			font-family: Arial, Helvetica, sans-serif;
+		}
+
+
+	</style>
+
+</head>
+
+
+<body>
+
+
+
+<div id="outDiv" >
+		<div id="inDiv"></div>
+		<div id="inDiv"></div>
+		<div id="inDiv"></div>
+		<div id="inDiv"></div>
+		<div id="inDiv"></div>
+</div>
+<button>RESET</button>
+
+</body>
+
+
+
+<script>
+
+let body = document.querySelector('body')
+let outDiv = document.querySelector('#outDiv')
+let inDivAll = document.querySelectorAll('#inDiv')
+let resetBtn = document.querySelector('button')
+let para = document.createElement('p')
+
+
+
+for(indiv of inDivAll) {
+		indiv.style.fontSize = '4rem'
+		indiv.style.display = 'flex'
+		indiv.style.justifyContent = 'center'
+		indiv.style.alignItems = 'center'
+	}
+
+
+let justi = ['center', 'end', 'left', 'right' , 'space-around', 'space-between', 'space-evenly']
+let align = [ 'center', 'end', 'start', 'flex-start', 'flex-end', 'self-end', 'self-start']
+
+let items =  ['🍔' , '🍟' , '🥗' , '🍙', '🌯', '🥪']
+
+document.addEventListener('keypress', function () {
+	let valuJust = justi[ Math.floor(Math.random()*7)]
+	let valuAlign = align [ Math.floor(Math.random()*7)]
+	let valuItems = items[Math.floor(Math.random()*5)]
+
+	outDiv.style.justifyContent = valuJust
+	outDiv.style.alignItems = valuAlign
+
+	inDivAll[0].innerHTML = items[Math.floor(Math.random()*6)]
+	inDivAll[1].innerHTML = items[Math.floor(Math.random()*6)]
+	inDivAll[2].innerHTML = items[Math.floor(Math.random()*6)]
+	inDivAll[3].innerHTML = items[Math.floor(Math.random()*6)]
+	inDivAll[4].innerHTML = items[Math.floor(Math.random()*6)]
+
+	para.innerHTML = `'KEY' pressed`
+	body.prepend(para)
+
+})
+
+
+resetBtn.addEventListener('click', function() {
+	for(indiv of inDivAll) {
+		indiv.innerHTML = ''
+		outDiv.style.justifyContent = 'center'
+		outDiv.style.alignItems = 'center'
+		resetBtn.classList.add('red')
+
+		setTimeout(function(){
+			resetBtn.classList.remove('red')
+		}, 200)
+
+		para.innerHTML = `'RESET BUTTON' pressed`
+		body.prepend(para) 
+	}
+})
+
+
+
+
+</script>
+
+
+
+
+
+</html>

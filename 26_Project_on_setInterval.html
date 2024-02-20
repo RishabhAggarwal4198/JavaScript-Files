@@ -1,0 +1,93 @@
+<!DOCTYPE html>
+<html lang="en">
+    <head>
+        <meta charset="UTF-8">
+        <meta name="viewport" content="width=device-width, initial-scale=1.0">
+        <title>Document</title>
+    </head>
+
+    <body>
+        <p>Start should change the background color Every Second & Stop gonna end this process</p>
+        <button id="Start" >Start</button>
+        <button id="Stop" >Stop</button>
+    </body>
+
+
+
+
+    <script>
+        // const randomColor = function() {
+        //     const hex = '0123456789ABCDEF';     // [📍 even though it's an String based variable but the values stored in it are in the form of ARRAY & it's indexes]
+        //     let color = '#';
+        //     for (let i = 0; i < 6; i++){
+        //         color += hex[Math.floor(Math.random()*16)];
+        //     }
+        //     return color;
+        // }; 
+
+        // let intervalId;
+
+        // const startChangingColor = function () {
+            
+        //     function changeBgColor () {
+        //         document.body.style.backgroundColor = randomColor();
+        //     }
+
+        //     intervalId = setInterval (changeBgColor, 1000 )
+        // }
+
+        
+        // const stopChangingColor = function () {
+        //     clearInterval(intervalId);
+        // }
+
+
+        // document.querySelector('#Start').addEventListener('click', startChangingColor);
+
+        // document.querySelector('#Stop').addEventListener('click', stopChangingColor )
+        
+        
+                                // 🔽🔽  (for making the code much more Efiicient)
+        
+
+        const randomColor = function() {
+            const hex = '0123456789ABCDEF';     // [📍 even though it's an String based variable but the values stored in it are in the form of ARRAY & it's indexes]
+            let color = '#';
+            for (let i = 0; i < 6; i++){
+                color += hex[Math.floor(Math.random()*16)];      // 💎✅💎 by multiplying by "Math.random()" by 16 we will get value from  0 - 16 
+            }
+            return color;
+        }; 
+
+        let intervalId;
+
+        const startChangingColor = function () {
+            
+            function changeBgColor () {
+                document.body.style.backgroundColor = randomColor();
+            }
+
+            intervalId = setInterval (changeBgColor, 1000 )
+
+            if(!intervalId){                                     // [📍📍 a way of writing "intervalId == null"  ]      
+                intervalId = setInterval(changeBgColor, 1000)     // ✅✅
+            }
+
+        }
+
+        
+
+        const stopChangingColor = function () {
+            clearInterval(intervalId);
+            intervalId = null;                             // ✅✅ By  "intervalId = null;" we DEREFRENCED the value of variable "intervalId" (& also made code much more PROFESSIONAL)
+        }
+
+
+        document.querySelector('#Start').addEventListener('click', startChangingColor);
+
+        document.querySelector('#Stop').addEventListener('click', stopChangingColor );
+
+
+    </script>
+
+</html>

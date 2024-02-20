@@ -1,0 +1,251 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>htnml Events </title>
+</head>
+<body style="background-color: #414141; color: aliceblue;">
+    <h2>Amazing image</h2>
+    <div >
+        <ul id="images">
+            <li><img width="200px" id="photoshop" src="https://images.pexels.com/photos/3561339/pexels-photo-3561339.jpeg?auto=compress&cs=tinysrgb&w=1600&lazy=load" alt="photoshop"></li>
+            <li><img width="200px" id="japan" src="https://images.pexels.com/photos/3532553/pexels-photo-3532553.jpeg?auto=compress&cs=tinysrgb&w=1600&lazy=load" alt=""></li>
+            <li><img width="200px" id="river" src="https://images.pexels.com/photos/3532551/pexels-photo-3532551.jpeg?auto=compress&cs=tinysrgb&w=1600&lazy=load" alt=""></li>
+            <li><img width="200px" id="owl" src="https://images.pexels.com/photos/3532552/pexels-photo-3532552.jpeg?auto=compress&cs=tinysrgb&w=1600&lazy=load" alt="" ></li>
+            <li><img width="200px"  src="https://images.pexels.com/photos/2522671/pexels-photo-2522671.jpeg?auto=compress&cs=tinysrgb&w=1600&lazy=load" alt=""></li>
+            <!-- <li><a style="color: aliceblue;" href="https://google.com" id="google">Google</a></li> -->
+            <li><a style="color: aliceblue;" id="Google" href="https://google.com" target="_blank" id="google">Google</a></li>
+        </ul>
+   </div>
+</body>
+<script>
+
+    // 💎💎 ON CLICK - EVENTS  👇👇
+
+    // document.getElementById('owl').onclick = function(){      
+    //     alert("owl clicked")                   //  [📍📍📍 Not the Correct Method to do, bcoz  if "onlick" event directly applied onto it can create problems & also u don't get that much properties & features while using "onclick" events as much u gets while using "addEventListner" ]
+    // }
+
+    //attachEvent() 
+
+    //jQuery - on 
+
+
+
+    // 💎✅💎 ADD - EVENT LISTNERS  👇👇
+
+    //Syntax 👇👇 
+    
+    // document.getElementById('owl').addEventListener('click', function () {}, false)
+
+
+
+    document.getElementById('owl').addEventListener('click', function(){
+        // alert("owl clicked again")     //[📍📍We got an "ALERT" by the name of  "OWL CLICKED AGAIN"
+    }, false)
+
+                                //    🔽🔽
+                  
+    document.getElementById('owl').addEventListener('click', function(e){
+        // console.log(e);                 //[📍💎📍Now in console we got a lots of "PointerEvents" & when we further open that "PointerEvents" we gets a lot more of objects 
+    }, false)
+
+
+
+
+    /* 📍📍 Events which got generated in the console due to above "addEventListner" & we MUST know them are :-
+      ➤ type, timestamp, defaultPrevented          //[📍📍 "defaultPrevented" method stops the deafult Behavoiur of that Tag ]
+      ➤ target, toElement, srcElement, currentTarget
+      ➤ clientX, clientY, screenX, screenY
+      ➤ altkey, ctrlkey, shiftkey, keycode
+    */ 
+    
+
+
+
+
+     
+    // 💎✅💎 EVENT - PROPAGATION 👇👇
+
+
+    // 💎🍁💎 CASE - 1 (EVENT - BUBBLING)👇
+
+    document.getElementById('images').addEventListener('click', function(e){
+        // console.log("clicked inside the ul");
+    }, false);   // [📍 We could just not write FALSE at the last as well bcoz it gonna give the same result]
+
+    document.getElementById('owl').addEventListener('click', function(e){
+        // console.log("owl clicked");
+    }, false);
+
+                                        // 🔽🔽 (even after removing the "FALSE"  from last, we will see the same result 👇👇)
+
+        document.getElementById('images').addEventListener('click', function(e){
+        // console.log("clicked inside the ul");
+    });   
+
+    document.getElementById('owl').addEventListener('click', function(e){
+        // console.log("owl clicked");
+    });
+
+   
+    // [📍💎✅💎📍 So, Just when the "owl" image got clicked, just after that we could see in the console that "owl clicked" got printed  first & then "clicked inside the ul" got printed
+    // 💎💎💎💎 So this is called BUBBLING of EVENT [ i.e. propagation of event from inside to outside (i.e. owl image >> li >> ul ) or from BOTTOM to TOP is definded as BUBBLING ]
+
+
+
+
+
+    //👇👇 when u don't  want BUBBLING of the elemnts to happen 👇👇
+
+    // document.getElementById('owl').addEventListener('click', function(e){
+    //     console.log("owl clicked");
+    //     e.stopPropagation    // [💎✅💎 this property is used for stopping the BUBBLING of the event ]
+    // }, false);
+   
+   // [📍Just click the "owl" image now & then you would only see "owl clicked" in the console.... [ i.e.  BUBBLING of the event is not happening & is not going to the Elements Above ]  
+
+
+
+
+
+
+
+
+    // 💎🍁💎 CASE - 2 (CAPTURING) 👇 [ 💎 in this "false" value @ the last got changed to "true" ]
+
+    // document.getElementById('images').addEventListener('click', function(e){
+    //     console.log("clicked inside the ul");
+    // }, true);  
+
+    // document.getElementById('owl').addEventListener('click', function(e){
+    //     console.log("owl clicked");
+    // }, true);
+
+    
+    // [📍💎✅💎📍 So, Just when the "owl" image got clicked, just after that we could see in the console that "clicked inside the ul" got printed  first & then "owl got clicked" got printed
+    // 💎💎💎💎 So this is called CAPUTRING of EVENT [ i.e. propagation of event from outside to  inside (i.e. ul >> li >> owl image  ) or from TOP to BOTTOM is definded as CAPTURING ] 
+ 
+   
+
+
+
+
+
+
+
+    // 💎🍁💎 PREVENT DEFAULT 👇👇  ( to track a DOM element & to change it's default behaviour )
+
+    //  document.getElementById('google').addEventListener('click', function(e){
+    //     console.log(("google clicked"));
+    //  }, false)  
+
+                                    // 🔽🔽 
+
+    //  document.getElementById('google').addEventListener('click', function(e){
+    //     e.preventDefault();        // [📍✅📍  Now by ENABLING this "e.preventDefault();" method, when we gonna cick on "Google" on the page it will only print "google clicked" in the console !! it won't get directed to the GOOGLE page in the nexttab as it is supposed to ]
+    //     e.stopPropagation();     // [📍now by enabling this we are stopping the PROPAGATION of the event i.e. it's BUBBLING from inside to outside ]
+    //     console.log(("google clicked"));
+    //  }, false)  
+
+
+
+
+
+
+
+
+
+    //💎💎💎💎  For making IMAGES disapper just by clicking 👇🍁👇
+
+    // document.querySelector('#images').addEventListener('click', function(e){
+    //     console.log(e);    // [📍 @this stage In "console.log" on clicking the images we are getting events]
+    // }) 
+                                 
+                              // 🔽🔽
+
+    // document.querySelector('#images').addEventListener('click', function(e){
+    //     console.log(e.target);   // [📍✅📍  @ this stage in "console.log" its basically showing that from which TARGET this EVENT is occuring (i.e. from which element of the DOM this event is occuring & that's why we have whole "TAG" of that element getting printed into our console ) ] 
+    // })
+    
+                              // 🔽🔽
+
+    // document.querySelector('#images').addEventListener('click', function(e){
+    //     console.log(e.target.parentNode);   // [📍 At this point In "console.log" its basically showing the original PARENT-NODE (in which the image is present i.e. <li> ... </li>)]
+    // })
+
+                              // 🔽🔽
+    
+    // document.querySelector('#images').addEventListener('click', function(e){ 
+    //     console.log(e.target.parentNode); 
+    //     let removeIt = e.target.parentNode
+    //     removeIt.remove()         // [📍🍁📍  At this point due to this "remove()" method  we could now "remove" the image by just clicking  onto it on the HTML page]
+    // })
+
+                              // 🔽OR 🔽 (✅another way of doing the above thing) (watch @3:55:21 ) 
+
+    // document.querySelector('#images').addEventListener('click', function(e){ 
+    //     let removeIt = e.target.parentNode
+    //     removeIt.parentNode.removeChild(removeIt)      // [📍🍁📍 Another Method of doing the above thing....  for (Explanation @watch @33:55:21 ) ( in "let removeIt = e.target.parentNode" we got "li" , but we are having the method as "removeChild()" so to apply that we have used we have to get the Parent of "removeIt" i.e. "ul",  so that's why we wrote it as "removeIt.parentNode.removeChild(removeIt)"  {bcoz "removeIt.parentNode" = "ul" & then remove which child of "ul" ? the one i.e. stored in "removeIt" = "li" hence we have  "removeIt.parentNode.removeChild(removeIt)" } ]
+    // }) 
+
+    
+
+    /*
+    💎 In the above code snippet in "Let removeIt" we targated & then stored 
+    List tag (li) but when we targated  'removeIt' directly using 'removeChild' after 
+    it, it actually gonna remove the child of the elemnt targated in 'removeIt'
+    variable i.e. List element....
+    So to stop this we have used the method '.parentNode' after 'removeIt' & hence the
+    expression :-
+     removeIt.parentNode.removeChild(removeIt)  
+     */
+
+
+
+                               // 🔽🔽
+
+    /*
+    💎✅💎 now if we gonna click anywhere else on the page (other than IMAGES & GOOGLE text at the last), we will see that everything is 
+    getting deleted, so basically this is happening bcoz  when we click  anywhere  (other than IMAGES & GOOGLE text at the last), we are 
+    clicking on the "li" tag & according to the function we have defined in the "addEventListner"
+    " let removeIt = e.target.parentNode "  
+    whenever the event of "click" is gonna happen anywhere on the page it will be targeted to the "parentNode" of that  particular element
+    so by that way the value that got stored in "removeIt" = (parentNode of "li") i.e. "ul" 
+    & hence :-
+        " removeIt.parentNode.removeChild(removeIt) " means that :-
+     >>> "ul.parnetNode" = "div"
+     >>>  " div.removeChild(removeIt) " = remove "div"'s child (removeIt)
+     >>>   i.e.  "div.removeChild(ul)"
+     
+     & that's how the whole "ul" is getting deleted
+
+     💎✅💎  so to prevent this we have to include some checks in our code, which
+               are mentioned in the code snippet below :- 👇👇👇👇
+    
+     */
+
+
+        document.querySelector('#images').addEventListener
+        ('click', function(e){ 
+        console.log(e.target.tagName);             // 💎✅💎 it will give us the "TagName"  of that element on to which we  "clicked"  [📍📍 Like on clicking any image we get "IMG" in console  ] 
+            if(e.target.tagName === 'IMG')  {      // 🍁💎🍁 This condition gonna keep on check that only values which have id as "IMG" only they gets deleted 
+                console.log(e.target.id);
+                let removeIt = e.target.parentNode
+                removeIt.remove()
+            } 
+    })
+
+  
+
+
+
+
+
+
+</script>
+</html>
+
+
+

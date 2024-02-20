@@ -1,0 +1,1327 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Testing </title>
+    
+
+
+
+    <style>
+
+        body{
+            height: 4000px;
+        }
+        
+        h2{
+            margin-top: 100px;
+            margin-bottom: 22px;
+        }
+
+
+        #startt,
+        #initiate {
+            margin-right:22px;
+        }
+
+
+        #color_App{
+            margin-top: 200px;
+        }
+
+
+
+        #divvvv{
+            height: 200px;
+            width: 200px;
+            border: 4px solid tomato;
+            margin: 100px;
+            background-color: rgb(80, 68, 161);
+            box-shadow: 10px 10px 20px 4px rgb(227, 54, 54, .8);
+            transform: scale(1.4, 1.8)   skew(10deg, 9deg)  rotate(20deg) translate(40px);
+            /* transform-style: preserve-3d;
+            transform:  rotate3d(2, 2, 2, 20deg ) ; */
+             
+        }
+        
+
+
+       
+
+
+    </style>
+
+</head>
+
+
+<body style="background-color: #212121; color: #fff; ">
+
+    <button> Hello </button>
+    
+    <!-- <div style="display: flex;  justify-content: center; align-items: center;">
+           
+        <img class="IMG" src="https://e7.pngegg.com/pngimages/88/501/png-clipart-leaf-vegetable-turnip-beetroot-rutabaga-beetroot-food-leaf-thumbnail.png"  height="200px">
+    
+    </div>
+     -->
+
+     <ul class="Listzz">
+        <li> Ram </li>
+        <li> Shyam </li>
+        <li> Raghav</li>
+        <li> Raman </li>
+
+     </ul>
+
+
+     <h1>Hello Everyone</h1>
+     <button id="stop">STOP</button>
+
+
+
+
+     <h2>JAVASCRIPT is a synchronous language</h2>
+     <button id="startt"> STARTT </button>
+     <button id="stopp"> STOPP </button> 
+
+
+
+
+
+     <h1 id="color_App" >Background Color Changing application</h1>
+     <button id="initiate" >INITIATE</button>
+     <button id="hangUpp"> HANG UP </button>
+
+     <h3></h3>
+    
+     <br>
+     <br>
+     <br>
+     <br>
+     <br>
+
+
+
+     <button id="Strng" >String Check</button>
+
+     <h1 id="StringH1"></h1>
+
+     <br>
+     <br>
+     <br>
+     <br>
+     <br>
+     <br>
+     <br>
+     <br>
+     <button id="table">Table Generate</button>
+
+     <ul id="para"></ul>
+   
+     <br>
+     <br>
+     <br>
+     <br>
+     <div id="divvvv"></div>
+    
+</body>
+
+
+
+<script>
+
+const neti = {
+    name: "Rishabh",
+    Age: 21,
+    Married: false
+}
+
+// console.log(neti.name);
+
+
+const yeti = {
+    "name" : "Ramesh",
+    "Age": 27,
+    "Married": true
+}
+
+// console.log(yeti.Married);
+
+
+
+const jeti = [
+{
+    name: "Rishabh",
+    Age: 21,
+    Married: false
+},
+{
+    "name" : "Ramesh",
+    "Age": 27,
+    "Married": true
+},
+{
+    name: "Raghav",
+    Age: 22,
+    Married: false
+}
+
+]
+
+
+// console.log(jeti[1]);
+// console.log(jeti[1].Married);
+
+
+
+const map = new Map()
+map.set('IN', "India")
+map.set('USA', "United States of America")
+map.set('Fr', "france")
+// console.log(map);
+
+
+
+const newHero = ["SpiderMan", "BatMan", "ShaktiMan", "Superman"]
+
+// console.log(newHero[2]);
+
+
+
+const newHero2 = ["Aryaman", "FlyingMan"]
+const newVal = [...newHero,...newHero2];
+
+// console.log(newVal);
+
+
+
+class Flight {
+    constructor (name) {
+        this._name = name 
+    }
+
+    fly () {
+        alert("The plane is flying")
+    }
+    get name (){
+        return this._name
+    }
+    set name (newName){
+        this._name = newName
+    }
+}
+
+let a = new  Flight ("Felaaa")                 
+// console.log(a.name);                           //[📍📍 Answer is :-  "Felaaa"  ] 
+// a.fly()
+
+
+// const app = document.getElementsByClassName('IMG')
+// let steps = 12;
+
+// for (let i =0; i < steps; i++){
+
+//     // const element = app.
+//     app.rotate(i*360/steps),
+//     AnchorPosition.BO
+   
+// }
+
+
+
+
+// document.querySelector('button').addEventListener('click', () => {
+//     document.body.style.background = "lightgreen"
+// })
+
+
+
+
+function  listzz (name) {
+    const ele = document.createElement('li')
+    ele.innerHTML = name
+    document.querySelector('li').appendChild(ele)
+}
+
+// listzz("Shivam");
+
+
+            // 🔽🔽
+
+
+function listzz2 (val) {
+    const ele = document.createElement('li');
+    ele.appendChild(document.createTextNode(val))
+}
+
+// listzz2("Vimal")
+
+
+
+
+
+
+
+
+
+
+
+const change = function () {
+    document.querySelector('h1').innerHTML = "Ram Ram Bhai saryaneyy 🙏🙏"
+}
+
+// change();
+
+// const timer = setTimeout(change, 4000)
+
+// document.querySelector('#stop').addEventListener('click', () => {
+//     clearTimeout(timer);
+//     console.log("STOPPPED");
+// })
+
+
+
+
+
+
+
+
+
+
+
+
+
+// const changge = function (vall) {
+//     document.querySelector('h2').innerHTML= "✅✅✅✅✅JAVASCRIPT✅✅✅✅✅"
+//     console.log(`Hello :- ${vall}`);
+// }
+
+
+// changge();
+
+// let intervalFxn;
+
+// document.querySelector('#startt').addEventListener('click', () => {
+//     intervalFxn = setInterval(changge, 1000, "Raman")
+// })
+
+// document.querySelector('#stopp').addEventListener('click', () => {
+//     clearInterval(intervalFxn);
+// })
+
+
+
+
+
+
+
+
+
+
+// 📍📍📍📍📍📍📍📍📍📍📍📍 COLOR-CHANGING-APP 📍📍📍📍📍📍📍📍📍📍📍📍
+
+
+//🔽Practice🔽
+
+// const trialVar =  Math.ceil(Math.random()*10+1) 
+// console.log(trialVar); 
+
+
+
+
+
+
+const colorGeneration = () =>{
+
+    const num = "123456789ABCDEF"
+    let colorValue = "#"
+    for (let i = 0; i < 6; i++) {
+
+        const mathMagic = parseInt(Math.random()*15)
+        // console.log(mathMagic);
+        colorValue += num[mathMagic] 
+    }
+
+    return colorValue;
+}
+
+// console.log(colorGeneration());
+
+let intervalFxn ;
+
+const whenInitiateButtonClicked = () => {
+    
+    const bgColorChange = () => {
+        document.body.style.backgroundColor = colorGeneration();
+    }
+    intervalFxn = setInterval(bgColorChange, 500)
+}
+ 
+
+// document.querySelector('#initiate').addEventListener('click', whenInitiateButtonClicked) 
+
+
+const whenHangUpButtonClicked = () => {
+        clearInterval(intervalFxn);
+} 
+
+
+// document.querySelector('#hangUpp').addEventListener('click', whenHangUpButtonClicked)
+
+
+
+function regar (val) {
+  let ringa = val +5
+  return ringa
+}
+
+//  console.log(regar(5));
+
+
+
+
+
+
+
+
+
+
+let myArr = [
+    {name: "Ramola",
+     Age: 25 },
+    {name: "Pramod",
+     Age: 35 },
+    {name: "Lakshmi",
+     Age: 29 },
+    {name: "Suresh",
+     Age: 34 }
+]
+
+
+
+for (let i = 0; i < myArr.length; i++) {
+    let itr = `Namaste! Meet ${myArr[i].name}, who is ${myArr[i].Age} years old `
+    // console.log(itr);
+} 
+
+
+
+
+
+
+let myObj = {
+    name: "Raman",
+    Age: 29,
+    Profession: "IT Industry",
+    CitizenOf : "India",
+    State: "Haryana"
+}
+
+
+    let sent = `Hello! my name is ${myObj.name}, I'am ${myObj.Age} years old & works in ${myObj.Profession} & citizen of ${myObj.CitizenOf} & belongs to state of ${myObj.State}`
+    // console.log(sent);
+
+
+
+
+    let tumtum = [`Helena`, 2 , 5.5 , `Selena`, true, ]
+
+    for (let i = 1; i< tumtum.length; i++) {
+            // console.log(`Hello !!  My index is ${[i]} & my value is ${tumtum[i]}` );
+    }
+
+
+    
+
+    // Hoisting
+
+    // console.log(v);
+
+    // var v = 10;
+    
+
+
+
+    // EXECUTION-PHASE
+
+    // let val1= 10
+    // let val2 = 5
+
+    // function addNum (num1, num2){
+    //     let total = num1 + num2
+    //     // return total
+    //     console.log(total);
+    // }
+    
+    // let parinaaam1 = addNum(val1,val2)
+    // let parinaaam2 = addNum(10,2)
+
+    // console.log(parinaaam1);   // Answer is "undefined"
+
+               // 🔽🔽
+
+    let val1= 10
+    let val2 = 5
+
+    function addNum (num1, num2){
+        let total = num1 + num2
+        console.log(total);
+        return total
+    }
+    
+    // let parinaaam1 = addNum(val1,val2)
+    // let parinaaam2 = addNum(10,2)
+
+    // console.log(parinaaam1);   // Answer is "15"
+    // console.log(parinaaam2);   // Answer is "12"
+
+
+
+
+
+
+
+
+
+
+
+//🍁🍁 CONDITION Operators 👇👇
+
+// console.log(2 != "2");     // Answer is "false"
+// console.log(2 == "2");      // Answer is "true"
+
+// console.log(2 !== "2");       // Answer is "true"
+// console.log(2 === "2");       // Answer is "false"
+
+// console.log(3 != 2);       // Answer is "true"
+
+
+
+
+document.querySelector('#initiate').addEventListener('click', ()=> {
+    document.querySelector('h3').innerHTML ="Hello everyone this is for your"
+})
+   
+
+
+let coco = 19;
+
+switch (coco) {
+    case 10:
+        // console.log(`Value of coco is ${coco} & is vey very lesser than 40`);
+        break;
+    case  20:
+        // console.log(`Value of coco is ${coco} & is very lesser than 40`);
+        break;
+    case 30:
+        // console.log(`Value of coco is ${coco} & is little lesser than 40`);
+        break;
+    case 35:
+        // console.log(`Value of coco is ${coco} & is close to 40`);
+        break;
+    
+    default:
+        // console.log(`Value of coco is ${coco} `);
+        break;
+}
+
+
+
+
+
+
+
+let cocoon = 25
+
+if (cocoon <= 10 ){
+    // console.log(`Value of coco is ${cocoon} & is vey very lesser than 40`);
+} 
+else if (cocoon <= 20) {
+    // console.log(`Value of coco is ${cocoon} & is vey lesser than 40`);
+} 
+else if (cocoon <= 30) {
+    // console.log(`Value of coco is ${cocoon} & is a little lesser than 40`);
+} 
+else if (cocoon <= 40) {
+    // console.log(`Value of coco is ${cocoon} & is exactly 40`);
+} 
+else  {
+    // console.log(`Value of coco is ${cocoon} & is greater than 40`);
+}
+
+
+
+
+
+
+
+const valKeeper = [
+    {Name: "Raman",
+    Age: 28,
+    Country: "India",
+    Married: false},
+
+    {Name: "Ranjeet",
+    Age: 48,
+    Country: "India",
+    Married: true},
+
+    {Name: "Suzzane",
+    Age: 32,
+    Country: "Britain",
+    Married: false},
+]
+  
+
+
+// for (const i of valKeeper) {
+//     console.log(`The name of the person is ${valKeeper[i].Name} & his Age is ${valKeeper[i].Age}`);
+// }
+
+
+
+
+
+
+
+// FUNCTION POSSIBLE syntaxes
+
+function Namah () {
+
+}
+
+// 🔽
+
+let Namah0 = () => {
+
+}
+
+
+// 🔽
+
+
+let Namah1 = ell => {
+
+}
+
+
+
+
+//Array.prototype.map():
+const numbers = [1, 2, 3, 4];
+const doubled = numbers.map((num) => num * 2);
+// doubled is now [2, 4, 6, 8]
+// Use map() when you want to transform each element in an array and create a new array with the results.
+
+
+
+
+
+
+
+
+// Array.prototype.forEach():
+const numbers0 = [1, 2, 3, 4];
+// numbers0.forEach((num) => console.log(num *2));
+// This will log each number to the console but won't create a new array.
+// Use forEach() when you want to perform an action for each element in an array but don't need a new array.
+
+
+
+
+
+
+
+
+// Array.prototype.filter()
+const numbers1 = [1, 2, 3, 4];
+const evenNumbers = numbers1.filter((num) => num % 2 === 0);
+// evenNumbers is now [2, 4]
+//Use filter() when you want to create a new array containing only the elements that meet a certain condition.
+// FILTER matlab :- JO TRUE HOGA WO HI PAAS HOGA 
+// In FILTER the whole game is about TRUE & FALSE
+
+
+
+
+
+
+
+
+
+
+let myArrr = [2, 3, 4, 5, 6, 7, 8, 9, 10 ]
+
+let newArr = myArrr.filter((hell) => {
+    return (hell % 3 === 0)
+} )
+
+// console.log(newArr);
+
+
+
+let myArr1 = ["A", 'B', 'C', 'D', 'E']
+
+let newArr1 = myArr1.forEach((ele)=> {
+    let nn = console.log(ele + 1);
+    return nn
+})
+
+// console.log(newArr1);
+
+
+
+
+let myArr2 = ["Emily", "Sylvie", "Mindy", "Antonie", "Gabriel" ]
+
+let newArr2 = myArr2.map((vall) => {
+    let nm = vall + ` French`;
+    return nm
+})
+
+// console.log(newArr2);
+
+
+
+
+
+
+let r = 19;
+
+// console.log(r == 20);
+
+
+
+
+
+
+
+function trafficLight ( vall ){
+
+let color = vall;
+
+if(color === 'red'){
+	return `STOP`
+}
+else if (color === 'green'){
+	return `GO`
+}
+else if (color === `yellow`) {
+	return `WAIT`
+}
+
+}
+
+// console.log(trafficLight('red'));
+// console.log(trafficLight('green'));
+
+
+
+
+
+
+let marks = 15
+
+if(marks >= 35){
+	// console.log(`You have successfuly passed the Exam `);
+	if (marks >= 80 ) {
+		// console.log(`You have obtained A+`);
+	}
+} 
+else if ( marks >= 30 && marks < 35 ) {
+    // console.log(`You have just any How passed the Exam`);
+}
+else {
+    // console.log(`You are a failure`);
+}
+
+
+
+
+
+
+
+    let numm = "Arizona"
+
+    // if((numm[0] === 'a' || numm[0] === 'A') && numm.length > 3) {
+    //     // console.log(`It's a good String`);              //[📍📍 Answer is :-  "It's a good String"  ] 
+    // }else{
+    //     // console.log(`It's not a good String`); 
+    // }
+
+
+
+
+
+
+
+    let rerarr= 'Sankhyaa';
+
+    document.getElementById('Strng').addEventListener('click', (rerarr) => {
+      
+     this.mehtt = rerarr;        //💎💎 Just removing this will give an ERROR
+
+    if((mehtt[0] === 'a' || mehtt[0] === 'A') && mehtt.length > 3) {
+        document.getElementById('StringH1').innerHTML=`It's a good String`
+    }else{
+        document.getElementById('StringH1').innerHTML=`It's not a good String`
+    }
+
+}) 
+
+
+
+
+let number = 0;
+
+// if (number){
+//     console.log(`'number' is not eqaul to 0`);  
+// }
+// else {
+//     console.log(`'number' is equal to 0 `);   //[📍📍 Answer is :- "'number' is not eqaul to 0"  ] 
+// }                                             // Bcoz of the TRUTHY-FALSY concept
+
+
+
+
+
+// alert('Hello')
+
+// console.log(`This is a Simple print statement`);
+// console.error(`This is a error statement`);
+// console.warn(`This is a error statement`);
+
+
+
+
+
+
+// 🍁🍁🍁🍁🍁🍁🍁🍁🍁🍁🍁🍁🍁🍁
+// 🍁💎✅💎🍁PROMPT🍁💎✅💎🍁 
+// 🍁🍁🍁🍁🍁🍁🍁🍁🍁🍁🍁🍁🍁🍁
+
+// prompt('Hello ')
+
+// let prom = prompt('Enter your Roll No :- ')
+
+// console.log(prom);
+
+
+// let password = prompt(`Enter your Password :- `)
+// console.log(password.trim()); 
+
+//🍁🍁🍁🍁🍁🍁🍁🍁🍁🍁🍁🍁🍁🍁
+//🍁🍁🍁🍁🍁🍁🍁🍁🍁🍁🍁🍁🍁🍁 
+
+
+
+
+let vall = 'This is VS code'
+
+// console.log(vall.toUpperCase());
+// console.log(vall.toLowerCase());
+
+// console.log(vall.indexOf('VS'));
+// console.log(vall.trim().toUpperCase());       //[📍📍 Answer is :-  "THIS IS VS CODE"  ] 
+
+
+// console.log(vall.length);           //[📍📍 Answer is :-  "15"  ]
+// console.log(vall.slice(-6));        //[📍📍 Answer is :-  "S code"  ] 
+
+// console.log(vall.replace("This is", "I love"));
+
+
+
+
+let vall0 = 'JavaScript is a Awesome language';
+
+// console.log(vall0.replace('language', 'way of writing code'));
+
+
+
+let vall1 = 'Programming is awesome'
+
+// console.log(vall1.replace('awesome', 'so good'));
+
+// console.log(vall1.repeat(2));
+
+// console.log(vall1.repeat(5));
+
+
+
+
+
+let myArr0 = [1, 2, 3, 4, 5]
+
+// console.log(myArr0[2]);
+// console.log(myArr0);
+// console.log(myArr0[3]); 
+// console.log(myArr0[4]); 0.-
+
+// console.log(myArr0.length);
+
+
+
+let myArr3 = [`Ramesh`, `Suresh`, `Prathmesh`, `Yogesh`] 
+
+// console.log(myArr3[2]);           //[📍📍 Answer is :- "Prathmesh" ] 
+// console.log(myArr3[2][3]);        //[📍📍 Answer is :- "t" ]   //🍁 3rd digit of "Prathmesh"
+// console.log(myArr3[2].length);        //[📍📍 Answer is :- "9" ]  
+
+
+
+let Arri = []
+
+function fives () {
+   for (let i = 0; i <= 50; i = i+5) {
+	Arri.push(i)
+   }
+
+}
+
+fives() 
+
+// console.log(Arri);
+
+let g;
+function finalVal () {
+	for(let i = 1; i <= 10; i++){
+   	 g = `5 X ${i} = ${Arri[i]}`
+   	console.log(g);
+    } 
+   return g;
+}
+
+// finalVal()
+// console.log(finalVal());
+
+
+document.querySelector('#table').addEventListener('click', () => {
+	// document.querySelector('#para').innerHTML = finalVal()
+	document.querySelector('#para').createElement = `<li> ggg </li>` 
+})
+
+
+
+
+
+
+
+
+
+
+let numz = [11, 22, 33, 44, 55]
+
+let result = numz.forEach((bb) => {
+    //   console.log(bb*bb);
+})
+
+
+
+let result0 = numz.map((el) => {
+     return (el*el)
+})
+
+// console.log(result0);        //📍📍 Answer is :-  [121, 484, 1089, 1936, 3025]
+ 
+
+
+
+let result1 = numz.filter((g) => {
+    return (g % 2 == 0 || g > 40)
+})
+
+// console.log(result1);          //📍📍 Answer is :-  [22, 44, 55]
+
+
+
+
+  let h =  [2, 4, 6, 8, 10].every((el) => {
+        return el%2 == 0
+    })
+
+    // console.log(h);             //📍📍 Answer is :-  true
+
+
+
+  let h0 =  [ 8, 5, 7, 9, 3].some((el) => {
+        return el%2 == 0
+    })
+
+    // console.log(h0);            //📍📍 Answer is :-  true
+
+
+
+
+
+    let h1 = [ 11, 22, 33, 44 ].reduce((h, l) => {
+       return (h+l) 
+    })
+    // console.log(h1);       //📍📍 Answer is :-  110
+
+
+
+
+
+    
+
+    // 💎✅💎 To FIND a MAXIMUM value in an ARRAY ( by using LOOPs) 👇👇
+
+    let arr = [10, 20, 30, 40 ,50 ,60, 70 , 80, 40]
+
+    let maxx = -1;
+
+    for(let i=0; i<arr.length; i++){
+        if(maxx < arr[i]){
+            maxx = arr[i]
+        }
+    }
+
+    // console.log(maxx);        //📍📍 Answer is :-  80
+
+
+
+
+
+    // 💎✅💎 To FIND a MAXIMUM value in an ARRAY ( by using REDUCE) 👇👇
+
+    let maxr = arr.reduce((s, l) => {
+        if( s < l){
+            return l
+        } else {
+            return s
+        }
+    })
+
+    // console.log(maxr);       //📍📍 Answer is :-  80
+
+
+
+
+
+
+    // 💎✅💎 To FIND a MINIMUM value in an ARRAY ( by using REDUCE) 👇👇
+
+    let gg = [44, 66, 88, 33, 11, 33]
+
+    let resul = gg.reduce( (r, h) => {
+        if(r < h){
+            return r
+        } else {
+            return h
+        }
+    })
+
+    // console.log(resul);          //📍📍 Answer is :-  11 
+
+
+                    // 🔽🔽
+
+    function getMin (val) {
+        let res = gig.reduce( (r, h) => {
+        if(r < h){
+            return r
+        } else {
+            return h
+        }
+     });
+     console.log(res);
+     return res
+
+    }
+   
+
+    let gig = [66, 55, 77, 4, 33, 44, 88]
+
+    // getMin(gig)      //📍📍 Answer is :-  4
+
+
+
+
+
+
+   // 💎✅💎 DEFAULT - PARAMETERS 👇👇
+
+
+   function test ( a, b = 4){
+       console.log(a**b);
+        return  a**b
+   }
+
+//  test(2, 5)     //📍📍 Answer is :-  32
+//  test(3)        //📍📍 Answer is :-  81
+
+
+           // 🔽🔽
+
+
+    function test0 (d=2, m){      // ❌❌ WRONG Syntax (for writing DEFAULT-PARAMETERS)
+        console.log(d*m);
+        return d*m
+    }
+
+    // test0(7)         //📍📍 Answer is :- NaN  (✅ bcoz "7" got assigned to 'd' & 'm' is still undefined )
+
+
+
+
+
+
+
+
+
+    // 💎✅💎 SPREAD 👇👇
+
+    let u = [6, 7, 4, 3, 8, 2, 9]
+    let x = [`A`, `B`, `C`, `D`]
+
+    // console.log(...u);          //📍📍 Answer is :-  6 7 4 3 8 2 9
+
+    //-----------------------------------------
+
+    // console.log(...'Hello');    //📍📍 Answer is :- H e l l o
+    
+    let hh = [...`Namaskaaram`]
+    // console.log(hh);               //📍📍 Answer is :- ['N', 'a', 'm', 'a', 's', 'k', 'a', 'a', 'r', 'a', 'm']
+    
+    //-----------------------------------------
+
+    let v = [...u,...x]
+   // console.log(v);             //📍📍 Answer is :-  [6, 7, 4, 3, 8, 2, 9, 'A', 'B', 'C', 'D']
+
+   //-----------------------------------------
+
+   const data = {
+        email: "user@gmail.com",
+        password: 123
+   }
+
+   const g2 = {...data, id: 23, title: "user" }
+   //  console.log(g2);             //📍📍 Answer is :-  {email: 'user@gmail.com', password: 123, id: 23, title: 'user'}
+
+
+   //-----------------------------------------
+
+   let rr = ['ww', 55, '88', 'gg', 77]
+   let y = {...rr}
+//    console.log(y);               //📍📍 Answer is :- {0: 'ww', 1: 55, 2: '88', 3: 'gg', 4: 77}
+
+    //-----------------------------------------
+
+    let ee = `Happy Today`
+    let cc = {...ee}
+    // console.log(cc);              //📍📍 Answer is :-  {0: 'H', 1: 'a', 2: 'p', 3: 'p', 4: 'y', 5: ' ', 6: 'T', 7: 'o', 8: 'd', 9: 'a', 10: 'y'}
+
+
+
+
+
+
+
+
+
+     // 💎✅💎 REST 👇👇  [Parrt-8]
+
+     function sum (...args){
+        for(let i=0; i < args.length; i++){
+            console.log(`You gave us: ${args[i]}`);
+        }
+     }
+    // sum(2, 4)    //📍📍 Answer is :-
+                    // You gave us: 2
+                    // You gave us: 4
+
+
+
+    function minz() {
+        console.log(arguments);         // ✅✅✅ "arguments" is an IN-BULIT collection parameter in JS
+        console.log(arguments.length);
+    }
+
+    // minz('A', 'B', 5, 7, 8)    //📍📍 Answer is :-
+                               // Arguments(5) ['A', 'B', 5, 7, 8, callee: ƒ, Symbol(Symbol.iterator): ƒ]
+                               // 5
+
+
+                            // 🔽🔽
+
+    function sum (...tt){
+        return tt.reduce((x, z) => {
+            console.log(x+z);
+            return x+z
+        })
+    }
+
+    // sum(2, 3, 5, 6, 8, 9)         //📍📍 Answer is :-  5 10 16 24 33
+
+
+                         // 🔽🔽
+    
+
+    function min(...argu){
+        return argu.reduce((e, b) => {
+            if( e > b){
+                return e
+            } else {
+                return b
+            }
+        })
+    }
+
+    let j = min(4, 5, 8, 2, 5)
+    // console.log(j);            //📍📍 Answer is :-  8
+
+
+                         // 🔽🔽
+    
+
+    function minz(valz, ...argu){
+        console.log(valz);
+        return argu.reduce((e, b) => {
+            if( e > b){
+                return e
+            } else {
+                return b
+            }
+        })
+    }
+
+    // let f = minz("Hello",4, 5, 8, 2, 5) 
+    // console.log(f);             //📍📍 Answer is :-
+                                // Hello
+                                // 8
+ 
+
+    // let n = minz(60000,4, 5, 8, 2, 5)
+    // console.log(n);             //📍📍 Answer is :-
+                                // 6000
+                                // 8
+ 
+
+
+    
+
+
+
+
+
+    // 💎✅💎 DESTRUCTURING (in ARRAYs)👇👇  [Parrt-8]
+
+    let names = [`Mark`, `Antony`, `James`, `Gabriel`, `Harold`, `Gilbert`, `Wilson`]
+
+    // let winner = names[0]
+    // let firstRunnerUp = names[1]
+    // let secondRunerUp = names[2]
+
+              // 🔽🔽 OR ( short way of writing this)
+    
+    let [Winner, IstRunnerUp, IIndRunnerUp, ...othersLeft] = names
+
+    // console.log(Winner);               //📍📍 Answer is :- Mark
+    // console.log(IstRunnerUp);          //📍📍 Answer is :- Antony
+    // console.log(IIndRunnerUp);          //📍📍 Answer is :- James
+    // console.log(othersLeft);            //📍📍 Answer is :-  ['Gabriel', 'Harold', 'Gilbert', 'Wilson']
+                                           // ✅✅ "othersLeft"  became an ARRAY & stored all the left out values
+
+
+
+
+
+
+
+
+    // 💎✅💎 DESTRUCTURING (in OBJECTs)👇👇  [Parrt-8]
+
+    const student = {
+        name: `Raman`,
+        age: 14,
+        class:9,
+        subjects: [`Hindi`, `English`, `Maths`, `Science`],
+        username: "raman@123",
+        password: 5678
+    }
+
+
+    let {username : user, 
+        password: pass, 
+        subjects: sub,
+         city = 'Nagpur',   // ✅ could also Assign a new Variable which was not in the Oringial OBJECT
+         Loacted : local = `Near NH road`
+                         } = student
+
+    // console.log(user);          //📍📍 Answer is :- raman@123
+    // console.log(pass);          //📍📍 Answer is :- 5678
+    // console.log(sub);            //📍📍 Answer is :- ['Hindi', 'English', 'Maths', 'Science'] 
+    // console.log(sub[2]);         //📍📍 Answer is :- Maths
+    // console.log(city);           //📍📍 Answer is :- Nagpur
+    // console.log(Located);         //❌❌ Answer is :- ERROR
+    // console.log(local);          //📍📍 Answer is :- Near NH road
+
+
+
+    // console.dir(document);
+
+
+
+
+
+    
+    const myObject = {
+    name: 'John',
+    age: 30,
+    address: {
+    city: 'Example City',
+    country: 'Example Country'
+      }
+    };
+
+//    console.dir(myObject);
+
+
+
+
+
+
+
+
+
+</script>
+
+</html>
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+<!-- https://www.hootsuite.com/social-media-tools/ai-tweet-generator -->

@@ -1,0 +1,247 @@
+<!DOCTYPE html>
+<html lang="en">   
+
+<head>
+	<title>PhotoEditor App</title>
+
+	<style>
+			* {
+				margin: 0;
+				padding: 0;
+				font-family: 'Poppins', sans-serif;
+				box-sizing: border-box;
+			}
+
+			@media only screen and (max-width: 500px)  { 
+				body{
+					background-color: #212121;
+				}
+			}
+
+			body{
+				background: linear-gradient(#eab0ad, #b499e7) ;
+				display: grid;
+				row-gap: 80px;
+				padding: 100px;
+			}
+
+			
+			.hero{
+				/* width:100%;
+				min-height: 100vh; */
+				display: flex;
+				align-items: center;
+				justify-content: center;
+				flex-direction: column;
+				row-gap: 10px;
+			}
+
+
+			.outer{
+				width: 80vh;
+				height: 70vh;
+				background-color: rgb(235, 116, 116);
+				border-radius: 10vh;
+				display: flex;
+				flex-direction: column;
+				justify-content: center;
+				row-gap: 4vh;
+				align-items:center;
+				/* box-shadow: ; */
+				box-shadow: 0px 0px 20px 0 rgba(28, 28, 29, 0.7);
+			}
+
+			.outer h1 {
+				font-size: 8vh;
+			}
+
+			.outer label{
+				font-size: 4vh;
+				padding: 2vh;
+				background-color: #b499e7;
+				border-radius: 1vh;
+				box-shadow: 0px 0px 2vh 0 rgb(0, 0, 0, .4) ;
+			}
+
+
+			#label_2{
+				background-color:rgb(235, 116, 116);
+				box-shadow: 0px 0px 0px;
+			}
+
+
+
+			#input-file{
+				/* display: none; */
+			}
+
+			img{
+				height: 30vh;
+				width: 30vh;
+				border-radius: 80%;
+				border: 1.5vh solid rgb(197, 79, 79);
+				padding: 1.4vh;
+				background-color: #ffffff;
+			}
+
+			#img_2{
+				height: 20vh;
+				width: 20vh;
+			}
+
+			#img_View{
+				height: 20vh;
+				width: 30vh;
+				border-radius: 4vh;
+				background-color:  rgb(238, 133, 133);;
+				border: 1px dashed  rgb(137, 45, 45);
+				box-sizing: content-box;
+				padding: 22px 55px;
+				opacity: .8;
+				display: flex;
+				justify-content: center;
+				align-items: center;
+				flex-direction: column;
+				background-position: center;
+				background-size: cover;
+			}
+
+
+
+			/* #out_Div{
+				width: 200px;
+				height: 200px;
+				border: 20px solid red;
+				background-color: rgb(236, 150, 150);
+				display: flex;
+				justify-content: center;
+				align-items: center;
+				padding: 10px;
+			}
+
+			#in_Div{
+				width: 100%;
+				height: 100%;
+				border: 8px solid rgb(0, 30, 255);
+				background-color: rgb(138, 132, 240);
+			} */
+
+
+	</style>
+
+</head>
+
+
+
+
+<body>
+	
+
+
+
+
+<div class="hero">
+	<div class="outer">
+			<h1>Profile Picture</h1>
+			<img src="/Starter Code (Part-9)/Images/creation_1.png" alt="">
+			<label for="input-file"> Upload Image</label>
+			<input type="file" accept="image/*" id="input-file" hidden >
+	</div>
+</div>
+
+
+<div class="hero">
+	<div class="outer">
+			<h4><b>Upload Image</b></h4>
+
+			<label for="inputFile" id="label_2">
+				<input type="file" accept="image/*" id="inputFile" hidden >
+				
+				<div id ="img_View">
+					<img id="img_2" src="/Starter Code (Part-9)/Images/Upload-PNG.png" alt="">
+				</div>
+			</label>	
+	</div>
+
+</div>
+
+ 
+
+<div>
+	<input type="range" max="100" min="0">
+</div>
+
+</body>
+
+<script>
+ let img = document.querySelector('img')
+ let label = document.querySelector('label')
+ let input = document.querySelector('input')
+ let masterDiv = document.querySelector('.hero')
+ let outerDiv = document.querySelector('.outer')
+ let para = document.createElement('p')
+ let img_View = document.querySelector('#img_View')
+ let inputFile = document.querySelector('#inputFile')
+ let label2 = document.querySelector('#label_2')
+
+// input.onchange = function () {
+// 	img.src = URL.createObjectURL(input.files[0])
+//  }
+
+					// 🔽🔽
+
+input.addEventListener('change', function () {
+	let imgLink  = URL.createObjectURL(input.files[0])
+     img.src = imgLink
+	//  masterDiv.style.backgroundImage = `url(${imgLink})`
+
+ } )
+ 
+inputFile.addEventListener('change', uploadImage)
+
+ function uploadImage (){
+	let newImgLink = URL.createObjectURL(inputFile.files[0])
+	// img_View.src = newImgLink
+	img_View.style.backgroundImage = `url(${newImgLink})`	
+	img_View.textContent = '';			 // ✅ will remove everything from the text box
+	img_View.style.border = 0;           // ✅ it will remove the BORDER
+ }
+
+
+ label2.addEventListener('dragover', function(e){
+	e.preventDefault();
+ });
+
+ label2.addEventListener('drop', function(e){
+	e.preventDefault();
+	inputFile.files = e.dataTransfer.files
+	uploadImage ()
+ });
+
+ 
+
+
+
+// 💎💎------++------JUST SOME TEST CODE-------++-------💎💎
+
+//  masterDiv.onclick = function () {
+// 	para.innerHTML = `Today is beautiful !!`
+// 	outerDiv.append(para)
+//  }
+
+
+//  document.onkeypress = function (){
+// 	para.innerHTML = `Hello Everyone`
+// 	para.style.padding = '4px'
+// 	para.style.border = `4px solid purple`
+// 	para.style.backgroundColor = 'skyblue'
+// 	para.style.borderRadius = '20px'
+// 	masterDiv.append(para)
+//  }
+
+
+
+</script>
+
+
+</html>

@@ -1,0 +1,149 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+	
+	<title>Document</title>
+
+	<style>
+		body{
+			background-color: #212121;
+			display: grid;
+			place-items: center;	
+			row-gap: 10px;
+			margin-top: 40px;
+			text-align: center;
+		}
+
+
+		div{
+			height: 50vh;
+			width:80vh ;
+			border: 9px solid red;
+			background-color: rgb(192, 216, 255);
+			display: flex;
+			justify-content: center;
+			align-items: center;
+			font-size: 40vh;
+		}
+
+	</style>
+
+</head>
+
+
+
+<body>
+
+	<h2> </h2>
+	<button>Generate Color</button>
+	<div> 💎 </div>
+
+
+	
+</body>
+
+
+
+<script>
+
+		  
+
+
+	// let btn = document.querySelector('button')
+
+	// function generateColor () {
+	// 	let red = Math.floor(Math.random()*255)
+	// 	let green = Math.floor(Math.random()*255)
+	// 	let blue = Math.floor(Math.random()*255)
+
+	// 	let color = `rgb( ${red}, ${green}, ${blue})`
+	// 	console.log(color);
+	// 	return color
+	// }
+
+
+
+	// btn.addEventListener('click', () => {
+	// 	let h2 = document.querySelector('h2')
+	// 	let randomColor = generateColor()
+	// 	h2.innerHTML = `THIS COLOR IS :- ${randomColor}`
+	// 	h2.style.color = `${randomColor}`
+
+	// 	let div = document.querySelector('div')
+	// 	div.style.backgroundColor = randomColor
+	// })
+	
+	
+
+
+
+
+
+
+
+
+
+				// 🔽🔽 (ANOTHER way of doing it)
+
+
+
+
+	 let btn = document.querySelector('button')
+
+
+	 function colorGenerater () {
+
+		let hex = `0123456789ABCDEF`
+		let color = `#`
+		for(let i=0; i <6; i++){
+			color += hex[Math.floor(Math.random()*15)]
+		}
+		console.log(color);
+		return color
+	 }
+
+
+
+
+
+	 let para = document.createElement('p')
+
+	 let brdr = [`dotted`, `dashed`,`solid`, `double`, `groove`, `ridge`, `inset`, `outset`, `none`, `hidden`, ]
+
+	 btn.addEventListener('click', () => {
+
+		para.innerHTML= `<b>THE CURRENT COLOR IS : ${colorGenerater()}</b>`
+		document.querySelector('body').prepend(para)
+		para.style.color = `${colorGenerater()}`
+
+		let div = document.querySelector('div')
+		div.style.backgroundColor = colorGenerater();
+		
+		let vall = brdr[Math.floor(Math.random()*9)]
+		div.style.borderStyle = vall
+		div.style.borderColor = `${colorGenerater()}`
+	 })
+
+
+
+	 				 
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+</script>
+
+
+</html>

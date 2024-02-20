@@ -1,0 +1,160 @@
+<!DOCTYPE html>
+<html lang="en">
+
+	<head>
+
+		<title>My SIMON SAY</title>
+
+		<link rel="preconnect" href="https://fonts.googleapis.com">
+		<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+		<link href="https://fonts.googleapis.com/css2?family=Ubuntu:wght@700&display=swap" rel="stylesheet">
+
+
+		<style>
+
+			body {
+				background-color: #d3cbcb;
+				color: #3f3d3d;
+				display: grid;
+				place-items: center;
+				gap: 0px;
+				height: 400px;
+			}
+
+			h1,
+			h3{
+				margin: 0;
+				font-family:Ubuntu;
+			}
+
+
+			#out_div{
+				display: grid;
+				grid-template-columns:1fr 1fr;
+				gap: 18px;
+				margin: 0px;
+
+			}
+
+
+			#In_div1{
+				height: 110px;
+				width: 110px;
+				border: 5px solid rgb(0, 0, 0);
+				background-color: rgb(232, 97, 97);
+				border-radius: 18px;
+			}
+			#In_div1 ::click {
+
+			}
+
+			#In_div2{
+				height: 110px;
+				width: 110px;
+				border: 5px solid rgb(0, 0, 0);
+				background-color: rgb(56, 142, 83);
+				border-radius: 18px;
+			}
+
+			#In_div3{
+				height: 110px;
+				width: 110px;
+				border: 5px solid rgb(0, 0, 0);
+				background-color: rgb(211, 120, 46);
+				border-radius: 18px;
+			}
+
+			#In_div4{
+				height: 110px;
+				width: 110px;
+				border: 5px solid rgb(0, 0, 0);
+				background-color: rgb(52, 112, 201);
+				border-radius: 18px;
+			}
+
+			.flash {
+				background-color: rgb(211, 203, 203);
+			}
+	
+		</style>
+
+	</head>
+
+
+	<body>
+
+		<h1>Simon Says Game</h1>
+		<h3>Press Any Key to Start the GAME !</h3>
+
+		<div id="out_div">
+
+			<div id="In_div1"></div>
+
+			<div id="In_div2"></div>
+
+			<div id="In_div3"></div>
+
+			<div id="In_div4"></div>
+
+		</div>
+
+
+		
+
+	
+	</body>
+
+		<script>
+
+			let lvl = document.querySelector('h3')
+			lvl.style.margin= 0;
+			let h1 = document.querySelector('h1')
+			let body = document.querySelector('body')
+			let num = 0
+
+			let outDiv = document.querySelector('#out_div')
+			let div1 = document.querySelector('#In_div1')
+			let div2 = document.querySelector('#In_div2')
+			let div3 = document.querySelector('#In_div3')
+			let div4 = document.querySelector('#In_div4')
+			// let colorDiv  = document.querySelector('#In_div1, #In_div2, #In_div3 ,#In_div4' )
+		
+
+			// console.log(div2);
+
+			function lvlUp () {
+				num ++ ;
+				lvl.innerHTML = `<b>Current Level is ${num}</b>`
+				outDiv.insertAdjacentElement('beforebegin', lvl )
+				div1.classList.add ("flash")
+				setTimeout(function () {
+					div1.classList.remove("flash")
+				}, 1000)
+				
+			}
+			
+
+			// div1.addEventListener('click', lvlUp)
+			// div2.addEventListener('click', lvlUp)
+			// div3.addEventListener('click', lvlUp)
+			// div4.addEventListener('click', lvlUp) 
+
+							// 🔽🔽 OR
+							
+
+			let colrBoxes = [div1, div2, div3, div4]
+
+			for(box of colrBoxes){
+				box.addEventListener ('click', lvlUp)
+			}
+		
+			
+
+			
+					
+			
+		</script>
+
+
+
+</html>

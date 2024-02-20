@@ -1,0 +1,172 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+	<title>Document</title>
+
+	<link rel="preconnect" href="https://fonts.googleapis.com">
+	<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+	<link href="https://fonts.googleapis.com/css2?family=Archivo+Black&family=Roboto:wght@900&display=swap" rel="stylesheet">
+
+	<style>
+
+		body{
+			background-color: #212121;
+			display: flex;
+			flex-direction: column;
+			justify-content: center;
+			height: 100vh;
+			align-items: center;
+			/* row-gap: 10px; */
+			
+		}
+
+		input{
+			
+			width: 190px; 
+			background-color: #3B3B3B;
+			border: 3px solid #814ccb;
+			margin-bottom:  10px;
+			border-radius: 10px;
+			color: #a7aaa7;
+			font-weight: bold;
+			font-size: large;
+			padding: 10px 10px;
+		}
+
+		input::placeholder{
+			padding-bottom: 2px;
+			text-align: left;
+			font-family: Roboto;
+			color: #727372;
+
+		}
+
+
+		div{
+			display: grid;
+			grid-template-columns: 1fr 1fr 1fr 1fr ;
+			justify-content:space-evenly;
+			gap: 10px;
+			background-color: #3B3B3B;;
+			border-radius: 10px;
+			border: 3px solid #814ccb;
+			padding: 10px;
+		}
+
+
+		button{
+			height: 40px;
+			width: 40px;
+			border: 2px solid #814ccb;
+			border-radius: 40px;
+			background-color: #585757;
+			color: #a7aaa7;
+			font-weight: bold;
+			font-size: large;
+			font-family: Roboto;
+		}
+
+		button:hover{
+			background-color: #814ccb;
+		}
+
+		
+	</style>
+</head>
+
+
+<body>
+
+	<input type='text' placeholder="calculate...">
+	<div>
+		<button  id="btn1" >1</button>
+		<button  id="btn2" >2</button>
+		<button  id="btn3" >3</button>
+		<button  id="btn4" >4</button>
+		<button  id="btn5" onclick="input.value += 5" >5</button>
+		<button  id="btn5" onclick="input.value += 6" >6</button>
+		<button  id="btn5" onclick="input.value += 7" >7</button>
+		<button  id="btn5" onclick="input.value += 8" >8</button>
+		<button  id="btnMulti" >*</button>
+		<button  id="btnDiv" >/</button>
+		<button  id="btnAdd" >+</button>
+		<button  id="btnMin" >-</button>
+		<button  id="btnSq" >sq</button>
+		<button  id="btnCube" >cu</button>
+		<button  id="btnEql" >=</button>
+		<button  id="btnClr" >C</button>
+	</div>
+	
+</body>
+
+
+<script>
+
+	let input = document.querySelector('input')
+    let btn1 = document.querySelector('#btn1')
+    let btn2 = document.querySelector('#btn2')
+    let btn3 = document.querySelector('#btn3')
+    let btn4 = document.querySelector('#btn4')
+    let btnMulti = document.querySelector('#btnMulti')
+    let btnDiv = document.querySelector('#btnDiv')
+    let btnAdd = document.querySelector('#btnAdd')
+    let btnMin = document.querySelector('#btnMin')
+    let btnSq = document.querySelector('#btnSq')
+    let btnCube = document.querySelector('#btnCube')
+    let btnClr = document.querySelector('#btnClr')
+
+	
+
+
+	btn1.addEventListener('click', function () {
+		input.value += 1
+	})
+
+	btn2.addEventListener('click', function () {
+		input.value += 2
+	})
+
+	btn3.addEventListener('click', function () {
+		input.value += 3
+	})
+
+	btn4.addEventListener('click', function () {
+		input.value += 4
+	})
+
+	btnMulti.addEventListener('click', function () {
+		input.value += '*'
+	})
+	btnDiv.addEventListener('click', function () {
+		input.value += '/'
+	})
+	btnAdd.addEventListener('click', function () {
+		input.value += '+'
+	})
+	btnMin.addEventListener('click', function () {
+		input.value += '-'
+	})
+	btnSq.addEventListener('click', function () {
+		input.value = input.value**2
+	})
+
+	btnCube.addEventListener('click', function () {
+		input.value = input.value**3
+	})
+
+	btnEql.addEventListener('click', function () {
+		input.value = eval(input.value)
+	})
+
+	btnClr.addEventListener('click', function () {
+		input.value = null
+	})
+
+	
+
+
+
+</script>
+
+</html>
+

@@ -1,0 +1,200 @@
+<!DOCTYPE html>
+<html lang="en">
+    <head>
+        <meta charset="UTF-8">
+    
+        <title>DOM learning</title>
+        <style>
+            body{
+                background-color: #212121;
+                color: white;    
+                
+            }
+
+
+        </style>
+
+
+
+    </head>
+
+
+    <body>
+        <div class="bg-black"> 
+            <h1  id="title" class="heading"> DOM learning on You Tube <span style="display: none;">test text</span></h1>
+            <p>JavaScipt Course</p>
+            <button>Test button</button>
+            <h2>Lorem ipsum dolor sit amet consectetur </h2>
+            <h2>Lorem ipsum dolor sit amet consectetur </h2>
+            <h2>Lorem ipsum dolor sit amet consectetur </h2>
+            <p id="para">Lorem, ipsum dolor sit amet.</p>
+            <input type="password" name="" id="">
+
+            <ul>
+                <li class="List-item" >two</li>
+                <li class="List-item" >one</li>
+                <li class="List-item" >three</li>
+                <li class="List-item" >four</li>
+            </ul>
+
+             
+        </div> 
+
+
+        <script>
+
+
+        // 💎💎 For getting extra information about the page Do :- 👇👇
+        
+        // console.dir(document)    // 📍📍To get all the properties of document which were hidden properties (instead of writing "console.log(window.document)" again & again )
+        // console.log(document.links)    // 📍📍To get all the links present in the documents
+
+
+        // 💎💎👇👇
+        
+        // document.getElementById('title').innerHTML = "<h1> Hello Everyone </h1>"
+        //                                 // 🔽🔽 (OR)
+        // document.getElementById('title').innerHTML = " Hello Everyone"
+
+       
+       
+       </script> 
+
+        
+        
+
+       
+    </body>
+</html>
+
+                
+
+
+
+<!--DOM Methods for targeting Elemnts of the above document :- 
+
+   ➤   document.getElementById('title')                        // [📍📍To get the whole element ] 
+   ➤   document.getElementById('title').id                     //[📍📍To get just the idn ame  of that Element ] 
+   ➤   document.getElementById('title').class  ❌❌❌❌ [📍Nothing will come bcoz it supports the key word "className"]
+   ➤   document.getElementById('title').className             //[📍📍To get just the class name  of that Element ] 
+   ➤   document.getElementById('title').innerHTML = "<h1> Hello Everyone </h1>"      // [📍📍To manipulate the "innerHTML" of that Element ] 
+   ➤   document.getElementById('title').getAtrribute('id')     //[📍📍To get just the id name  of that Element ] 
+   ➤   document.getElementById('title').getAtrribute('class') 
+   ➤   document.getElementById('title').getAtrribute('class', 'test') ✅✅ [📍in "Elements" section  heading will get overwrited  with text "test "in class]
+   
+
+
+
+   🔽🔽 👇👇 targeting STYLE elements :-
+
+   ➤   title.style.backgroundColor = 'green'
+   ➤   title.style.padding = "15px"
+   ➤   title.style.borderRadius = "5px"
+   ➤   title.style.borderRadius = "15px"
+
+
+
+   🔽🔽 Adding Contents 👇👇 :-
+
+   ➤   title.innerText      [📍 only displays the text part that is visible on the page ( i.e. doesn't  displays any  HTML tags present in the text node) ] [ ✅Text will not be visible in 'innerText '  if we make "style= display: none"]
+                             ✅ If we gonna enter TEXT with HTML tags in it, it's not gonna recognise it & tags will be visible as it is on the web Page
+
+
+   ➤   title.textContent    [📍 displays everything whatever is there in the Text Node ] [✅ Text will be visible in 'title.textContent' even if we make "style= display: none"]
+   
+
+
+   ➤   title.innerHTML      [📍 displays everything whatever is there in the Text Node along with their HTML tags]
+                             ✅ If we gonna enter TEXT with HTML tags in it, it's gonna recognise it  & will be visible onto the page with effect
+                             ✅ Like:- document.querySelector('#para1').innerHTML = "Hi, I am <b>Peter Parker</b>" [will be visible on the page with bold text]
+   
+
+
+
+   💎 Other Methods 👇👇
+
+   ➤   document.getElementsByClassName('heading')   
+   ➤   document.getElementsByTagName  
+   ➤   document.getElementsByName 
+   ➤   document.getElementById
+
+
+   
+
+   
+   🔽🔽Query-Selectors 👇👇
+
+   ➤  document.querySelector('h1')  [📍 Will give the first h1 of the page to you] 
+   ➤  document.querySelector('h2')  [📍 Will give the first h2 of the page to you] 
+   ➤  document.querySelector('#title')    [📍for selecing by "id" (Just like CSS selectors)] 
+   ➤  document.querySelector('.heading')  [📍for selecing by "class" (Just like CSS selectors)] 
+   ➤  document.querySelector('input[type="passowrd"]')  [📍 for selecting by "input types" (Just like CSS selectors)] 
+       
+   ➤  document.querySelector('p:first-child')      [📍for selecting the first paragrapgh of a div (which was his first child)] 
+
+
+   ➤  document.querySelector('ul')        [📍for selecing a complete list ] 
+       const myul = document.querySelector('ul')
+       myul.querySelector('li')
+       const turnGreen = myul.querySelector('li')
+       turnGreen.style.backgroundColor = "green"
+       turnGreen.style.padding = "10x"
+       turnGreen.innerText
+       turnGreen.innerText = "five"
+   
+
+
+   ➤  document.querySelectorAll('h1')
+       const myH1 = document.querySelectorAll('h1')
+       myH1[0].style.color = 'green' 
+
+
+
+   🔽🔽 Node- Lists👇👇
+
+   ➤  document.querySelectorAll('li')                    // ✅💎✅ "querySelectorAll" gonna return the "Node List" data type to us, so for using it we have to use operations like that on an ARRAY
+       const tempLiList = document.querySelectorAll('li')
+       tempLiList[0].style.color = 'green'                //[📍📍So basically it looks like an ARRAY but not an ARRAY & many of the operations like ARRAY can be applied onto it as well ]   
+
+                    // OR
+
+       document.querySelectorAll('li')
+       const tempLiList = document.querySelectorAll('li')
+       tempLiList        
+
+       tempLiList.forEach(function (l) {            [📍used it's PROTOTYPE attribute ] 
+       l.style.backgroundColor = 'green'
+       })                                           [📍all of the list got green in Color ]
+
+
+      
+
+       ➤ document.getElementsByClassName('List-item')            // ✅💎✅ "getElementsByClassName" gonna return us "HTML Collection"
+          const tempClassList = document.getElementsByClassName('List-item')
+          tempClassList
+          Array.from(tempClassList)                 [💎📍💎 converting from "tempList" to "ARRAY" (for applying "ForLoop" onto it )]
+          const myConvertedArray = Array.from(tempClassList)  [📍storing "ARRAY" inside const Variable ]
+
+          myConvertedArray.forEach(function (li){
+          li.style.color = `orange`
+          })
+  
+
+
+
+
+       ➤ const myH2 = document.querySelectorAll('.mw-headline')
+
+          myH2[0].innerHTML             // [📍📍 Answer is :-  "Adoption by Microsoft" ] 
+
+          myH2.forEach(function (h){
+          h.style.color = 'red'
+          })
+
+          myH2.forEach(function (h){
+          h.style.color = 'red';
+          h.style.backgroundColor = 'green';
+          h.style.padding = '20px 10px ';
+          h.innerText = "RISHABHHHHHH"
+          })
+

@@ -134,7 +134,8 @@ h1{
 
 }
 
-.filters button {
+.filters button,
+.transFormBox button {
 	height: 2rem;
 	width: 2rem;
 	display: flex;
@@ -144,6 +145,7 @@ h1{
 	border: none;
 	border-radius: .3rem; 
 	background-color: rgb(89, 123, 144);
+	padding: .2rem;
 }
 
 

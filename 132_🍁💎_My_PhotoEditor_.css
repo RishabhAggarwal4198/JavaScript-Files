@@ -88,6 +88,8 @@ h1{
 	background-color:rgb(236, 235, 232);
 	box-shadow: 0rem 0rem 1rem .4rem  rgb(211, 208, 203, .5);
 }
+
+
 .slider{
 	/* border: 2px solid red; */
 	border-radius: 1rem;
@@ -111,8 +113,9 @@ h1{
 
 
 
-.filetrsBox,
-.transFormBox {
+.filetrsBox, 
+.transFormBox 
+{
 	margin: 1rem 0rem;
 	display: grid;
 	row-gap: 1rem;
@@ -160,8 +163,9 @@ h1{
 .disabled h1,
 .disabled p,
 .disabled .slider,
-.disabled .filetrsBox,
-.disabled .transFormBox{
+.disabled .filetrsBox
+/* , .disabled .transFormBox */
+{
 	pointer-events: none;
 	opacity: .2;
 	

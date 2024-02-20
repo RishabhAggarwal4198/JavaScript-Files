@@ -119,10 +119,10 @@ rotate_btns.forEach((ele) => {
 			flip_y = flip_y === 1 ? -1 : 1      // Watch [@ 1:32:50]
 		}
 
-
 		imgSrc.style.transform = `rotate(${rotate}deg)  scale(${flip_x}, ${flip_y})`;
 	})
 })
+
 
 
 reset.addEventListener('click', () => {
@@ -145,6 +145,7 @@ reset.addEventListener('click', () => {
 						   grayscale(${grayscale}%)
 						   blur(${blur}px)`;
 })
+
 
 
 save.addEventListener('click', () => {

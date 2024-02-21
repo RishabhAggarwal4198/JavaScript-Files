@@ -6,7 +6,7 @@ let filterBtns = document.querySelectorAll('.filters button')
 let sliderInput = document.querySelector('.slider input')
 let filterType = document.querySelector('.filter_type')
 let filterMagnitude = document.querySelector('.value')
-let transformBtns = document.querySelector('.transFormBox  button')
+let transformBtns = document.querySelectorAll('.transfromers  button')
 
 
 let bright = 100,
@@ -32,7 +32,7 @@ uploadInput.addEventListener('change', () => {
 
 filterBtns.forEach((ele) => {
 	ele.addEventListener('click', () => {
-		// document.querySelector('.activeBtn').classList.remove('activeBtn')
+		document.querySelector('.activeBtn').classList.remove('activeBtn')
 		ele.classList.add('activeBtn')
 		
 		filterType.innerHTML = ele.id.toUpperCase()
@@ -108,7 +108,11 @@ sliderInput.addEventListener('input', editImage );
 
 
 transformBtns.forEach((el) =>{
-	el.addEventListener('click', () =>{
+	el.addEventListener('click', () => {
+		document.querySelector('.activeBtn').classList.remove('activeBtn')
+		el.classList.add('activeBtn')
+
 		
+
 	})
 })

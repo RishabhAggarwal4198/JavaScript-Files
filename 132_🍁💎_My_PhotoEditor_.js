@@ -38,10 +38,7 @@ uploadInput.addEventListener('change', () => {
 
 	// #1f75fe
 
-	let efects = [ `0rem 0rem 2rem .5rem #76c4fa`,
-				   `0rem 0rem 2rem .8rem #76c4fa`,
-				   `0rem 0rem 2rem 1.2rem #76c4fa`]
-
+	
 
 
 
@@ -230,12 +227,14 @@ saveBtn.addEventListener('click', () => {
 	ctz.transform =  `rotate(${rotate}deg)  
 						scale(${flipX}, ${flipY})`
 	
+	// ctz.scale(flipX, flipY)
+
 	ctz.translate ( (canvazz.width) / 2  , (canvazz.height) / 2 )
 
 	ctz.drawImage (
 		focusImage,
 		-(canvazz.width) / 2,
-		(canvazz.height) / 2,
+		-(canvazz.height) / 2,
 		canvazz.width,
 		canvazz.height
 	)

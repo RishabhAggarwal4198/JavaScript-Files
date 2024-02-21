@@ -1314,9 +1314,10 @@ toDoAddBtn.addEventListener('click', () => {
     newH2.insertAdjacentElement("beforeend",delBTN)
     inputToDO.value = ``
 
-    
-    delBTN.addEventListener('click', () => {
 
+    delBTN.addEventListener('click', () => {
+            delBTN.previousSibling.remove()
+            delBTN.remove()
     })
 
 })

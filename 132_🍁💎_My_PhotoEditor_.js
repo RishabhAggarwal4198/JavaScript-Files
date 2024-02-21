@@ -8,6 +8,7 @@ let filterType = document.querySelector('.filter_type')
 let filterMagnitude = document.querySelector('.value')
 let transformBtns = document.querySelectorAll('.transfromers  button')
 // let allBtnsofDOC = document.querySelectorAll('button')
+let resetBtn = document.querySelector('.resetBtn')
 
 
 let bright = 100,
@@ -141,3 +142,19 @@ transformBtns.forEach((el) =>{
 	})
 })
 
+
+
+resetBtn.addEventListener('click', () => {
+
+focusImage.src = `/Images/upload.png`
+
+bright = 100,
+contrAAst = 100,
+GrayIsskale = 0,
+Blurrr = 0,
+OpaCity = 100;
+rotate = 0;
+flipX = 1;
+flipY = 1;
+
+})

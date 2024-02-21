@@ -84,11 +84,11 @@ h1{
 }
 
 
-.uploadBtn button:hover,
-.resetBtn:hover,
-.saveBtn:hover {
+.uploadBtn button:hover
+{
 	background-color:rgb(236, 235, 232);
 	box-shadow: 0rem 0rem 1rem .4rem  rgb(211, 208, 203, .5);
+	color: #2E5266FF;
 }
 
 
@@ -133,7 +133,14 @@ h1{
 .saveBtn {
 	padding: .6rem  2rem;
 	margin: 0;
-	transition: 600ms;
+	transition: 1400ms;
+}
+
+.resetBtn:hover,
+.saveBtn:hover {
+	background-color:rgb(236, 235, 232);
+	box-shadow: 0rem 0rem 1rem .4rem  rgb(211, 208, 203, .5);
+	color: #2E5266FF;
 }
 
 
@@ -143,8 +150,6 @@ h1{
 	justify-content: space-between;
 	padding: .6rem;
 }
-
-
 
 
 
@@ -187,8 +192,6 @@ h1{
 {
 	pointer-events: none;
 	opacity: .2;
-
-	
 }
 
 .activeBtn {

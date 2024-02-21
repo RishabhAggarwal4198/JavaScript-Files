@@ -22,7 +22,7 @@ rotate = 0;
 flipX = 1;
 flipY = 1;
 
-
+let interval1, interval2, interval3;
 
 
 uploadBtn.addEventListener('click', () => uploadInput.click());
@@ -37,21 +37,18 @@ uploadInput.addEventListener('change', () => {
 
 	// #1f75fe
 
-	setInterval(() => {
-		outContainer.style.boxShadow = ` 0rem 0rem 2rem .2rem #76c4fa`
+	interval1 = setInterval(() => {
+		outContainer.style.boxShadow = ` 0rem 0rem 2rem .5rem #76c4fa`
 	}, 800 )
 
-	setInterval(() => {
+	interval2 = setInterval(() => {
 		outContainer.style.boxShadow = ` 0rem 0rem 2rem .5rem #76c4fa`
 	}, 1200 )
 
-	setInterval(() => {
+	interval3 = setInterval(() => {
 		outContainer.style.boxShadow = ` 0rem 0rem 2rem .8rem #76c4fa`
 	}, 1400 )
 
-	// setInterval(() => {
-	// 	outContainer.style.boxShadow = ` 0rem 0rem 2.9rem 1.1rem #76c4fa`
-	// }, 1600 )
 })
 
 
@@ -194,6 +191,8 @@ focusImage.style.filter = `brightness(${bright}%)
 focusImage.style.transform = `rotate(${rotate}deg)  
 							  scale(${flipX}, ${flipY})`
 
-outContainer.style.remove(setInterval())
+clearInterval(interval1)
+clearInterval(interval2)
+clearInterval(interval3)
 
 })

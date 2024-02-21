@@ -23,6 +23,7 @@ flipY = 1;
 
 
 
+
 uploadBtn.addEventListener('click', () => uploadInput.click());
 
 uploadInput.addEventListener('change', () => {

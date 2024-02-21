@@ -1305,15 +1305,14 @@ let body = document.querySelector('body')
 toDoAddBtn.addEventListener('click', () => {
     
     let newH2  =  document.createElement('h2')
-    newH2.innerHTML = `⦾ ${inputToDO.value}  `
+    newH2.innerHTML = `⦾ ${inputToDO.value}   `
     body.append(newH2)
     newH2.style.margin = `1rem`
     // newH2.style.display = `inline-block`
     let delBTN = document.createElement('button')  
-    delBTN.innerHTML = `X` 
+    delBTN.innerHTML = `❌` 
     newH2.insertAdjacentElement("beforeend",delBTN)
     inputToDO.value = ``
-
 
     delBTN.addEventListener('click', () => {
             delBTN.previousSibling.remove()

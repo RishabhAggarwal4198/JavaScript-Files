@@ -26,7 +26,7 @@ choose_Input.addEventListener('change', () => {
 
     //  console.log(choose_Input.files[0]); 
 	let file = choose_Input.files[0];
-	if(!file) return;           //✅✅If 'file' doesn't exist return nothing
+	// if(!file) return;           //✅✅If 'file' doesn't exist return nothing
 	imgSrc.src = URL.createObjectURL(file);
 
 	// document.querySelector('.container').classList.remove('disabled')
@@ -34,6 +34,8 @@ choose_Input.addEventListener('change', () => {
 	imgSrc.addEventListener('load', () => {
 		document.querySelector('.container').classList.remove('disabled')
 	})
+
+
 })
 
 
@@ -176,10 +178,10 @@ save.addEventListener('click', () => {
 
   
 		
-	let link = document.createElement('a')	
-	link.download = 'img.jpg';
-	link.href = canvas.toDataURL();
-	link.click();
+	let filezz = document.createElement('a')	
+	filezz.download = 'img.jpg';
+	filezz.href = canvas.toDataURL();
+	filezz.click();
 
 });
 

@@ -34,6 +34,18 @@ uploadInput.addEventListener('change', () => {
 	focusImage.classList.add('NewImg')
 	outContainer.classList.remove('disabled')
 	outContainer.style.height =`50rem`
+
+	// setInterval(() => {
+	// 	outContainer.style.boxShadow = ` 0rem 0rem 2rem .2rem  #1f75fe`
+	// }, 1000 )
+
+	// setInterval(() => {
+	// 	outContainer.style.boxShadow = ` 0rem 0rem 2rem .9rem  #1f75fe`
+	// }, 2000 )
+
+	// setInterval(() => {
+	// 	outContainer.style.boxShadow = ` 0rem 0rem 2rem 1.4rem  #1f75fe`
+	// }, 3000 )
 })
 
 

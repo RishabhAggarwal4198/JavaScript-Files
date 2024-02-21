@@ -67,6 +67,7 @@ h1{
 	opacity: 1;
 	border-radius: 1rem;
 	box-shadow: 0rem 0rem .6rem .2rem  #D3D0CBFF;
+	filter: op;
 }
 
 .uploadBtn button {

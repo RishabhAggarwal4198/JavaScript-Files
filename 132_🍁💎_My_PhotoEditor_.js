@@ -156,6 +156,7 @@ sliderInput.value = '0'
 filterType.innerHTML =`VALUE`
 filterMagnitude.innerHTML =`0%`
 outContainer.classList.add('disabled')
+outContainer.style.height =`48rem`
 
 bright = 100,
 contrAAst = 100,
@@ -165,5 +166,14 @@ OpaCity = 100;
 rotate = 0;
 flipX = 1;
 flipY = 1;
+
+focusImage.style.filter = `brightness(${bright}%) 
+						   contrast(${contrAAst}%)
+						   grayscale(${GrayIsskale}%)
+						   blur(${Blurrr}px)
+						   opacity(${OpaCity}%)`
+
+focusImage.style.transform = `rotate(${rotate}deg)  
+							  scale(${flipX}, ${flipY})`
 
 })

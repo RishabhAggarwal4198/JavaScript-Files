@@ -9,6 +9,7 @@ let filterMagnitude = document.querySelector('.value')
 let transformBtns = document.querySelectorAll('.transfromers  button')
 // let allBtnsofDOC = document.querySelectorAll('button')
 let resetBtn = document.querySelector('.resetBtn')
+let saveBtn = document.querySelector('.saveBtn')
 
 
 let bright = 100,

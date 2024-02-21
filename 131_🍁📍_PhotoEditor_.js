@@ -174,7 +174,7 @@ save.addEventListener('click', () => {
 		canvas.height
 		);
 
-
+  
 		
 	let link = document.createElement('a')	
 	link.download = 'img.jpg';

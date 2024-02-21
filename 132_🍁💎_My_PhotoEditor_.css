@@ -23,7 +23,7 @@ h1{
 
 
 .out_container{
-	height: 49rem;
+	height: 48rem;
 	width: 30rem;
 	border: 2px none red;
 	box-shadow: 0rem 0rem 2rem .2rem  #D3D0CBFF;
@@ -84,7 +84,9 @@ h1{
 }
 
 
-.uploadBtn button:hover {
+.uploadBtn button:hover,
+.resetBtn:hover,
+.saveBtn:hover {
 	background-color:rgb(236, 235, 232);
 	box-shadow: 0rem 0rem 1rem .4rem  rgb(211, 208, 203, .5);
 }
@@ -131,6 +133,7 @@ h1{
 .saveBtn {
 	padding: .6rem  2rem;
 	margin: 0;
+	transition: 600ms;
 }
 
 
@@ -140,6 +143,11 @@ h1{
 	justify-content: space-between;
 	padding: .6rem;
 }
+
+
+
+
+
 
 .filters button,
 .transfromers button {
@@ -175,6 +183,7 @@ h1{
 .disabled .slider,
 .disabled .filetrsBox
 , .disabled .transFormBox
+, .disabled .LastBtns
 {
 	pointer-events: none;
 	opacity: .2;

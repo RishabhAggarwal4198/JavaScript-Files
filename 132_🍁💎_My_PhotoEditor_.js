@@ -32,6 +32,7 @@ uploadInput.addEventListener('change', () => {
 	focusImage.classList.remove('mainIMG')
 	focusImage.classList.add('NewImg')
 	outContainer.classList.remove('disabled')
+	outContainer.style.height =`50rem`
 })
 
 

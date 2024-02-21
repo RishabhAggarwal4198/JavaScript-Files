@@ -34,11 +34,7 @@ filterBtns.forEach((ele) => {
 	ele.addEventListener('click', () => {
 		// document.querySelector('.activeBtn').classList.remove('activeBtn')
 		ele.classList.add('activeBtn')
-		if (ele.classList === 'activeBtn'){
-			ele.nextElementSibling.classList.remove('activeBtn')
-			ele.previousElementSibling.classList.remove('activeBtn')
-		}
-
+		
 		filterType.innerHTML = ele.id.toUpperCase()
 
 		if(ele.id === 'Brightness'){

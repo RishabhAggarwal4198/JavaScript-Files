@@ -126,6 +126,7 @@ rotate_btns.forEach((ele) => {
 
 
 
+
 reset.addEventListener('click', () => {
 	brightness = '100';
 	saturate = '100';

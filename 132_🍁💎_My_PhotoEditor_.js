@@ -130,10 +130,10 @@ transformBtns.forEach((el) =>{
 			flipX = flipX === 1 ? -1 : 1
 		}
 		else if(el.id === 'Flip-Vertical' ){
-			flipX = flipX === 1 ? -1 : 1
+			flipY = flipY === 1 ? -1 : 1
 		}
 
-		
+
 		focusImage.style.transform = `rotate(${rotate})  scale(${flipX}, ${flipY})`
 
 	})

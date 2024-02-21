@@ -210,6 +210,28 @@ outContainer.style.boxShadow = `0rem 0rem 2rem .2rem  #D3D0CBFF`
 
 
 
+
 saveBtn.addEventListener('click', () => {
+
+	let canvazz = document.createElement('canvas')
+
+	canvazz.width = focusImage.naturalWidth
+	canvazz.height = focusImage.naturalHeight
+
+	let ctz = canvazz.getContext('2d')
+	
+	ctz.filter = `brightness(${bright}%) 
+					contrast(${contrAAst}%)
+					grayscale(${GrayIsskale}%)
+					blur(${Blurrr}px)
+					opacity(${OpaCity}%)`
+
+
+	ctz.transform =  `rotate(${rotate}deg)  
+						scale(${flipX}, ${flipY})`
+	
+	ctz.translate ( (canvazz.width) / 2  , (canvazz.height) / 2 )
+	
+
 
 })

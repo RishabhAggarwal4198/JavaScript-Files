@@ -231,7 +231,16 @@ saveBtn.addEventListener('click', () => {
 						scale(${flipX}, ${flipY})`
 	
 	ctz.translate ( (canvazz.width) / 2  , (canvazz.height) / 2 )
-	
 
+	ctz.drawImage (
+		focusImage,
+		-(canvazz.width) / 2,
+		(canvazz.height) / 2,
+		canvazz.width,
+		canvazz.height
+	)
+
+	let newCreation = document.createElement('a')
+	newCreation
 
 })

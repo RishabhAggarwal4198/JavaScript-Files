@@ -16,10 +16,10 @@ contrAAst = 100,
 GrayIsskale = 0,
 Blurrr = 0,
 OpaCity = 100;
-rotateLeft = 0;
-rotateRight = 0;
+rotate = 0;
 flipX = 1;
 flipY = 1;
+
 
 
 
@@ -112,28 +112,30 @@ function editImage ()  {
 sliderInput.addEventListener('input', editImage );
 
 
+
 transformBtns.forEach((el) =>{
 	el.addEventListener('click', () => {
 		document.querySelector('.activeBtn').classList.remove('activeBtn')
 		el.classList.add('activeBtn')
 
-		filterType.innerHTML = el.id.toUpperCase()
+		// filterType.innerHTML = el.id.toUpperCase()
 		
-
 		if(el.id === 'Rotate-Left' ){
-			rotateLeft -= 90
+			rotate -= 90
 		}
 		else if(el.id === 'Rotate-Right' ){
-			rotateRight += 90
+			rotate += 90
 		}
 		else if(el.id === 'Flip-Horizontal' ){
 			flipX = flipX === 1 ? -1 : 1
 		}
 		else if(el.id === 'Flip-Vertical' ){
-			flipY = flipY === 1 ? -1 : 1
+			flipX = flipX === 1 ? -1 : 1
 		}
 
-		
+
+		focusImage.style.transform = `rotate(${rotate})  scale(${flipX}, ${flipY})`
 
 	})
 })
+

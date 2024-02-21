@@ -16,6 +16,10 @@ contrAAst = 100,
 GrayIsskale = 0,
 Blurrr = 0,
 OpaCity = 100;
+rotateLeft = 0;
+rotateRight = 0;
+flipX = 1;
+flipY = 1;
 
 
 
@@ -115,7 +119,19 @@ transformBtns.forEach((el) =>{
 
 		filterType.innerHTML = el.id.toUpperCase()
 		
-		// if(el.id === )
+
+		if(el.id === 'Rotate-Left' ){
+			rotateLeft -= 90
+		}
+		else if(el.id === 'Rotate-Right' ){
+			rotateRight += 90
+		}
+		else if(el.id === 'Flip-Horizontal' ){
+			rotateLeft -= 90
+		}
+		else if(el.id === 'Flip-Vertical' ){
+			rotateLeft -= 90
+		}
 
 	})
 })

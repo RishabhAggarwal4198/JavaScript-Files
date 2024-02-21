@@ -158,7 +158,7 @@ save.addEventListener('click', () => {
 	canvas.height = imgSrc.naturalHeight;
 
 	ctx.filter = `brightness(${brightness}%)
-					contrast(${contrast}%)  +
+					contrast(${contrast}%)  
 					saturate(${saturate}%)
 					invert(${invert}%)
 					grayscale(${grayscale}%)

@@ -167,7 +167,7 @@ h1{
 .disabled p,
 .disabled .slider,
 .disabled .filetrsBox
-, .disabled .transfromers
+/* , .disabled .transFormBox */
 {
 	pointer-events: none;
 	opacity: .2;

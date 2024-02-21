@@ -134,7 +134,7 @@ transformBtns.forEach((el) =>{
 		}
 
 
-		focusImage.style.transform = `rotate(${rotate})  scale(${flipX}, ${flipY})`
+		focusImage.style.transform = `rotate(${rotate}deg)  scale(${flipX}, ${flipY})`
 
 	})
 })

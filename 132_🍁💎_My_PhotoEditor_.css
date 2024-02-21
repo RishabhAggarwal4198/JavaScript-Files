@@ -42,15 +42,15 @@ h1{
 	width: 100%;
 	border: 1px solid rgb(140, 158, 169);
 	margin-bottom: .5rem;
-	
 	}
 
-.image_div{
-	display: flex;
-	justify-content: center;
-	align-items: center;
-	overflow: hidden;
-}
+
+	.image_div{
+		display: flex;
+		justify-content: center;
+		align-items: center;
+		overflow: hidden;
+	}
 
 .mainIMG {
 	height: 14rem;

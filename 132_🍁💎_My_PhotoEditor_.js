@@ -7,7 +7,7 @@ let sliderInput = document.querySelector('.slider input')
 let filterType = document.querySelector('.filter_type')
 let filterMagnitude = document.querySelector('.value')
 let transformBtns = document.querySelectorAll('.transfromers  button')
-let allBtnsofDOC = document.querySelectorAll('button')
+// let allBtnsofDOC = document.querySelectorAll('button')
 
 
 let bright = 100,
@@ -29,18 +29,12 @@ uploadInput.addEventListener('change', () => {
 	outContainer.classList.remove('disabled')
 })
 
-allBtnsofDOC.forEach((btn) => {
-	btn.addEventListener('click', () => {
-		document.querySelectorAll('.activeBtn').classList.remove('activeBtn')
-		btn.classList.add('activeBtn')
-	})
-})
 
 
 filterBtns.forEach((ele) => {
 	ele.addEventListener('click', () => {
-		// document.querySelector('.activeBtn').classList.remove('activeBtn')
-		// ele.classList.add('activeBtn')
+		document.querySelector('.activeBtn').classList.remove('activeBtn')
+		ele.classList.add('activeBtn')
 		
 		filterType.innerHTML = ele.id.toUpperCase()
 
@@ -116,8 +110,8 @@ sliderInput.addEventListener('input', editImage );
 
 transformBtns.forEach((el) =>{
 	el.addEventListener('click', () => {
-		// document.querySelector('.activeBtn').classList.remove('activeBtn')
-		// el.classList.add('activeBtn')
+		document.querySelector('.activeBtn').classList.remove('activeBtn')
+		el.classList.add('activeBtn')
 
 		filterType.innerHTML = el.id.toUpperCase()
 		

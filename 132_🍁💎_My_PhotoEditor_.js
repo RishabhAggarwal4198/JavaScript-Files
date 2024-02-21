@@ -23,11 +23,6 @@ flipX = 1;
 flipY = 1;
 
 
-function backColor (vv){
-	setInterval(() => {
-		outContainer.style.boxShadow = ` 0rem 0rem 2rem .2rem #76c4fa`
-	}, vv )
-}
 
 
 uploadBtn.addEventListener('click', () => uploadInput.click());
@@ -42,10 +37,21 @@ uploadInput.addEventListener('change', () => {
 
 	// #1f75fe
 
-	backColor(800);
-	backColor(1200);
-	backColor(1600);
+	setInterval(() => {
+		outContainer.style.boxShadow = ` 0rem 0rem 2rem .2rem #76c4fa`
+	}, 800 )
 
+	setInterval(() => {
+		outContainer.style.boxShadow = ` 0rem 0rem 2rem .5rem #76c4fa`
+	}, 1200 )
+
+	setInterval(() => {
+		outContainer.style.boxShadow = ` 0rem 0rem 2rem .8rem #76c4fa`
+	}, 1400 )
+
+	// setInterval(() => {
+	// 	outContainer.style.boxShadow = ` 0rem 0rem 2.9rem 1.1rem #76c4fa`
+	// }, 1600 )
 })
 
 

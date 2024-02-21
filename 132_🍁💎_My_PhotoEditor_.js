@@ -22,7 +22,9 @@ rotate = 0;
 flipX = 1;
 flipY = 1;
 
-let interval1, interval2, interval3;
+let interval1;
+let interval2;
+let interval3;
 
 
 uploadBtn.addEventListener('click', () => uploadInput.click());
@@ -191,8 +193,9 @@ focusImage.style.filter = `brightness(${bright}%)
 focusImage.style.transform = `rotate(${rotate}deg)  
 							  scale(${flipX}, ${flipY})`
 
-clearInterval(interval1)
-clearInterval(interval2)
-clearInterval(interval3)
+
+// remove(interval1)
+// remove(interval2)
+// remove(interval3)
 
 })

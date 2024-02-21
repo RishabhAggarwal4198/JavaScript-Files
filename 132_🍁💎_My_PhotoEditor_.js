@@ -36,17 +36,23 @@ uploadInput.addEventListener('change', () => {
 	outContainer.classList.remove('disabled')
 	outContainer.style.height =`50rem`
 
-	// setInterval(() => {
-	// 	outContainer.style.boxShadow = ` 0rem 0rem 2rem .2rem  #1f75fe`
-	// }, 1000 )
+	// #1f75fe
+
+	setInterval(() => {
+		outContainer.style.boxShadow = ` 0rem 0rem 2rem .2rem #76c4fa`
+	}, 800 )
+
+	setInterval(() => {
+		outContainer.style.boxShadow = ` 0rem 0rem 2rem .5rem #76c4fa`
+	}, 1200 )
+
+	setInterval(() => {
+		outContainer.style.boxShadow = ` 0rem 0rem 2rem .8rem #76c4fa`
+	}, 1400 )
 
 	// setInterval(() => {
-	// 	outContainer.style.boxShadow = ` 0rem 0rem 2rem .9rem  #1f75fe`
-	// }, 2000 )
-
-	// setInterval(() => {
-	// 	outContainer.style.boxShadow = ` 0rem 0rem 2rem 1.4rem  #1f75fe`
-	// }, 3000 )
+	// 	outContainer.style.boxShadow = ` 0rem 0rem 2.9rem 1.1rem #76c4fa`
+	// }, 1600 )
 })
 
 

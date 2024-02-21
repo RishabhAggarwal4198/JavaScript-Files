@@ -44,25 +44,18 @@ uploadInput.addEventListener('change', () => {
 
 
 
-	
-		for(let i = 0; i < 3; i++){
-			interval1 = setInterval(() => {
-				outContainer.style.boxShadow = efects[i]
-			}, 1000 )
-		}
 
+	interval1 = setInterval(() => {
+		outContainer.style.boxShadow = ` 0rem 0rem 2rem .5rem #76c4fa`
+	}, 1000 )
 
-	// interval1 = setInterval(() => {
-	// 	outContainer.style.boxShadow = ` 0rem 0rem 2rem .5rem #76c4fa`
-	// }, 1000 )
+	interval2 = setInterval(() => {
+		outContainer.style.boxShadow = ` 0rem 0rem 2rem .8rem #76c4fa`
+	}, 1600 )
 
-	// interval2 = setInterval(() => {
-	// 	outContainer.style.boxShadow = ` 0rem 0rem 2rem .8rem #76c4fa`
-	// }, 1600 )
-
-	// interval3 = setInterval(() => {
-	// 	outContainer.style.boxShadow = ` 0rem 0rem 2rem 1.2rem #76c4fa`
-	// }, 2200 )
+	interval3 = setInterval(() => {
+		outContainer.style.boxShadow = ` 0rem 0rem 2rem 1.2rem #76c4fa`
+	}, 2200 )
 })
 
 

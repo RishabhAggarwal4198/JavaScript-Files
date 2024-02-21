@@ -194,8 +194,10 @@ focusImage.style.transform = `rotate(${rotate}deg)
 							  scale(${flipX}, ${flipY})`
 
 
-// remove(interval1)
-// remove(interval2)
-// remove(interval3)
+clearInterval(interval1);
+clearInterval(interval2);
+clearInterval(interval3);
+
+outContainer.style.boxShadow = `0rem 0rem 2rem .2rem  #D3D0CBFF`
 
 })

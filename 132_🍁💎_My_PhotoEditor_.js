@@ -146,7 +146,12 @@ transformBtns.forEach((el) =>{
 
 resetBtn.addEventListener('click', () => {
 
+
+focusImage.src = `/Images/upload.png`
 focusImage.classList.add('mainIMG')
+focusImage.classList.remove('NewImg')
+
+
 sliderInput.value = '0'
 filterType.innerHTML =`VALUE`
 filterMagnitude.innerHTML =`0%`

@@ -127,11 +127,13 @@ transformBtns.forEach((el) =>{
 			rotateRight += 90
 		}
 		else if(el.id === 'Flip-Horizontal' ){
-			rotateLeft -= 90
+			flipX = flipX === 1 ? -1 : 1
 		}
 		else if(el.id === 'Flip-Vertical' ){
-			rotateLeft -= 90
+			flipY = flipY === 1 ? -1 : 1
 		}
+
+		
 
 	})
 })

@@ -146,9 +146,11 @@ transformBtns.forEach((el) =>{
 
 resetBtn.addEventListener('click', () => {
 
-focusImage.src = `/Images/upload.png`
 focusImage.classList.add('mainIMG')
 sliderInput.value = '0'
+filterType.innerHTML =`VALUE`
+filterMagnitude.innerHTML =`0%`
+outContainer.classList.add('disabled')
 
 bright = 100,
 contrAAst = 100,

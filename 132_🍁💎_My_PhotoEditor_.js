@@ -241,6 +241,8 @@ saveBtn.addEventListener('click', () => {
 	)
 
 	let newCreation = document.createElement('a')
-	newCreation
+	newCreation.download = 'img.jpg'
+	newCreation.href = canvazz.toDataURL()
+	newCreation.click()
 
 })

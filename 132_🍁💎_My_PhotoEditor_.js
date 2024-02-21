@@ -30,8 +30,7 @@ let interval3;
 uploadBtn.addEventListener('click', () => uploadInput.click());
 
 uploadInput.addEventListener('change', () => {
-	let newUrl = URL.createObjectURL(uploadInput.files[0])
-	focusImage.src = newUrl
+	focusImage.src = URL.createObjectURL(uploadInput.files[0])
 	focusImage.classList.remove('mainIMG')
 	focusImage.classList.add('NewImg')
 	outContainer.classList.remove('disabled')
@@ -39,18 +38,31 @@ uploadInput.addEventListener('change', () => {
 
 	// #1f75fe
 
-	interval1 = setInterval(() => {
-		outContainer.style.boxShadow = ` 0rem 0rem 2rem .5rem #76c4fa`
-	}, 800 )
+	let efects = [ `0rem 0rem 2rem .5rem #76c4fa`,
+				   `0rem 0rem 2rem .8rem #76c4fa`,
+				   `0rem 0rem 2rem 1.2rem #76c4fa`]
 
-	interval2 = setInterval(() => {
-		outContainer.style.boxShadow = ` 0rem 0rem 2rem .5rem #76c4fa`
-	}, 1200 )
 
-	interval3 = setInterval(() => {
-		outContainer.style.boxShadow = ` 0rem 0rem 2rem .8rem #76c4fa`
-	}, 1400 )
 
+	
+		for(let i = 0; i < 3; i++){
+			interval1 = setInterval(() => {
+				outContainer.style.boxShadow = efects[i]
+			}, 1000 )
+		}
+
+
+	// interval1 = setInterval(() => {
+	// 	outContainer.style.boxShadow = ` 0rem 0rem 2rem .5rem #76c4fa`
+	// }, 1000 )
+
+	// interval2 = setInterval(() => {
+	// 	outContainer.style.boxShadow = ` 0rem 0rem 2rem .8rem #76c4fa`
+	// }, 1600 )
+
+	// interval3 = setInterval(() => {
+	// 	outContainer.style.boxShadow = ` 0rem 0rem 2rem 1.2rem #76c4fa`
+	// }, 2200 )
 })
 
 

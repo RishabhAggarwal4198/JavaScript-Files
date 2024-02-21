@@ -124,7 +124,23 @@
      <br>
      <br>
      <div id="divvvv"></div>
-    
+     <br>
+     <br>
+     <br>
+     <br>
+     <br>
+     <br>
+     <br>
+     <br>
+     <br>
+     <br>
+     <br>
+     <br>
+     <br>
+     <input style="margin: 0px;"  id="inputToDO" type="text" placeholder="Type here....">
+     <button id="toDoAddBtn">Add</button>
+
+
 </body>
 
 
@@ -1279,6 +1295,20 @@ let result1 = numz.filter((g) => {
 //    console.dir(myObject);
 
 
+
+
+let inputToDO = document.querySelector('#inputToDO')
+let toDoAddBtn = document.querySelector('#toDoAddBtn')
+let body = document.querySelector('body')
+
+
+toDoAddBtn.addEventListener('click', () => {
+
+    let newH2  =  document.createElement('h2')
+    let delBTN = document.createElement('h3')   
+    newH2.innerHTML = `⦾ ${inputToDO.value}`
+    body.append(newH2)
+})
 
 
 

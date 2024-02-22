@@ -48,6 +48,7 @@ section{
 
 .row .options  option {
 	display: flex;
+	cursor: pointer;
 	align-items: center;
 	margin-bottom: 10px;
 }
@@ -55,8 +56,16 @@ section{
 
 .options :where(span, label){
 	color: #5a6168;
+	cursor: pointer;
 	padding-left: 10px;
 }
+
+.option #fill-color {
+	cursor: pointer;
+	height: 14px;
+	width: 14px;
+}
+
 
 
 .drawing-board {

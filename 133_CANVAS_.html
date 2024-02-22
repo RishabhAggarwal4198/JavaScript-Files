@@ -9,7 +9,7 @@
 
 		canvas{
 			border: 2px solid red;
-			
+			background-color: greenyellow;
 		}
 
 	</style>
@@ -28,8 +28,12 @@
 <script>
 
  let canvas = document.querySelector('canvas')
+let body = document.querySelector('body')
 
+canvas.width = window.innerWidth
+canvas.height = window.innerHeight
 
+let c = canvas.getContext('2d')
 
 
 

@@ -5,6 +5,10 @@
 	font-family: sans-serif;
 }
 
+img{
+	height: 14vh;
+}
+
 body{
 	display: flex;
 	align-items: center;
@@ -13,10 +17,17 @@ body{
 	background: #4A98F7;
 }
 
-
-
-
-img{
-	height: 14vh;
+.container {
+	display: flex;
+	width: 100%;
+	max-width: 1050px;
 }
+
+
+section{
+	background: #fff;
+	border-radius: 7px;
+}
+
+
  

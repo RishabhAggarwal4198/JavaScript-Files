@@ -7,7 +7,7 @@ ctx = canvas.getContext("2d");
 // })
 
 const drawing = (e) => {
-	ctx.lineTo(e.offsetX, e.offsetY);
+	ctx.lineTo(e.clientX, e.offsetY);
 	ctx.stroke();
 }
 

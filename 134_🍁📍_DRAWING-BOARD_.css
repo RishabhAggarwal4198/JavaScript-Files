@@ -136,7 +136,7 @@ justify-content: space-between;
 }
 
 
-.colors .option:hover::before {
+.colors .option.selected::before {
 	position: absolute;
 	content: " ";
 	top: 50%;
@@ -150,7 +150,7 @@ justify-content: space-between;
 }
 
 
-.colors .option:last-child:hover:before {
+.colors .option:last-child.selected::before {
 	border-color: #ccc;
 }
 
@@ -164,7 +164,6 @@ justify-content: space-between;
 	margin-bottom: 13px;
 	background: none;
 	border-radius: 4px;
-	border-radius: 5px;
 	cursor: pointer;
 }
 

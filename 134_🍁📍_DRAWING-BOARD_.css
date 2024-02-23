@@ -77,6 +77,8 @@ section{
 	width: 14px;
 }
 
+
+
 #fill-color:checked ~ label {
 	color: #4A98F7 ;
 }
@@ -93,6 +95,7 @@ section{
 	height: 14px;
 	width: 14px;
 }
+
 
 .colors .options {
 display: flex;

@@ -1,14 +1,22 @@
 const canvas = document.querySelector("canvas"),
 ctx = canvas.getContext("2d");
 
-// window.addEventListener('load', () => {
-// 	canvas.width = canvas.offsetWidth;
-// 	canvas.height =canvas.offsetHeight;
-// })
+let isDrawing = false
+
+window.addEventListener("load", () => {
+	canvas.width = canvas.offsetWidth;
+	canvas.height =canvas.offsetHeight;
+})
+
+const startDraw = () => {
+	isDrawing = true
+}
 
 const drawing = (e) => {
-	ctx.lineTo(e.clientX, e.offsetY);
+	if(!isDrawing) return;
+	ctx.lineTo(e.offsetX, e.offsetY);
 	ctx.stroke();
 }
 
-canvas.addEventListener('mousemove' , drawing)
+canvas.addEventListener('mousemove' , startDraw); 
+canvas.addEventListener('mousemove' , drawing); 

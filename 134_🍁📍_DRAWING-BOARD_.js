@@ -36,8 +36,10 @@ const drawTriangle = (e) => {
 	ctx.moveTo(prevMouseX, prevMouseY);
 	ctx.lineTo(e.offsetX, e.offsetY);
 	ctx.lineTo(prevMouseX * 2 - e.offsetX, e.offsetY);
+	ctx.closePath();
 	ctx.stroke();
 }
+
 
 
 const startDraw = (e) => {

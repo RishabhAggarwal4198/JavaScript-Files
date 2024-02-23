@@ -3,7 +3,7 @@ toolBtns = document.querySelectorAll(".tool"),
 ctx = canvas.getContext("2d");
 
 
-let prevMouseX , prevMouseY,             
+let prevMouseX , prevMouseY, snapshot,           
 isDrawing = false,
 selectedTool = "brush",
 brushWidth = 5;
@@ -20,12 +20,13 @@ const drawRect = (e) => {
 
 
 
-const startDraw = () => {
+const startDraw = (e) => {
 	isDrawing = true;
 	prevMouseX = e.offsetX;
 	prevMouseY = e.offsetY
 	ctx.beginPath(); 
 	ctx.lineWidth = brushWidth;
+	snapshot =  ctx.getImageData(0, 0, canvas.width, canvas.height);
 }
 
 const drawing = (e) => {
@@ -34,7 +35,7 @@ const drawing = (e) => {
 	if(selectedTool === "brush"){
 		ctx.lineTo(e.offsetX, e.offsetY);
 		ctx.stroke();
-	} else if(selectedTool === ""){
+	} else if(selectedTool === "rectangle"){
 		drawRect(e);
 	}
 }
@@ -54,7 +55,9 @@ toolBtns.forEach(btn => {
 toolBtns.forEach(btn => {
 	btn.addEventListener('click', () => {
 		document.querySelector(".options .active").classList.remove("active");
-		console.log(btn.id);
+		btn.classList.add("active")
+		selectedTool = btn.id;
+		console.log(selectedTool);
 	})
 })
 

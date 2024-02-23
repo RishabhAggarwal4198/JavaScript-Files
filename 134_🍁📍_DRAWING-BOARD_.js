@@ -2,7 +2,9 @@ const canvas = document.querySelector("canvas"),
 toolBtns = document.querySelectorAll(".tool"),
 ctx = canvas.getContext("2d");
 
-let isDrawing = false,
+
+let prevMouseX , prevMouseY,             
+isDrawing = false,
 selectedTool = "brush",
 brushWidth = 5;
 
@@ -12,6 +14,10 @@ window.addEventListener("load", () => {
 	canvas.height =canvas.offsetHeight;
 })
 
+const drawRect = (e) => {
+	// ctx.strokeRect(e.offsetY, e.offsetY);
+}
+
 const startDraw = () => {
 	isDrawing = true;
 	ctx.beginPath(); 
@@ -20,8 +26,13 @@ const startDraw = () => {
 
 const drawing = (e) => {
 	if(!isDrawing) return;
-	ctx.lineTo(e.offsetX, e.offsetY);
-	ctx.stroke();
+
+	if(selectedTool === "brush"){
+		ctx.lineTo(e.offsetX, e.offsetY);
+		ctx.stroke();
+	} else if(selectedTool === ""){
+		drawRect(e);
+	}
 }
 
 toolBtns.forEach(btn => {
@@ -30,6 +41,8 @@ toolBtns.forEach(btn => {
 		btn.classList.add("active")
 		selectedTool = btn.id;
 		console.log(btn.id);
+		console.log(selectedTool);
+		
 	});
 })
 

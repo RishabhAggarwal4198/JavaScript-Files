@@ -28,9 +28,16 @@ const drawCircle = (e) => {
 	ctx.beginPath();
 	let radius = Math.sqrt(Math.pow((prevMouseX-e.offsetX),2) + Math.pow((prevMouseY-e.offsetY),2));
 	ctx.arc(prevMouseX, prevMouseY, radius, 0, 2 * Math.PI);
-	fillColor.chhecked ? ctx.fill() : ctx.stroke();
+	fillColor.checked ? ctx.fill() : ctx.stroke();
 }
 
+const drawTriangle = (e) => {
+	ctx.beginPath();
+	ctx.moveTo(prevMouseX, prevMouseY);
+	ctx.lineTo(e.offsetX, e.offsetY);
+	ctx.lineTo(prevMouseX * 2 - e.offsetX, e.offsetY);
+	ctx.stroke();
+}
 
 
 const startDraw = (e) => {
@@ -53,6 +60,8 @@ const drawing = (e) => {
 		drawRect(e);
 	} else if (selectedTool === "circle"){
 		drawCircle(e);
+	} else {
+		drawTriangle(e);
 	}
 }
 

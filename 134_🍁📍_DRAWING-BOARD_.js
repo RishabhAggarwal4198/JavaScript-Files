@@ -37,7 +37,7 @@ const drawTriangle = (e) => {
 	ctx.lineTo(e.offsetX, e.offsetY);
 	ctx.lineTo(prevMouseX * 2 - e.offsetX, e.offsetY);
 	ctx.closePath();
-	ctx.stroke();
+	fillColor.checked ? ctx.fill() : ctx.stroke();
 }
 
 

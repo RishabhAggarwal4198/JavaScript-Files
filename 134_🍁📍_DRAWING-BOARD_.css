@@ -79,7 +79,6 @@ section{
 
 
 
-
 #fill-color:checked ~ label {
 	color: #4A98F7 ;
 }
@@ -149,6 +148,7 @@ justify-content: space-between;
 	border: 2px solid #fff;
 	transform: translate(-50%, -50%);
 }
+
 
 .colors .option:last-child:hover:before {
 	border-color: #ccc;

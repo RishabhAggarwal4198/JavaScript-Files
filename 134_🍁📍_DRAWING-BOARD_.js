@@ -3,6 +3,7 @@ toolBtns = document.querySelectorAll(".tool"),
 fillColor = document.querySelector("#fill-color"),
 sizeSlider= document.querySelector("#size-slider"),
 colorBtns = document.querySelectorAll(".colors  .option"),
+// colorPicker = document.querySelector("#color-picker"),
 ctx = canvas.getContext("2d");
 
 
@@ -51,6 +52,8 @@ const startDraw = (e) => {
 	prevMouseY = e.offsetY
 	ctx.beginPath(); 
 	ctx.lineWidth = brushWidth;
+	ctx.strokeStyle = selectedColor;
+	ctx.fillStyle = selectedColor
 	snapshot =  ctx.getImageData(0, 0, canvas.width, canvas.height);
 }
 
@@ -103,6 +106,11 @@ colorBtns.forEach(btn => {
 		selectedColor = window.getComputedStyle(btn).getPropertyValue("background-color");
 	})
 })
+
+// colorPicker.addEventListener("change" , () => {
+// 	colorPicker.parentElement.style.background = colorPicker.value;
+// 	colorPicker.parentElement.click();
+// })
 
 canvas.addEventListener('mousedown' , startDraw); 
 canvas.addEventListener('mousemove' , drawing); 

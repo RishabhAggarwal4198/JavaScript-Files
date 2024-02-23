@@ -10,6 +10,7 @@ let prevMouseX , prevMouseY, snapshot,
 isDrawing = false,
 selectedTool = "brush",
 brushWidth = 5;
+selectedColor = "#000";
 
 
 window.addEventListener("load", () => {
@@ -99,7 +100,7 @@ colorBtns.forEach(btn => {
 	btn.addEventListener("click", () => {
 		document.querySelector(".options .selected").classList.remove("selected");
 		btn.classList.add("selected")
-		console.log(window.getComputedStyle(btn).getPropertyValue("background"));
+		selectedColor = window.getComputedStyle(btn).getPropertyValue("background-color");
 	})
 })
 

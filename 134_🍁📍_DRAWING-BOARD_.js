@@ -18,6 +18,8 @@ const drawRect = (e) => {
 	// ctx.strokeRect(e.offsetY, e.offsetY);
 }
 
+
+
 const startDraw = () => {
 	isDrawing = true;
 	ctx.beginPath(); 

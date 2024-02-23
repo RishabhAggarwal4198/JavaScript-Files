@@ -39,9 +39,6 @@ uploadInput.addEventListener('change', () => {
 	// #1f75fe
 
 	
-
-
-
 	interval1 = setInterval(() => {
 		outContainer.style.boxShadow = ` 0rem 0rem 2rem .5rem #76c4fa`
 	}, 1000 )

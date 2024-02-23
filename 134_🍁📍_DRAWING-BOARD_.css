@@ -163,17 +163,23 @@ justify-content: space-between;
 	margin-bottom: 13px;
 	background: none;
 	border-radius: 5px;
+	cursor: pointer;
 }
 
 
 .buttons .clear-canvas {
 	color: #6C757D;
 	border: 1px solid #6C757D;
+	transition: all 0.3s ease;
 }
 
-.buttons .clear-canvas {
-	color: #6C757D;
-	border: 1px solid #6C757D;
+.clear-canvas:hover{
+	background: #4A98F7;
+}
+
+.buttons .save-img {
+	background: #4A98F7;
+	border: 1px solid #4A98F7;
 }
 
 .drawing-board {

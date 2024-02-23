@@ -10,6 +10,7 @@ window.addEventListener("load", () => {
 
 const startDraw = () => {
 	isDrawing = true
+	ctx.beginPath();
 }
 
 const drawing = (e) => {
@@ -20,3 +21,4 @@ const drawing = (e) => {
 
 canvas.addEventListener('mousemove' , startDraw); 
 canvas.addEventListener('mousemove' , drawing); 
+canvas.addEventListener('mouseup' , () => isDrawing = false); 

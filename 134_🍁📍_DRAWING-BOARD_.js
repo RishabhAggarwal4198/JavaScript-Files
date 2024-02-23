@@ -1,7 +1,9 @@
 const canvas = document.querySelector("canvas"),
+toolBtns = document.querySelectorAll(".tool"),
 ctx = canvas.getContext("2d");
 
 let isDrawing = false,
+selectedTool = "brush",
 brushWidth = 5;
 
 
@@ -11,7 +13,7 @@ window.addEventListener("load", () => {
 })
 
 const startDraw = () => {
-	isDrawing = true
+	isDrawing = true;
 	ctx.beginPath(); 
 	ctx.lineWidth = brushWidth;
 }
@@ -22,6 +24,15 @@ const drawing = (e) => {
 	ctx.stroke();
 }
 
-canvas.addEventListener('mousemove' , startDraw); 
+toolBtns.forEach(btn => {
+	btn.addEventListener('click', () => {
+		document.querySelector(".options .active").classList.remove("active")
+		btn.classList.add("active")
+		selectedTool = btn.id;
+		console.log(btn.id);
+	});
+})
+
+canvas.addEventListener('mousedown' , startDraw); 
 canvas.addEventListener('mousemove' , drawing); 
 canvas.addEventListener('mouseup' , () => isDrawing = false); 

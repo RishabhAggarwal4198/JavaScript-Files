@@ -1,5 +1,6 @@
 const canvas = document.querySelector("canvas"),
 toolBtns = document.querySelectorAll(".tool"),
+fillColor = document.querySelectorAll("#fill-color"),
 ctx = canvas.getContext("2d");
 
 
@@ -31,7 +32,8 @@ const startDraw = (e) => {
 
 const drawing = (e) => {
 	if(!isDrawing) return;
-
+	ctx.putImageData(snapshot, 0, 0);
+	
 	if(selectedTool === "brush"){
 		ctx.lineTo(e.offsetX, e.offsetY);
 		ctx.stroke();

@@ -154,6 +154,13 @@ justify-content: space-between;
 	border-color: #ccc;
 }
 
+.option #color-picker {
+	opacity: 0 ;
+	cursor: pointer;
+}
+
+
+
 .buttons button{
 	width: 100%;
 	color: #fff;

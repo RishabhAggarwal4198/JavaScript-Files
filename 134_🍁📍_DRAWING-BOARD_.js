@@ -1,10 +1,9 @@
 const canvas = document.querySelector("canvas"),
 ctx = canvas.getContext("2d");
 
-let isDrwaing = false,
+let isDrawing = false,
 brushWidth = 5;
 
-let isDrawing = false
 
 window.addEventListener("load", () => {
 	canvas.width = canvas.offsetWidth;

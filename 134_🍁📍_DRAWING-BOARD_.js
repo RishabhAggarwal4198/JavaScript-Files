@@ -24,6 +24,13 @@ const drawRect = (e) => {
 }
 
 
+const drawCircle = (e) => {
+	let radius = Math.sqrt(Math.pow((prevMouseX-e.offsetX),2) + Math.pow((prevMouseY-e.offsetY),2));
+	ctx.arc(prevMouseX, prevMouseY, 50, 0, 2 * Math.PI);
+	ctx.stroke();
+}
+
+
 
 const startDraw = (e) => {
 	isDrawing = true;
@@ -43,6 +50,8 @@ const drawing = (e) => {
 		ctx.stroke();
 	} else if(selectedTool === "rectangle"){
 		drawRect(e);
+	} else if (selectedTool === "circle"){
+		drawCircle(e);
 	}
 }
 

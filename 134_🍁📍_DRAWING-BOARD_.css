@@ -117,6 +117,7 @@ justify-content: space-between;
 
 .colors .option:nth-child(1){
 	background: #fff;
+	border: 1px solid #bfbfbf;
 }
 
 .colors .option:nth-child(2){
@@ -136,7 +137,7 @@ justify-content: space-between;
 }
 
 
-.colors .option::before {
+.colors .option:hover::before {
 	position: absolute;
 	content: " ";
 	top: 50%;
@@ -149,6 +150,31 @@ justify-content: space-between;
 	transform: translate(-50%, -50%);
 }
 
+.colors .option:last-child:hover:before {
+	border-color: #ccc;
+}
+
+.buttons button{
+	width: 100%;
+	color: #fff;
+	border: none;
+	outline: none;
+	padding: 11px 0;
+	margin-bottom: 13px;
+	background: none;
+	border-radius: 5px;
+}
+
+
+.buttons .clear-canvas {
+	color: #6C757D;
+	border: 1px solid #6C757D;
+}
+
+.buttons .clear-canvas {
+	color: #6C757D;
+	border: 1px solid #6C757D;
+}
 
 .drawing-board {
 	flex: 1;

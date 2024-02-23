@@ -15,13 +15,15 @@ window.addEventListener("load", () => {
 })
 
 const drawRect = (e) => {
-	// ctx.strokeRect(e.offsetY, e.offsetY);
+	ctx.strokeRect(e.offsetX, e.offsetY, prevMouseX - e.offsetX, prevMouseY - e.offsetY );
 }
 
 
 
 const startDraw = () => {
 	isDrawing = true;
+	prevMouseX = e.offsetX;
+	prevMouseY = e.offsetY
 	ctx.beginPath(); 
 	ctx.lineWidth = brushWidth;
 }
@@ -47,6 +49,16 @@ toolBtns.forEach(btn => {
 		
 	});
 })
+
+
+toolBtns.forEach(btn => {
+	btn.addEventListener('click', () => {
+		document.querySelector(".options .active").classList.remove("active");
+		console.log(btn.id);
+	})
+})
+
+
 
 canvas.addEventListener('mousedown' , startDraw); 
 canvas.addEventListener('mousemove' , drawing); 

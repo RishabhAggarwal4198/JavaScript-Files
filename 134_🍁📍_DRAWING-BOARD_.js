@@ -4,6 +4,8 @@ fillColor = document.querySelector("#fill-color"),
 sizeSlider= document.querySelector("#size-slider"),
 colorBtns = document.querySelectorAll(".colors  .option"),
 colorPicker = document.querySelector("#color-picker"),
+clearCanvas = document.querySelector(".clear-canvas"),
+saveImg = document.querySelector(".save-img"),
 ctx = canvas.getContext("2d");
 
 
@@ -61,7 +63,9 @@ const drawing = (e) => {
 	if(!isDrawing) return;
 	ctx.putImageData(snapshot, 0, 0);
 	
-	if(selectedTool === "brush"){
+	if(selectedTool === "brush"  || selectedTool === "eraser" ){
+
+		ctx.strokeStyle = selectedTool === "eraser" ? "#fff" : selectedColor;
 		ctx.lineTo(e.offsetX, e.offsetY);
 		ctx.stroke();
 	} else if(selectedTool === "rectangle"){
@@ -112,6 +116,18 @@ colorPicker.addEventListener("change" , () => {
 	colorPicker.parentElement.style.background = colorPicker.value;
 	colorPicker.parentElement.click();
 })
+
+
+
+clearCanvas.addEventListener("click", () => {
+	ctx.clearRect(0, 0, canvas.width, canvas.height);
+})
+
+saveImg.addEventListener('click' , () => {
+	const link = document.createElement("a");
+	link.download = `${Date.now()}.jpg`
+})
+
 
 canvas.addEventListener('mousedown' , startDraw); 
 canvas.addEventListener('mousemove' , drawing); 

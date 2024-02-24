@@ -19,16 +19,17 @@ selectedColor = "#000";
 const setCanvasBackground = () => {
 	ctx.fillStyle = "#fff"
 	ctx.fillRect(0, 0, canvas.width, canvas.height);
-	ctx.fillStyle = selectedColor;
+	// ctx.fillStyle = selectedColor;
 }
 
- 
 
 window.addEventListener("load", () => {
 	canvas.width = canvas.offsetWidth;
 	canvas.height =canvas.offsetHeight;
 	setCanvasBackground();
 })
+
+
 
 const drawRect = (e) => {
 	if(!fillColor.checked){

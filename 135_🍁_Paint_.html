@@ -52,13 +52,23 @@ ctx.fillRect(100, 100, 100, 100)
 
 
 
-
 //Line
 ctx.beginPath();
 ctx.moveTo(150, 200)
 ctx.lineTo(50, 100)
 ctx.lineTo(80, 180)
 ctx.stroke();
+
+
+
+// Circle
+
+ctx.beginPath();
+ctx.arc(160, 190, 30, 0, Math.PI*2 , false)
+ctx.strokeStyle = 'blue'
+ctx.stroke();
+
+
 
 
 

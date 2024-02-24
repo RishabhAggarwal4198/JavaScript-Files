@@ -9,6 +9,7 @@ clearCanvas = document.querySelector(".clear-canvas"),
 saveImg = document.querySelector(".save-img"); 
 
 
+
 let prevMouseX , prevMouseY, snapshot,           
 isDrawing = false,
 selectedTool = "brush",
@@ -21,7 +22,7 @@ const setCanvasBackground = () => {
 	ctx.fillStyle = selectedColor;
 }
 
-
+ 
 
 window.addEventListener("load", () => {
 	canvas.width = canvas.offsetWidth;

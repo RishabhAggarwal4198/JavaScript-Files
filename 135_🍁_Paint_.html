@@ -14,7 +14,7 @@
 		}
 
 		canvas{
-			background-color: tomato;
+			background-color: rgb(232, 121, 102);
 		}
 
 	</style>
@@ -36,9 +36,23 @@ let canvas = document.querySelector('canvas')
 canvas.height = window.innerHeight
 canvas.width = window.innerWidth
 
-let ct = canvas.getContext("2d")
 
-let g = ct.fillRect(100, 100, 100, 100)
+// Rectangle
+let ctx = canvas.getContext("2d")
+
+ctx.fillStyle = `green`
+ctx.fillRect(100, 100, 100, 100)
+
+ctx.fillStyle = `green`
+ctx.fillRect(200, 250, 100, 100)
+
+ctx.fillStyle = `green`
+ctx.fillRect(100, 100, 100, 100)
+
+
+
+//Line
+
 
 
 

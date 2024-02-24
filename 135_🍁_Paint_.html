@@ -1,0 +1,47 @@
+<!DOCTYPE html>
+
+<html lang="en">
+
+<head>
+	<title>Document</title>
+
+	<style>
+		*{
+			margin: 0;
+			padding: 0;
+			box-sizing: border-box;
+			background-color: #212121;
+		}
+
+		canvas{
+			background-color: tomato;
+		}
+
+	</style>
+</head>
+
+
+
+<body>
+
+<canvas></canvas>
+	
+</body>
+
+
+<script>
+
+let canvas = document.querySelector('canvas')
+
+canvas.height = window.innerHeight
+canvas.width = window.innerWidth
+
+let ct = canvas.getContext("2d")
+
+let g = ct.fillRect(100, 100, 100, 100)
+
+
+
+</script>
+
+</html>

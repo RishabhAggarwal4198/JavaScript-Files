@@ -1,12 +1,12 @@
 const canvas = document.querySelector("canvas"),
+ctx = canvas.getContext("2d"),
 toolBtns = document.querySelectorAll(".tool"),
 fillColor = document.querySelector("#fill-color"),
 sizeSlider= document.querySelector("#size-slider"),
 colorBtns = document.querySelectorAll(".colors  .option"),
 colorPicker = document.querySelector("#color-picker"),
 clearCanvas = document.querySelector(".clear-canvas"),
-saveImg = document.querySelector(".save-img"),
-ctx = canvas.getContext("2d");
+saveImg = document.querySelector(".save-img"); 
 
 
 let prevMouseX , prevMouseY, snapshot,           
@@ -20,6 +20,7 @@ const setCanvasBackground = () => {
 	ctx.fillRect(0, 0, canvas.width, canvas.height);
 	ctx.fillStyle = selectedColor;
 }
+
 
 
 window.addEventListener("load", () => {

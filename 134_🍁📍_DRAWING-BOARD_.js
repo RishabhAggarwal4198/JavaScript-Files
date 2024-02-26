@@ -87,6 +87,8 @@ const drawing = (e) => {
 	}
 }
 
+// Trial Comment 
+
 toolBtns.forEach(btn => {
 	btn.addEventListener('click', () => {
 		document.querySelector(".options .active").classList.remove("active")

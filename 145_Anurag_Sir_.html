@@ -1,11 +1,100 @@
+
 <!DOCTYPE html>
 <html lang="en">
+
 <head>
-	<meta charset="UTF-8">
-	<meta name="viewport" content="width=device-width, initial-scale=1.0">
 	<title>Document</title>
+
+	<style>
+		body{
+			background-color: #212121;
+			color: #ffffff;
+			margin: 4rem;
+		}
+	</style>
+
 </head>
+
+
+
 <body>
 	
+		<h2></h2>
+		<h2></h2>
+		<h2></h2>
+		<h2></h2>
+		<h2></h2>
+		<h2></h2>
+		<h2></h2>
+		<h2></h2>
+		<h2></h2>
+		<h2></h2>
+
 </body>
+
+
+
+
+<script>
+
+
+	//🍁Maths in JavaScript
+
+	let firstH2 = document.querySelector('body :nth-child(1)')
+	let a = Math.sqrt(9)
+	firstH2.innerText = ` Math.sqrt(9) = ${a}`
+
+	let IIndH2 = document.querySelector('body :nth-child(2)')
+	let b = Math.cbrt(81)
+	IIndH2.innerText = ` Math.cbrt(81) = ${b}`
+
+	let IIIndH2 = document.querySelector('body :nth-child(3)')
+	let c = Math.PI
+	IIIndH2.innerText = `Math.PI = ${c}`
+
+	let forthH2 = document.querySelector('body :nth-child(4)')
+	let d = Math.E
+	forthH2.innerText = `Math.E = ${d}`
+
+	let fifthH2 = document.querySelector('body :nth-child(5)')
+	let e = Math.pow(2, 5)
+	fifthH2.innerText = `Math.pow(2, 5) = ${e}`
+
+	let sixthH2 = document.querySelector('body :nth-child(6)')
+	let f = Math.pow(2, 5)
+	sixthH2.innerText = `${f}`
+
+
+	// let g = prompt("Enter your input Here := ") * 5
+	// document.write(`the product is :  <b>${g}</b>`)
+	
+	// let seventhH2 = document.querySelector('body :nth-child(6)')
+	// seventhH2.innerText = `${g}`
+
+
+
+
+
+	//🍁 STRINGs
+
+	let yy = "   Ramesh  Bhai "
+	let zz = " bohot bhadiya"
+
+	yy.trim().trimEnd().trimStart().includes('the word to search')
+	yy.indexOf('m')
+	yy.replace('Ra', 'Su')
+	yy.replaceAll('s' , 'y')
+	yy.concat(zz)
+
+
+	let num = '687577'
+	let  hh = num.padStart(22, '*');
+	console.log(hh);    // Ans is :-  ****************687577
+
+
+
+
+
+</script>
+
 </html>

@@ -86,7 +86,9 @@
 	// Methods (without Argmnts)
 	yy.toUpperCase().toLowerCase().trim().trimEnd().trimStart()
 
+
 	// Methods (with Argmnts)
+	yy.toLocaleUpperCase('tr')   // method that converts a string to uppercase, but it does so while taking into account the language or locale-specific rules for uppercase conversions
 	yy.includes('the word to search')
 	yy.indexOf('m')  //  run it !!
 	yy.replace('Ra', 'Su') //  run it !!
@@ -95,22 +97,26 @@
 
 	let num = '687577ABCSD'
 	let  hh = num.padStart(22, '*');
-	console.log(hh);    // Ans is :-  ****************687577
+	// console.log(hh);    // Ans is :-  ****************687577
 	let  jj = num.padEnd(22, '*');
-	console.log(jj);    // Ans is :- 687577****************
+	// console.log(jj);    // Ans is :- 687577****************
 
 	let uu = num.charAt(3)
-	console.log(uu);   // Ans is :- 5
+	// console.log(uu);   // Ans is :- 5
 
 	num.charCodeAt(a)   //give the ASCII code of the character
 
-	console.log(num.split('')); // Ans is :- ['6', '8', '7', '5', '7', '7', 'A', 'B', 'C', 'S', 'D']
+	// console.log(num.split('')); // Ans is :- ['6', '8', '7', '5', '7', '7', 'A', 'B', 'C', 'S', 'D']
 
 	let val = "Hello Everyone ! doing great ?"
-	console.log(val.split(' '));  // Ans is :-   ['Hello', 'Everyone', '!', 'doing', 'great', '?']
-	console.log(val.split('e'));   // Ans is :-  ['H', 'llo Ev', 'ryon', ' ! doing gr', 'at ?']
+	// console.log(val.split(' '));  // Ans is :-   ['Hello', 'Everyone', '!', 'doing', 'great', '?']
+	// console.log(val.split('e'));   // Ans is :-  ['H', 'llo Ev', 'ryon', ' ! doing gr', 'at ?']
 
 
+	//🍁 This method >> `${}` << is called TEMPLATE LITERAL 
+	let num3 = '89994'
+	let  hhh = `Your account Number ending with ${num3.padStart(22, '*')} has a balance of Rs.400,000`
+	// console.log(hhh);  // Answer is : Your account Number ending with *****************89994 has a balance of Rs.400,000
 
 
 

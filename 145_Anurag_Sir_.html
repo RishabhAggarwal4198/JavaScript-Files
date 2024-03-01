@@ -81,17 +81,29 @@
 	let zz = " bohot bhadiya"
 
 	yy.trim().trimEnd().trimStart().includes('the word to search')
-	yy.indexOf('m')
-	yy.replace('Ra', 'Su')
-	yy.replaceAll('s' , 'y')
-	yy.concat(zz)
+	yy.includes('u') //  run it !!
+	yy.indexOf('m')  //  run it !!
+	yy.replace('Ra', 'Su') //  run it !!
+	yy.replaceAll('s' , 'y') //  run it !!
+	yy.concat(zz) //  run it !!
 
 
-	let num = '687577'
+	let num = '687577ABCSD'
 	let  hh = num.padStart(22, '*');
 	console.log(hh);    // Ans is :-  ****************687577
 	let  jj = num.padEnd(22, '*');
 	console.log(jj);    // Ans is :- 687577****************
+
+	let uu = num.charAt(3)
+	console.log(uu);   // Ans is :- 5
+
+	num.charCodeAt(a)   //give the ASCII code of the character
+
+	console.log(num.split('')); // Ans is :- ['6', '8', '7', '5', '7', '7', 'A', 'B', 'C', 'S', 'D']
+
+	let val = "Hello Everyone ! doing great ?"
+	console.log(val.split(' '));  // Ans is :-   ['Hello', 'Everyone', '!', 'doing', 'great', '?']
+	console.log(val.split('e'));   // Ans is :-  ['H', 'llo Ev', 'ryon', ' ! doing gr', 'at ?']
 
 
 

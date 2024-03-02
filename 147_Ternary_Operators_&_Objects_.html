@@ -112,8 +112,8 @@
 
 
 
-    //💎🍁💎 if we want nothing should get neither get DELETD or REPLACED from our OBJECT for that :- 
-
+    //💎🍁💎 if we want nothing should get neither DELETED nor REPLACED from our OBJECT for that :- 
+    // (in the console it would be visible but there would be no changes in the original OBJECT)
 
     const user3 = {
         name : 'Raman',
@@ -126,13 +126,16 @@
     Object.freeze(user3)
 
     let u = delete user3.age
-    let g = user3.age = 'yyyy'
+    let g = user3.name = 'Kuchh Bhi'
 
     document.writeln(`${u}  <br>`)  // false
     document.writeln(`${user3.age}  <br>`)  // 22
 
-    document.writeln(`${g} <br>`)
+    document.writeln(`${g} <br>`) //Kuchh Bhi (chnages will be visbile here)
+    document.writeln(`${user3.name} <br>`) //🔰 Raman (it did not changed)
 
+    let yy= document.querySelector('body :nth-child(1)')
+    yy.innerHTML = `${user3.name}`  //🔰 Raman (it did not changed)
     
 
    

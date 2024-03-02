@@ -177,14 +177,19 @@
     document.writeln(`${ei}<br><br>`)  // Bandar,Cheeta,Haathi,Sher
 
     let vy = ['Haathi', 'Sher', 'Bandar', 'Cheeta', 'Bhaalu', 'Mor']
+
     let ti = vy.slice(2)
     document.writeln(`${ti}<br><br>`)  // Bandar,Cheeta,Bhaalu,Mor
     let ui = vy.slice(2, 5)
     document.writeln(`${ui}<br><br>`)  // Bandar,Cheeta,Bhaalu
     document.writeln(`${vy}<br><br>`)  // Haathi,Sher,Bandar,Cheeta
-                                        //🍁ARRAY remains As it is
+                                        //🍁ARRAY remains unchanged
     
-    
+    let m = ['AA', 'BB', 'CC', 'DD', 'EE', 'FF', 'GG']
+    let ii = m.splice(3)
+    document.writeln(`${ii}<br><br>`)  // DD,EE,FF,GG
+    let oi = m.splice(2)
+    document.writeln(`${ii}<br><br>`) 
 
   </script>
 </html>

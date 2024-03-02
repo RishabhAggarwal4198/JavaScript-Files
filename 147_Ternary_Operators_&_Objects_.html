@@ -1,0 +1,54 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <title>STRINGs in JS</title>
+
+    <style>
+      body {
+        background-color: #212121;
+        color: #ffffff;
+        margin: 4rem;
+      }
+    </style>
+  </head>
+
+  <body></body>
+
+  <script>
+    // debugger
+
+    const name = 5 > 2 ? "Rishabh" : "Ramesh";
+
+    console.log(name);
+
+    let gg = "Somesh";
+
+    gg = gg.length >= 4 ? "Right length" : "Wrong length";
+
+    console.log(gg);
+
+    const gender = "Female";
+
+    const userMessage = `${
+      gender === "Female" ? "She" : "He"
+    } is a good student`;
+    console.log(userMessage);
+
+    let val = "GREEN";
+    let result =
+      val.toLowerCase() === "green" ? "Value is correct" : "Value is incorrect";
+    console.log(result);
+
+    const val2 = 0 ? "Anubhav" : "Ramesh" ? 24 : 0;
+    console.log(val2); // 24  (Bcoz Ramesh is Truthy value)
+
+    const user = {
+      firstName: "Ramesh",
+      lastName: "Rohilla",
+      age: 22,
+      education: "12",
+    };
+
+	
+  </script>
+</html>

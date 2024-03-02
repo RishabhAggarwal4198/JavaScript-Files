@@ -100,21 +100,33 @@
 
 
 
-   //💎💎 if we want nothing should get DELETED from our OBJECT for that :- 
+   //💎🍁💎 if we want nothing should get DELETED from our OBJECT for that :- 
 
-    // Object.seal(user2);
+    Object.seal(user2);
 
-    // delete user2.subjects
-    // document.writeln(`${user2.subjects}<br><br>`) // Maths,Science,Social-Science,Hindi
+    delete user2.subjects
+    document.writeln(`${user2.subjects}<br><br>`) // Maths,Science,Social-Science,Hindi
 
 
-    //💎💎 if we want nothing should get neither get DELETD or REPLACED from our OBJECT for that :- 
 
-    Object.freeze(user2);
 
-    let g = user2.subjects[2] = 'Sst'
 
-    document.writeln(`${user2.subjects[2]}`)
+
+    //💎🍁💎 if we want nothing should get neither get DELETD or REPLACED from our OBJECT for that :- 
+
+
+    const user3 = {
+        name : 'Raman',
+        age : '22',
+        height : '6 feets',
+        qualiFi : ['10th', '12th', 'Graduation', 'Post-Graduation']
+    }
+
+    Object.freeze(user3);
+
+    let g = user3.qualiFi[2] = 'yyyy'
+
+    document.writeln(`${g}`)
 
    
 

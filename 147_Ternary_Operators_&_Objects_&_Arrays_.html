@@ -13,14 +13,10 @@
   </head>
 
   <body>
-
     <h2></h2>
-
   </body>
 
   <script>
-
-
     // 💎💎 TERNARY Operators
 
     // debugger
@@ -50,14 +46,6 @@
     const val2 = 0 ? "Anubhav" : "Ramesh" ? 24 : 0;
     // console.log(val2); // 24  (Bcoz Ramesh is Truthy value)
 
-
-
-
-
-
-
-
-
     // 💎💎OBJECTS
 
     const user = {
@@ -70,20 +58,18 @@
     //🍁🍁 'Alt+Shift+F' to get an object in One line
 
     const user2 = {
-
       firstName: "Rishabh",
 
       lastname: "Aggarwal",
 
-      address:  { 
-          city: "Sharanpur",
-          pincode: 247001, 
-          state: "Uttar Pradesh",
-          locality : "Behat road" 
-      } ,
+      address: {
+        city: "Sharanpur",
+        pincode: 247001,
+        state: "Uttar Pradesh",
+        locality: "Behat road",
+      },
 
-      subjects : ['Maths', 'Science' , 'Social-Science', 'Hindi']
-
+      subjects: ["Maths", "Science", "Social-Science", "Hindi"],
     };
 
     // console.log(user2["firstName"]);
@@ -91,80 +77,66 @@
     // console.log(user2.subjects[3]);
     // console.log(user2['subjects'][3]);   // Hindi
 
-    delete user2.locality
+    delete user2.locality;
     // console.log(user2.locality);    // Undefined
 
-  //  document.write(`${user2.firstName} <br><br>` )   // Rishabh
-   
-  //  document.writeln(`${user2.locality} <br><br>`)   // undefined
+    //  document.write(`${user2.firstName} <br><br>` )   // Rishabh
 
+    //  document.writeln(`${user2.locality} <br><br>`)   // undefined
 
-
-   //💎🍁💎 if we want nothing should get DELETED from our OBJECT for that :- 
+    //💎🍁💎 if we want nothing should get DELETED from our OBJECT for that :-
 
     Object.seal(user2);
 
-    delete user2.subjects
+    delete user2.subjects;
     // document.writeln(`${user2.subjects}<br><br>`) // Maths,Science,Social-Science,Hindi
 
-
-
-
-    //💎🍁💎 if we want nothing should get neither DELETED nor REPLACED from our OBJECT for that :- 
+    //💎🍁💎 if we want nothing should get neither DELETED nor REPLACED from our OBJECT for that :-
     // (in the console it would be visible but there would be no changes in the original OBJECT)
 
     const user3 = {
-        name : 'Raman',
-        age : 22,
-        boy : true,
-        height : 6 + `feets`,
-        qualiFi : ['10th', '12th', 'Graduation', 'Post-Graduation']
-    }
+      name: "Raman",
+      age: 22,
+      boy: true,
+      height: 6 + `feets`,
+      qualiFi: ["10th", "12th", "Graduation", "Post-Graduation"],
+    };
 
-    Object.freeze(user3)
+    Object.freeze(user3);
 
-    let u = delete user3.age
-    let g = user3.name = 'Kuchh Bhi'
+    let u = delete user3.age;
+    let g = (user3.name = "Kuchh Bhi");
 
-    document.writeln(`${u}  <br>`)  // false
-    document.writeln(`${user3.age}  <br>`)  // 22
+    document.writeln(`${u}  <br>`); // false
+    document.writeln(`${user3.age}  <br>`); // 22
 
-    document.writeln(`${g} <br>`) //Kuchh Bhi (chnages will be visbile here)
-    document.writeln(`${user3.name} <br>`) //🔰 Raman (it did not changed)
+    document.writeln(`${g} <br>`); //Kuchh Bhi (chnages will be visbile here)
+    document.writeln(`${user3.name} <br>`); //🔰 Raman (it did not changed)
 
-    let yy= document.querySelector('body :nth-child(1)')
-    yy.innerHTML = `${user3.name}`  //🔰 Raman (it did not changed)
-    
-    
+    let yy = document.querySelector("body :nth-child(1)");
+    yy.innerHTML = `${user3.name}`; //🔰 Raman (it did not changed)
 
     //💎🍁💎 To check
 
-    let r = 'qualiFi' in user3 
-    document.writeln(`${r} <br> <br>`)  //true
-    let r1 = 'Height' in user3
-    document.writeln(`${r1} <br>`)      // false
-
-   
-
-
+    let r = "qualiFi" in user3;
+    document.writeln(`${r} <br> <br>`); //true
+    let r1 = "Height" in user3;
+    document.writeln(`${r1} <br>`); // false
 
     // 💎💎ARRAYS
 
-    let t = `Ramesh Singh`
-    document.writeln(`${t[5]} - ${t[6]} - ${t[7]} <br><br>`)  // h S
+    let t = `Ramesh Singh`;
+    document.writeln(`${t[5]} - ${t[6]} - ${t[7]} <br><br>`); // h S
 
-    let ty = ['Gagan' , 'Ganesh', 'Ganpat', 'Girija']
-    document.writeln(`${ty[3]} <br>`)    // Girija
+    let ty = ["Gagan", "Ganesh", "Ganpat", "Girija"];
+    document.writeln(`${ty[3]} <br>`); // Girija
+
+    ty[2] = "Vivek";
+    document.writeln(`${ty}`); // Gagan,Ganesh,Vivek,Girija
+    // ARRAY is aslo an object behind the scenes
+
+
+
     
-    ty[2] = 'Vivek'
-    document.writeln(`${ty}`)   // Gagan,Ganesh,Vivek,Girija
-                                // ARRAY is aslo an object behind the scenes
-
-
-
- 
-
-
-
   </script>
 </html>

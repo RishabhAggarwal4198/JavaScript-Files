@@ -19,34 +19,31 @@
 
     const name = 5 > 2 ? "Rishabh" : "Ramesh";
 
-    console.log(name);
+    // console.log(name);
 
     let gg = "Somesh";
 
     gg = gg.length >= 4 ? "Right length" : "Wrong length";
 
-    console.log(gg);
+    // console.log(gg);
 
     const gender = "Female";
 
     const userMessage = `${
       gender === "Female" ? "She" : "He"
     } is a good student`;
-    console.log(userMessage);
+    // console.log(userMessage);
 
     let val = "GREEN";
     let result =
       val.toLowerCase() === "green" ? "Value is correct" : "Value is incorrect";
-    console.log(result);
+    // console.log(result);
 
     const val2 = 0 ? "Anubhav" : "Ramesh" ? 24 : 0;
-    console.log(val2); // 24  (Bcoz Ramesh is Truthy value)
-
-
-
+    // console.log(val2); // 24  (Bcoz Ramesh is Truthy value)
 
     // 💎💎OBJECTS
-    
+
     const user = {
       firstName: "Ramesh",
       lastName: "Rohilla",
@@ -54,9 +51,30 @@
       education: "12",
     };
 
-    //🍁🍁 'Alt+Shift+F' to get an object in One line 
+    //🍁🍁 'Alt+Shift+F' to get an object in One line
+
+    const user2 = {
+
+      firstName: "Rishabh",
+
+      lastname: "Aggarwal",
+
+      address:  { 
+          city: "Sharanpur",
+          pincode: 247001, 
+          state: "Uttar Pradesh" 
+      } ,
+
+      subjects : ['Maths', 'Science' , 'Social-Science', 'Hindi']
+
+    };
+
+    // console.log(user2["firstName"]);
+    // console.log(user2.address.city);
+    // console.log(user2.subjects[3]);
+    // console.log(user2['subjects'][3]);   // Hindi
 
 
-	
+
   </script>
 </html>

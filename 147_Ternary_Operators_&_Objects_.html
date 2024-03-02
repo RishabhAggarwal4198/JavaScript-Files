@@ -19,6 +19,10 @@
   </body>
 
   <script>
+
+
+    // 💎💎 TERNARY Operators
+
     // debugger
 
     const name = 5 > 2 ? "Rishabh" : "Ramesh";
@@ -45,6 +49,14 @@
 
     const val2 = 0 ? "Anubhav" : "Ramesh" ? 24 : 0;
     // console.log(val2); // 24  (Bcoz Ramesh is Truthy value)
+
+
+
+
+
+
+
+
 
     // 💎💎OBJECTS
 
@@ -82,11 +94,20 @@
     delete user2.locality
     // console.log(user2.locality);    // Undefined
 
-   document.writeln(user2.firstName)   // Rishabh
+   document.writeln(`${user2.firstName} <br><br>` )   // Rishabh
    
-   document.writeln(user2.locality)   // undefined
+   document.writeln(`${user2.locality} <br><br>`)   // undefined
 
 
+   //💎💎 if we want nothing should get deleted from our OBJECT for that :- 
+
+    Object.seal(user2);
+
+    delete user2.subjects
+    document.writeln(`${user2.subjects}<br><br>`) // Maths,Science,Social-Science,Hindi
+
+  
+   
 
 
   </script>

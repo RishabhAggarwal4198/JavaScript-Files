@@ -188,8 +188,12 @@
     let m = ['AA', 'BB', 'CC', 'DD', 'EE', 'FF', 'GG']
     let ii = m.splice(3)
     document.writeln(`${ii}<br><br>`)  // DD,EE,FF,GG
-    let oi = m.splice(2)
-    document.writeln(`${ii}<br><br>`) 
+    document.writeln(`${m}<br><br>`)  // AA,BB,CC
+
+    let bui = ['AA', 'BB', 'CC', 'DD', 'EE', 'FF', 'GG']
+    let oi = bui.splice(2, 4, 'MM', 22 , true) 
+    document.writeln(`${oi}<br><br>`) 
+    document.writeln(`${bui}<br><br>`) 
 
   </script>
 </html>

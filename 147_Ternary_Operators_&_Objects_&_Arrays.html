@@ -192,8 +192,10 @@
 
     let bui = ['AA', 'BB', 'CC', 'DD', 'EE', 'FF', 'GG']
     let oi = bui.splice(2, 4, 'MM', 22 , true) 
-    document.writeln(`${oi}<br><br>`) 
-    document.writeln(`${bui}<br><br>`) 
+    document.writeln(`${oi}<br><br>`) // CC,DD,EE,FF
+    document.writeln(`${bui}<br><br>`) //AA,BB,MM,22,true,GG
+                                        //🍁 Will remove 4 elemnts starting from 2th elmnt
+                                        //
 
   </script>
 </html>

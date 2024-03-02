@@ -117,17 +117,20 @@
 
     const user3 = {
         name : 'Raman',
-        age : '22',
-        height : '6 feets',
+        age : 22,
+        boy : true,
+        height : 6 + `feets`,
         qualiFi : ['10th', '12th', 'Graduation', 'Post-Graduation']
     }
 
     Object.freeze(user3)
 
     let u = delete user3.age
-    let g = user3.height = 'yyyy'
+    let g = user3.age = 'yyyy'
 
-    document.writeln(`${u}  <br>`)
+    document.writeln(`${u}  <br>`)  // false
+    document.writeln(`${user3.age}  <br>`)  // 22
+
     document.writeln(`${g} <br>`)
 
    

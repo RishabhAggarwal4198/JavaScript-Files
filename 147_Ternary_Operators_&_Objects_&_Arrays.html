@@ -132,11 +132,26 @@
     document.writeln(`${ty[3]} <br>`); // Girija
 
     ty[2] = "Vivek";
-    document.writeln(`${ty}`); // Gagan,Ganesh,Vivek,Girija
+    document.writeln(`${ty}<br><br>`); // Gagan,Ganesh,Vivek,Girija
     // ARRAY is aslo an object behind the scenes
 
+    ty[8] = "Suresh" 
+    document.writeln(`${ty}<br><br>`) // Gagan,Ganesh,Vivek,Girija,,,,,Suresh
 
+    ty.push('Yogesh')
+    document.writeln(`${ty}<br><br>`)  // Gagan,Ganesh,Vivek,Girija,,,,,Suresh,Yogesh
+    
+    ty.pop() , ty.pop()
+    document.writeln(`${ty}<br><br>`)  // Gagan,Ganesh,Vivek,Girija,,,,
+
+
+    ty.unshift('Naveen');
+    document.writeln(`${ty}<br><br>`)  // Naveen,Gagan,Ganesh,Vivek,Girija,,,,
 
     
+
+
+
+
   </script>
 </html>

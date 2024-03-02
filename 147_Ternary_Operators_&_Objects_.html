@@ -122,10 +122,13 @@
         qualiFi : ['10th', '12th', 'Graduation', 'Post-Graduation']
     }
 
-    
-    let g = user3.qualiFi[2] = 'yyyy'
+    Object.freeze(user3)
 
-    document.writeln(`${user3.name}`)
+    let u = delete user3.age
+    let g = user3.height = 'yyyy'
+
+    document.writeln(`${u}  <br>`)
+    document.writeln(`${g} <br>`)
 
    
 

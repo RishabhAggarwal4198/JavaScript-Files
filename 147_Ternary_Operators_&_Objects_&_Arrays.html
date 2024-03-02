@@ -145,10 +145,10 @@
     document.writeln(`${ty}<br><br>`)  // Gagan,Ganesh,Vivek,Girija,,,,
 
 
-    ty.unshift('Naveen');
+    ty.unshift('Naveen');          // Opposite of PUSH
     document.writeln(`${ty}<br><br>`)  // Naveen,Gagan,Ganesh,Vivek,Girija,,,,
 
-    ty.shift() , ty.shift()
+    ty.shift() , ty.shift()          // Opposite of POP
     document.writeln(`${ty}<br><br>`)  // Ganesh,Vivek,Girija,,,,
 
 
@@ -172,6 +172,19 @@
     document.writeln(`${wi}<br><br>`)  // E,D,C,B,A
 
 
+    let v = ['Haathi', 'Sher', 'Bandar', 'Cheeta']
+    let ei = v.sort()
+    document.writeln(`${ei}<br><br>`)  // Bandar,Cheeta,Haathi,Sher
+
+    let vy = ['Haathi', 'Sher', 'Bandar', 'Cheeta', 'Bhaalu', 'Mor']
+    let ti = vy.slice(2)
+    document.writeln(`${ti}<br><br>`)  // Bandar,Cheeta,Bhaalu,Mor
+    let ui = vy.slice(2, 5)
+    document.writeln(`${ui}<br><br>`)  // Bandar,Cheeta,Bhaalu
+    document.writeln(`${vy}<br><br>`)  // Haathi,Sher,Bandar,Cheeta
+                                        //🍁ARRAY remains As it is
+    
+    
 
   </script>
 </html>

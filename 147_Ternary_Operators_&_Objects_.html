@@ -94,9 +94,9 @@
     delete user2.locality
     // console.log(user2.locality);    // Undefined
 
-   document.write(`${user2.firstName} <br><br>` )   // Rishabh
+  //  document.write(`${user2.firstName} <br><br>` )   // Rishabh
    
-   document.writeln(`${user2.locality} <br><br>`)   // undefined
+  //  document.writeln(`${user2.locality} <br><br>`)   // undefined
 
 
 
@@ -105,7 +105,7 @@
     Object.seal(user2);
 
     delete user2.subjects
-    document.writeln(`${user2.subjects}<br><br>`) // Maths,Science,Social-Science,Hindi
+    // document.writeln(`${user2.subjects}<br><br>`) // Maths,Science,Social-Science,Hindi
 
 
 
@@ -122,11 +122,10 @@
         qualiFi : ['10th', '12th', 'Graduation', 'Post-Graduation']
     }
 
-    Object.freeze(user3);
-
+    
     let g = user3.qualiFi[2] = 'yyyy'
 
-    document.writeln(`${g}`)
+    document.writeln(`${user3.name}`)
 
    
 

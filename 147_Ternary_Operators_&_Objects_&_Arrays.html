@@ -197,10 +197,13 @@
                                         //🍁 Will remove 4 elemnts starting from 2th elmnt
                                         // & then insert rest of the values from that place
     
-
     let ai = ['YY'].concat(bui)
     document.writeln(`${ai}<br><br>`)  // YY,AA,BB,MM,22,true,GG
 
+    //🍁🍁Correct method of Duplicating an ARRAY (without changing the original ARRAY)
+    let si = [...bui] 
+          //OR
+    let di = bui.slice();
 
   </script>
 </html>

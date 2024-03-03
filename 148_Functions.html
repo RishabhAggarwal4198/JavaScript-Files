@@ -19,8 +19,13 @@
   <script>
 
 
-	function introduceMe(username){
-		document.writeln(`My name is '${username || 'BHARAT'}' <br> <br>`)
+	// function introduceMe(username){
+	// 	document.writeln(`My name is '${username || 'BHARAT'}' <br> <br>`)
+	// }
+							// OR
+
+	function introduceMe(username = ' BHARAT '){
+		document.writeln(`My name is '${username}' <br> <br>`)
 	}
     
 	introduceMe()

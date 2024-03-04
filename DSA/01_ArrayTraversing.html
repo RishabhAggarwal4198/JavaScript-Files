@@ -26,6 +26,7 @@
 
   <body>
 	 
+	<input type="text" id="input1">
     <button> Hello</button>
 
 
@@ -45,19 +46,16 @@
 	})
 
 	let r = document.querySelector('button')
-
+	let inpu2 = document.querySelector('#input1').value 
 
 	
 	
 	let yy = () => {
 		
-		let pr0mpt = prompt('Input your value')
-
-		if ( typeof pr0mpt === 'number' ) {
-
-			alert(`You entered ${pr0mpt}`)
-		} else {
+		if ( inpu2 === null) {
 			alert(`Enter a valid value`)
+		} else {
+			alert(`You entered ${inpu2}`)
 		}
 	}
 	

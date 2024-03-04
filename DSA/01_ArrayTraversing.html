@@ -46,16 +46,16 @@
 	})
 
 	let r = document.querySelector('button')
-	let inpu2 = document.querySelector('#input1').value 
+	let inpu2 = document.querySelector('#input1')
 
 	
 	
 	let yy = () => {
 		
-		if ( inpu2 === null) {
-			alert(`Enter a valid value`)
+		if ( typeof parseInt(inpu2.value) === 'number' ) {
+			alert(`You entered ${inpu2.value}`)
 		} else {
-			alert(`You entered ${inpu2}`)
+			alert(`Enter a valid value`)
 		}
 	}
 	

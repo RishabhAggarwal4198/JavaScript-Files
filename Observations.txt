@@ -255,7 +255,7 @@ master "JavaScript Objects" &   "Browser Web events/ Browser Events/ DOM Events"
 // 🔽🔽  👇👇
 //📍📍 Answer is :-  " "  
 // 🔽🔽
-
+ 
 
 APNA -COLLEGE :-
 
@@ -298,9 +298,15 @@ tandem
 + App for locals to keep check on INFILTRATION 
 + Online portal for reporting MOMINS who abuse SANATAN
 + clubbing of OLD AGE homes & ORPHANAGE
++ Creating an app or extension which could convert whole
+  video into an other language video 
++ Creating drop like effect in background of a 
+  Canvas Page 
+  (Just like as we saw in Anurag Sir's Video)
 
 
 
 
 >> Bhagwan gaya kahan tha jo wapas aaaya hai ?
+
 

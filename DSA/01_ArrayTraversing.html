@@ -36,7 +36,7 @@
 
   <script>
 
-	let pr0mpt = prompt('Input your value')
+
 
 	let data = [ 9, 45, 2, 8, 45, 23 , 7]
 
@@ -46,19 +46,22 @@
 
 	let r = document.querySelector('button')
 
+
+	
+	
 	let yy = () => {
-		if (pr0mpt === !NaN ) {
+		
+		let pr0mpt = prompt('Input your value')
+
+		if ( typeof pr0mpt === 'number' ) {
 
 			alert(`You entered ${pr0mpt}`)
 		} else {
 			alert(`Enter a valid value`)
 		}
 	}
-
+	
 	r.addEventListener('click' , yy )
-	
-
-	
 	
 
    

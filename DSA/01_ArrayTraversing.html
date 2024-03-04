@@ -25,8 +25,8 @@
 
 
   <body>
-
-    <button>Hello</button>
+	 
+    <button> Hello</button>
 
 
 
@@ -36,6 +36,8 @@
 
   <script>
 
+	let pr0mpt = prompt('Input your value')
+
 	let data = [ 9, 45, 2, 8, 45, 23 , 7]
 
 	data.forEach((g) => {
@@ -44,6 +46,16 @@
 
 	let r = document.querySelector('button')
 
+	let yy = () => {
+		if (pr0mpt === !NaN ) {
+
+			alert(`You entered ${pr0mpt}`)
+		} else {
+			alert(`Enter a valid value`)
+		}
+	}
+
+	r.addEventListener('click' , yy )
 	
 
 	

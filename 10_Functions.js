@@ -182,7 +182,7 @@ function loginUserMessage (username) {
 
                              // 🔽🔽 
 
-    
+
 
   function loginUserMessage3 (username3 = "ANYTHING") {       // ✅✅ [ Or to avoid "!username2" condition we could do one thing in place of "username2" we could use "username2 = 'ANYTHING'" (as adefault value to get printed)]
         if (!username3) {                                     // ✅✅ here  "!username3" [not -username3] is exactly  same as using "username3 === undefined" 
@@ -323,7 +323,7 @@ let greet = function () {
 
 // multipleGreet(greet, 5)         //📍📍 Answer is :-  
 				// Hello
-				// Hello
+				// Hello 
 				// Hello
 				// Hello
 				// Hello
@@ -370,7 +370,7 @@ function oddEvenFactory (reqq){
     if(reqq%2 == 0  ){
         console.log(`${reqq} is an EVEN number`);
     } else {
-        console.log(`${reqq} is an ODD number`);
+        console.log(`${reqq} is an ODD number`); 
     }
 }
 

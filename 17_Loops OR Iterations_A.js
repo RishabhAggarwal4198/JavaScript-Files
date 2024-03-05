@@ -214,9 +214,6 @@ for (let i = 1; i <= 20; i++) {
 
 
 
-
-
-
 //💎✅💎 WHILE - LOOP 👇👇  [watch @7:40:02] [it's an extended version of FOR-LOOP ]
 
 
@@ -324,10 +321,11 @@ for (let i = 0; i <heros.length; i++){
 let student = [ [`Keshav`, 95], [`Raman`, 80], [`Aastha`, 55] ]
 
 for( let i = 0; i < student.length; i++){
-	// console.log(student[i]);
+	console.log(student[i]);
 	for(let j = 0; j < student[i].length; j++  ){
-	// console.log(student[i][j]);                  //📍📍 Answer is :-  
-	}						// Keshav
+	console.log(student[i][j]);                  //📍📍 Answer is :-  
+	}						// [ 'Keshav', 95 ]
+							// Keshav
 }							// 95
 							// [ 'Raman', 80 ]
 							// Raman

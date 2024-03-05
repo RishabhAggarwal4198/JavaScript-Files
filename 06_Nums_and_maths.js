@@ -97,8 +97,6 @@ const hundreds = 100000000000
 
 
 
-
-
 //💎✅💎 MATH - RANDOM 👇 [Values will always come b/w  0 - 1 (mostly in decimals)]
 
 // console.log(Math.random());  

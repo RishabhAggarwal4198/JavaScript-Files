@@ -27,8 +27,9 @@ const myArr3 = [`A`, 3, "Raman", true, 40.5764, null]
 let myArrz = [`Ramesh`, `Suresh`, `Prathmesh`, `Yogesh`] 
 
 // console.log(myArrz[2]);           	 //[📍📍 Answer is :- "Prathmesh" ] 
-// console.log(myArrz[2][z]);        	 //[📍📍 Answer is :- "t" ]   //🍁 zrd digit of "Prathmesh"
+// console.log(myArrz[2][3]);        	 //[📍📍 Answer is :- "t" ]   //🍁 3rd digit of "Prathmesh"
 // console.log(myArrz[2].length);        //[📍📍 Answer is :- "9" ]  
+
 
 
 //EMPTY ARRAY
@@ -47,8 +48,6 @@ fruits [6] = 'Peach'
 
 
 //🍀🍀🍀🍀🍀🍀🍀🍀
-
-
 
 
 
@@ -247,7 +246,7 @@ myArr8.splice(2, 0, 'toyota', 'xuv','bmw')    // (✅ if we want To push values 
 
 const myArr9 = [ 'Stone', 'Paper', 'Scissor', 'Eraser', 'Pen', 'Pencil']
 myArr9.splice(2, 3, 'Diamond', 'Rubies', 'Pearls')    // (✅ if we want To push values like " 'Diamond', 'Rubies', 'Pearls'"  on the 2nd position & want to delete 3 values starting from the 2nd value of the ARRAY)
-// console.log(myArr9);            //📍 Answer is :- [ 'Stone', 'Paper', 'Diamond', 'Rubies', 'Pearls', 'Pencil' ]
+console.log(myArr9);            //📍 Answer is :- [ 'Stone', 'Paper', 'Diamond', 'Rubies', 'Pearls', 'Pencil' ]
          
 				   // 🔽🔽
 

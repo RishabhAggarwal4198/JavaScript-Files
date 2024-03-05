@@ -233,7 +233,7 @@ JsUser.email = "rishabhChatGPT.com"
 
 
 //💎✅💎Now if we want to FREEZE the particular value inside a OBJECT [i.e. we don't want anyone to change it] 👇
-// Object.freeze(JsUser)  // 🍁🍁🍁🍁FREEZEING the values 🍁🍁🍁🍁
+Object.freeze(JsUser)  // 🍁🍁🍁🍁FREEZEING the values 🍁🍁🍁🍁
 JsUser.email = "rishabh_twitter.com"
 // console.log(JsUser.email); // 📍 Answer is still "rishabhChatGPT.com" {Bcoz we freezed it}
 

@@ -1,4 +1,4 @@
-!<!DOCTYPE html>
+<!DOCTYPE html>
 
 <html lang="en">
 
@@ -27,7 +27,7 @@
   <body>
 	 
 	<input type="text" id="input1">
-    <button onclick="yy()"> Hello</button>
+    <button onclick="yy()"> Get Element</button>
 
   </body>
 
@@ -38,11 +38,12 @@
 
 	let data = [ 9, 45, 2, 8, 45, 23 , 7]
 
-	let inpu2 = document.querySelector('#input1')
-
+  
 	
-	 function yy () {
-		
+  function yy () {
+    
+    let inpu2 = document.querySelector('#input1')
+    
 		if ( typeof parseInt(inpu2.value) === 'number' ) {
 			alert(`You entered ${inpu2.value}`)
 		} else {

@@ -15,7 +15,7 @@ const user = {
                                     // }
                                          
     }
-}
+} 
 
  
 
@@ -60,7 +60,7 @@ function play () {
 
 const play2 = function () {
     let username = "Rishabh"
-    console.log(this.username);
+    console.log(this.username); 
 }
 
 // play2()  // 📍Answer is "undefined"

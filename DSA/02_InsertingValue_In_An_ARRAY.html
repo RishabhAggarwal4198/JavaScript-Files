@@ -33,21 +33,20 @@
 
 
 
-	let data = [ 9, 45, 2, 8, 45, 23 , 7]
+	let data = [ 81, 45, 27, 121, 75, 65]
 
-	let newVal = 81
+	for ( let i = data.length -1; i >= 0; i--){
 
-	for ( let i = data.length-1 ; i >= 0;  i--){
-		
-		if( i >= 3 ){
+		if ( i >= 3) {
 			data[i+1] = data[i]
-			if ( i == 3) {
-				data[i] = newVal
+			if( i == 3){
+				data[i] = 44
 			}
 		}
 	}
-  
+
 	document.writeln(data)
+
 
 
    

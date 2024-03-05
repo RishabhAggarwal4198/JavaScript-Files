@@ -240,8 +240,6 @@ JsUser.email = "rishabh_twitter.com"
 
 
 
-
-
  
 JsUser.greeting = function() {
     console.log("Hello JS user");
@@ -278,7 +276,7 @@ JsUser.greetingTwo = function() {
 const calculateIt = {
 	num: 55,
     
-	add: function(a,b){
+	add : (a,b) => {
 	    console.log(a+b);
 	    return a+b;
 	    

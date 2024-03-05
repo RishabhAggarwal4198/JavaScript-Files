@@ -24,6 +24,7 @@ const regularUser =  {
     }
 }
 
+
 // console.log(regularUser.fullname);    // 📍 Answer is  "{ userfullname: { firstname: 'Rishabh', lastname: 'Aggarwal' } }"
 
 // console.log(regularUser.fullname.userfullname.lastname);   // 📍 Answer is  "Aggarwal"
@@ -31,7 +32,6 @@ const regularUser =  {
                                                             // ✅✅    
 
 // console.log(regularUser.fullname?.userfullname.lastname);   // ✅✅ Extra SYNTAX ( Like 'fullname'?) which we use in place of LOOPS
-
 
 
 

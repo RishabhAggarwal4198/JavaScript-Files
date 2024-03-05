@@ -321,9 +321,9 @@ for (let i = 0; i <heros.length; i++){
 let student = [ [`Keshav`, 95], [`Raman`, 80], [`Aastha`, 55] ]
 
 for( let i = 0; i < student.length; i++){
-	console.log(student[i]);
+	// console.log(student[i]);
 	for(let j = 0; j < student[i].length; j++  ){
-	console.log(student[i][j]);                  //📍📍 Answer is :-  
+	// console.log(student[i][j]);                  //📍📍 Answer is :-  
 	}						// [ 'Keshav', 95 ]
 							// Keshav
 }							// 95
@@ -355,6 +355,12 @@ for ( froot of fruitz) {
 				// Banana
 				// Litchi
 				// Orange
+
+for (frut of fruitz){
+	for (f of frut) {
+		// console.log(`This time it iterated on '${f}'`);
+	}
+}
 
 
 

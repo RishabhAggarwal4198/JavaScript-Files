@@ -29,3 +29,7 @@ input {
   width: 100%;
   background-color: rgb(132, 209, 132);
 }
+
+#btns{
+	display: block;
+}

@@ -14,28 +14,20 @@ body {
 }
 
 #outer_div1{
- height:max-content;
+ height: 40rem;
   width: 20rem;
   border: 2px solid red;
   border-radius: 1rem;
   display: flex;
   align-items: start;
-  justify-content: center;
+  flex-direction: column;
+  /* justify-content: center; */
   overflow: hidden;
   margin: 0rem 0rem 1rem;
 }
 
-#outer_div2{
-  height: 30rem;
-  width: 20rem;
-  border: 2px solid red;
-  border-radius: 1rem;
-  display: flex;
-  align-items: start;
-  justify-content: center;
-  overflow: hidden;
-  
-}
+
+
 
 input {
   height: 8rem;

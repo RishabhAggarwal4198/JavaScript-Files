@@ -29,6 +29,7 @@ let interval3;
 
 uploadBtn.addEventListener('click', () => uploadInput.click());
 
+
 uploadInput.addEventListener('change', () => {
 	focusImage.src = URL.createObjectURL(uploadInput.files[0])
 	focusImage.classList.remove('mainIMG')
@@ -129,7 +130,6 @@ function editImage ()  {
 
 
 sliderInput.addEventListener('input', editImage );
-
 
 
 transformBtns.forEach((el) =>{

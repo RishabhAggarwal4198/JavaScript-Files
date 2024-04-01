@@ -16,7 +16,7 @@ body {
 #outer_div1{
  height: 40rem;
   width: 20rem;
-  border: 2px solid red;
+  border: .4rem solid red;
   border-radius: 1rem;
   display: flex;
   align-items: start;

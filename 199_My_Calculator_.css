@@ -42,7 +42,10 @@ input {
  display: grid;
  grid-template-columns: repeat(4, 1fr);
  justify-content: center;
- 
+ row-gap: 2rem;
+ column-gap: 1.4rem;
+ box-sizing: border-box;
+ padding: 1rem;
 }
 
 
@@ -50,6 +53,7 @@ button{
   height: 4rem;
   width: 4rem;
   border-radius: 50rem;
+  se
 }
 
 

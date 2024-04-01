@@ -39,6 +39,8 @@ input {
 
 #btnDiv{
  background-color: red;
+ display: grid;
+ grid-template-columns: repeat(4, 1fr);
 }
 
 

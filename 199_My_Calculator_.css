@@ -35,8 +35,9 @@ input {
   background-color: rgb(132, 209, 132);
 }
 
-#btnDiv{
 
+#btnDiv{
+ background-color: red;
 }
 
 

@@ -38,11 +38,13 @@ input {
 
 
 #btnDiv{
+  width: 100%;
  display: grid;
- justify-content: space-around;
- align-items: center;
  grid-template-columns: repeat(4, 1fr);
+ justify-content: center;
+ 
 }
+
 
 button{
   height: 4rem;

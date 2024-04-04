@@ -60,11 +60,11 @@ button{
   background-color: rgb(217, 222, 243);
   box-shadow: 0rem 0rem .4rem .4rem rgb(185, 195, 245) ;
   font-weight: 900;
-  transition: 2000ms;
+  transition: 1000ms;
 }
 
 button:hover {
-  background-color: rgb(125, 246, 125);
+  background-color: rgb(43, 115, 232);
 }
 
 

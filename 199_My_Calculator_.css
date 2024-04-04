@@ -61,6 +61,7 @@ button{
   box-shadow: 0rem 0rem .4rem .4rem rgb(185, 195, 245) ;
   font-weight: 900;
   transition: 1000ms;
+  border: none;
 }
 
 button:hover {

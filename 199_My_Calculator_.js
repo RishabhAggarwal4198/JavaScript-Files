@@ -1,7 +1,7 @@
 let input = document.querySelector('input')
-let one = document.querySelector("#btnDiv")
+let one = document.querySelector("#btnDiv:nth child (1)")
 
 
-input.addEventListener('click', () => {
-	
+.addEventListener('click', () => {
+ input.value = 1
 })

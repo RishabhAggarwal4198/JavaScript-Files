@@ -14,7 +14,7 @@ body {
 }
 
 #outer_div1{
- height: 40rem;
+ height: 30rem;
   width: 20rem;
   border: .2rem solid red;
   border-radius: 1rem;
@@ -63,6 +63,9 @@ button{
   transition: 1000ms;
   border: none;
 }
+
+
+
 
 button:hover {
   background-color: rgb(43, 115, 232);

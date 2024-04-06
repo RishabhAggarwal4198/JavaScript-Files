@@ -8,12 +8,12 @@ let num_6 = document.querySelector("#btnDiv button:nth-child(6)")
 let num_7 = document.querySelector("#btnDiv button:nth-child(7)")
 let num_8 = document.querySelector("#btnDiv button:nth-child(8)")
 let num_9 = document.querySelector("#btnDiv button:nth-child(9)")
-let num_0 = document.querySelector("#btnDiv button:nth-child(0)")
-let plus  = document.querySelector("#btnDiv button:nth-child()")
-let minus= document.querySelector("#btnDiv button:nth-child(0)")
-let multi = document.querySelector("#btnDiv button:nth-child(0)")
-let divide = document.querySelector("#btnDiv button:nth-child(0)")
-let equal = document.querySelector("#btnDiv button:nth-child(0)")
+let num_0 = document.querySelector("#btnDiv button:nth-child(10)")
+let plus  = document.querySelector("#btnDiv button:nth-child(11)")
+let minus= document.querySelector("#btnDiv button:nth-child(12)")
+let multi = document.querySelector("#btnDiv button:nth-child(13)")
+let divide = document.querySelector("#btnDiv button:nth-child(14)")
+let equal = document.querySelector("#btnDiv button:nth-child(15)")
 
 
   num_1.addEventListener('click', () => {

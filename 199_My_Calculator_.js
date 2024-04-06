@@ -35,3 +35,19 @@ let num_0 = document.querySelector("#btnDiv button:nth-child(0)")
   input.value += 6;
 })
 
+  num_7.addEventListener('click', () => {
+  input.value += 7;
+})
+
+  num_8.addEventListener('click', () => {
+  input.value += 8;
+})
+
+  num_9.addEventListener('click', () => {
+  input.value += 9;
+})
+
+  num_0.addEventListener('click', () => {
+  input.value += 0;
+})
+

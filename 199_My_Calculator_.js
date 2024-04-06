@@ -9,6 +9,10 @@ let num_7 = document.querySelector("#btnDiv button:nth-child(7)")
 let num_8 = document.querySelector("#btnDiv button:nth-child(8)")
 let num_9 = document.querySelector("#btnDiv button:nth-child(9)")
 let num_0 = document.querySelector("#btnDiv button:nth-child(0)")
+let num_0 = document.querySelector("#btnDiv button:nth-child(0)")
+let num_0 = document.querySelector("#btnDiv button:nth-child(0)")
+let num_0 = document.querySelector("#btnDiv button:nth-child(0)")
+let num_0 = document.querySelector("#btnDiv button:nth-child(0)")
 
 
   num_1.addEventListener('click', () => {

@@ -6,3 +6,4 @@ let one = document.querySelector("#btnDiv:nth-child(1)")
   input.value = 1
   
 })
+

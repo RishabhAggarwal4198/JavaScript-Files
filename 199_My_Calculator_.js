@@ -52,7 +52,7 @@ let equal = document.querySelector("#btnDiv button:nth-child(15)")
   input.value += 9;
 })
 
-  sign.addEventListener('click', () => {
+sign.addEventListener('click', () => {
   input.value += 0;
 })
 

@@ -40,7 +40,7 @@ input {
 #btnDiv{
   width: 100%;
  display: grid;
- grid-template-columns: repeat(3, 1fr);
+ grid-template-columns: repeat(4, 1fr);
  justify-content: center;
  row-gap: 2rem;
  column-gap: 1.4rem;

@@ -42,7 +42,7 @@ input {
  display: grid;
  grid-template-columns: repeat(4, 1fr);
  justify-content: center;
- row-gap: 2.6rem;
+ row-gap: 2.7rem;
  column-gap: 1.4rem;
  box-sizing: border-box;
  padding: 1rem;

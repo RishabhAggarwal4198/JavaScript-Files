@@ -8,7 +8,7 @@ let score = "33";
 //💎✅💎 CONVERSION 👇👇 converting one data type to another
 
 let valueInNumber = Number (score); // 💎💎 for Conversion of the "score" variable into numbers
-// console.log(valueInNumber);          //[📍📍 Answer is :-  "33"  ] 
+console.log(valueInNumber);          //[📍📍 Answer is :-  "33"  ] 
 // console.log(typeof valueInNumber);   //[📍📍 Answer is :-  "number"  ] 
 
 

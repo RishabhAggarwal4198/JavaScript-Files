@@ -1,5 +1,5 @@
 
-// console.log(2 != 1);              // 📍 Answer is "true"    
+console.log(2 != 1);              // 📍 Answer is "true"    
 // console.log("02" > 1);              // 📍 Answer is "true"    
 // console.log("2" > 1);              // 📍 Answer is "true"    
 // console.log("2" == 1);              // 📍 Answer is "false"    

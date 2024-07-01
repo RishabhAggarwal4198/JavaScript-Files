@@ -97,7 +97,7 @@ const hundreds = 100000000000
 
 
 
-//💎✅💎 MATH - RANDOM 👇 [Values will always come b/w  0 - 1 (mostly in decimals)]
+//💎✅💎 MATH - RANDOM 👇 [Values will always come b/w  0 -1 (mostly in decimals)]
 
 // console.log(Math.random());  
 // So we can do the following thing to avoid the comming of "zero" value
@@ -108,12 +108,12 @@ const hundreds = 100000000000
 
 
 
-//✅✅ When u want values between two NUMBERS only 👇 [ Bewlo syntax is just like above, but overhere we have replaced "10" with "(maxValue - minValue + 1)"  & "+1" with "minValue" ]
+//✅✅ When u want values between two NUMBERS only 👇 [ Below syntax is just like above, but overhere we have replaced "10" with "(maxValue - minValue + 1)"  & "+1" with "minValue" ]
 
 const  minValue = 10;
 const maxValue = 20;
 
-// console.log(Math.floor(Math.random() * (maxValue - minValue + 1)) + minValue);    // 📍 Run it to know how it works  [watch @2:52:05 ]
+console.log(Math.floor(Math.random() * (maxValue - minValue + 1)) + minValue);    // 📍 Run it to know how it works  [watch @2:52:05 ]
 
 
                                         // 🔽🔽
@@ -128,7 +128,7 @@ let mathhh = Math.random()
 // console.log((mathhh * (maxValue0 - minValue0 + 1)) + minValue0);
 // console.log(Math.floor(mathhh * (maxValue0 - minValue0 + 1)) + minValue0);    // 📍 Run it to know how it works  [watch @2:52:05 ]
 
-
+  
 
 
  

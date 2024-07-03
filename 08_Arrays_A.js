@@ -53,7 +53,7 @@ fruits [6] = 'Peach'
 
 // 💎✅💎 ARRAY-METHODS 👇👇
 
-myArr.push(6);   //  ✅ It is for PUSHING the given value into the originla array 
+myArr.push(6);   //  ✅ It is for PUSHING the given value into the original array 
 // console.log(myArr);  //📍 Answer will be "[ 0, 1, 2, 3, 4, 5, 6]"
                               // 🔽🔽
 myArr.push(7); 
@@ -74,7 +74,8 @@ myArr.pop()
 
 
 myArr.unshift(9);    // ✅ For ADDING a value on the 0th position of the Array
-// console.log(myArr);    // 📍  Answer is [ 9, 0, 1, 2, 3, 4, 5, 6]
+// console.log(myArr);    // 📍  Answer is [ 9, 0, 1, 2, 3, 4, 5, 6]     
+
 
 
 

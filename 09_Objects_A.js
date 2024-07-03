@@ -27,10 +27,9 @@ const JsUser0 = {
 
 const mySym0 = Symbol("key1")   //🍁🍁[Important INTERVIEW question on SYMBOL element watch @3:54:00]
 
-
 const JsUser = { 
     name:"Rishabh",
-    "full Name" : "Rishabh Aggarwal",    // 📍 This value can't be accessed through dot(.) method [bcoz of the gap which is present b/w full & Name ]
+    "full Name" : "Rishabh  Aggarwal",    // 📍 This value can't be accessed through dot(.) method [bcoz of the gap which is present b/w full & Name ]
     [mySym0] : "mykey1",        //🍁🍁[Important INTERVIEW question on SYMBOL element watch @3:54:00]
     age : 18,
     Location: "jaipur",
@@ -71,6 +70,7 @@ twPost.Followers = 1000
 				// 	Followers: 1000
 				//       }
 	
+			
 				
 //✅ NESTED - OBJECTs  👇👇
 

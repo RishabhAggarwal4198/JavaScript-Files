@@ -16,7 +16,7 @@ const JsUser0 = {
     [mySym]: "mykey1"
 }
 
-// console.log(JsUser0[mySym]);  // 📍 Answer is  "mykey1"
+// console.log(JsUser0[mySym]);   // 📍 Answer is  "mykey1"
 
 
 
@@ -26,6 +26,7 @@ const JsUser0 = {
 //💎✅💎 OBJECTs  👇👇
 
 const mySym0 = Symbol("key1")   //🍁🍁[Important INTERVIEW question on SYMBOL element watch @3:54:00]
+
 
 const JsUser = { 
     name:"Rishabh",

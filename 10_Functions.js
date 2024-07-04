@@ -385,3 +385,13 @@ let yy = 0;
 
 //🍀🍀🍀🍀🍀🍀🍀🍀
 
+
+
+
+
+
+function hhh (a, b, c) {
+    console.log(`Hello !! ${a} is a very ${b} person. He lives in ${c} `);
+}
+
+hhh('Roshesh', 'good' , 'California')

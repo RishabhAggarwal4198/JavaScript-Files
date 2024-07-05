@@ -12,6 +12,7 @@ if (true) {
     // console.log(`Inner 'b' value is :- ${b}`);      // 📍 Answer is :-  "Inner 'b' value is :- 20"  
 }
 
+
 // console.log(a);    // 📍Answer will not be printed bcoz "a" is not accesible outside scope
 // console.log(b);    // 📍 Answer is :-  "50"  
 // console.log(c);      // 📍 🚩🚩{Problem with VAR}🚩🚩 Answer will not be "30" [which should not be, as variable "var c" is definded in a SCOPE]

@@ -365,6 +365,7 @@ let odd = function (n){
 
 		// 🔽🔽 ( in place of the above code)
 
+        
 function oddEvenFactory (reqq){
 
     if(reqq%2 == 0  ){
